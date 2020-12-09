@@ -1,8 +1,6 @@
 class Api::SessionsController < ApplicationController
 
-    def new
-        render :new
-    end
+    skip_before_action :verify_authenticity_token
 
     def create
         user = User.find_by_credentials(params[:user][:email],
@@ -10,7 +8,7 @@ class Api::SessionsController < ApplicationController
         
         if user
             login(user)
-            redirect_to users_url
+            redirect_to api_users_url
         else
             flash[:errors] = ['Invalid email or password']
             render :new

@@ -1,4 +1,7 @@
 class Api::UsersController < ApplicationController
+
+    skip_before_action :verify_authenticity_token
+
     # render new page for creating a new user
     def new
         @user = User.new
