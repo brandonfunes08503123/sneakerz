@@ -1,21 +1,18 @@
 class Api::UsersController < ApplicationController
 
-    skip_before_action :verify_authenticity_token
+    #skip_before_action :verify_authenticity_token
 
     # render new page for creating a new user
-    def new
-        @user = User.new
-        render new
-    end
 
     def create
         @user = User.new(user_params);
 
         if @user.save
             login(@user)
-            redirect_to user_url
+            #redirect_to user_url
+            render "api/users/show"
         else
-           render :json[@user.errors.full_messages]
+           render json: @user.errors.full_messages, status: 422
         end
     end
 

@@ -24125,3 +24125,339 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 936ms (Views: 893.5ms | ActiveRecord: 0.0ms)
 
 
+  [1m[36mUser Load (11.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for ::1 at 2020-12-08 20:55:27 -0800
+  [1m[35m (12.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/camerontanjoco/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 6652ms (Views: 6644.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-08 20:57:28 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 3711ms (Views: 3688.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-08 20:57:56 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 3641ms (Views: 3625.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-08 20:58:55 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 2499ms (Views: 2486.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-08 20:59:13 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 3468ms (Views: 3459.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (42.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for ::1 at 2020-12-08 21:04:45 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 2148ms (Views: 2101.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-08 21:05:05 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 2264ms (Views: 2244.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-12-08 21:05:48 -0800
+
+SyntaxError - syntax error, unexpected '}', expecting =>
+... :json => { "Succesful login "}
+...                              ^
+/Users/camerontanjoco/Desktop/Sneakerz_App/Sneakerz/app/controllers/api/sessions_controller.rb:23: syntax error, unexpected '}', expecting =>
+...json => { "Successful logout" }
+...                              ^:
+  app/controllers/api/sessions_controller.rb:12:in `'
+
+Started GET "/" for ::1 at 2020-12-08 21:06:43 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 598ms (Views: 581.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-12-08 21:47:51 -0800
+
+SyntaxError - syntax error, unexpected '}', expecting =>
+... :json => { "Succesful login "}
+...                              ^
+/Users/camerontanjoco/Desktop/Sneakerz_App/Sneakerz/app/controllers/api/sessions_controller.rb:23: syntax error, unexpected '}', expecting =>
+...json => { "Successful logout" }
+...                              ^:
+  app/controllers/api/sessions_controller.rb:12:in `'
+
+Started GET "/" for ::1 at 2020-12-08 21:49:39 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 533ms (Views: 509.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-12-08 21:50:00 -0800
+
+SyntaxError - syntax error, unexpected '}', expecting =>
+... :json => { "Succesful login "}
+...                              ^
+/Users/camerontanjoco/Desktop/Sneakerz_App/Sneakerz/app/controllers/api/sessions_controller.rb:23: syntax error, unexpected '}', expecting =>
+...json => { "Successful logout" }
+...                              ^:
+  app/controllers/api/sessions_controller.rb:12:in `'
+
+Started GET "/" for ::1 at 2020-12-08 22:03:38 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 643ms (Views: 630.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-12-08 22:04:10 -0800
+
+SyntaxError - syntax error, unexpected '}', expecting =>
+...json => { "Successful logout" }
+...                              ^:
+  app/controllers/api/sessions_controller.rb:22:in `'
+
+Started POST "/api/session" for ::1 at 2020-12-08 22:04:20 -0800
+
+SyntaxError - syntax error, unexpected '}', expecting =>
+...json => { "Successful logout" }
+...                              ^:
+  app/controllers/api/sessions_controller.rb:22:in `'
+
+Started GET "/" for ::1 at 2020-12-08 22:07:41 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 716ms (Views: 685.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-12-08 22:08:33 -0800
+
+SyntaxError - syntax error, unexpected '}', expecting =>
+...json => { "Successful logout" }
+...                              ^:
+  app/controllers/api/sessions_controller.rb:22:in `'
+
+Started POST "/api/session" for ::1 at 2020-12-08 22:10:01 -0800
+  [1m[35m (39.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/camerontanjoco/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+
+SyntaxError - syntax error, unexpected '}', expecting =>
+...json => { "Successful logout" }
+...                              ^:
+  app/controllers/api/sessions_controller.rb:22:in `'
+
+Started GET "/" for ::1 at 2020-12-08 22:11:53 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 5935ms (Views: 5927.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-12-08 22:12:12 -0800
+
+SyntaxError - syntax error, unexpected '}', expecting =>
+...json => { "Successful logout" }
+...                              ^:
+  app/controllers/api/sessions_controller.rb:22:in `'
+
+Started GET "/" for ::1 at 2020-12-08 22:13:26 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 228ms (Views: 219.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-12-08 22:13:33 -0800
+
+ArgumentError - Before process_action callback :verify_authenticity_token has not been defined:
+  app/controllers/api/sessions_controller.rb:3:in `<class:SessionsController>'
+  app/controllers/api/sessions_controller.rb:1:in `<top (required)>'
+
+Started POST "/api/session" for ::1 at 2020-12-08 22:13:47 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"test", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/controllers/api/sessions_controller.rb:6:in `create'
+
+Started POST "/api/session" for ::1 at 2020-12-08 22:15:32 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/controllers/api/sessions_controller.rb:6:in `create'
+
+Started GET "/" for ::1 at 2020-12-08 22:20:21 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 363ms (Views: 339.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-12-08 22:20:25 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/controllers/api/sessions_controller.rb:6:in `create'
+
+Started POST "/api/session" for ::1 at 2020-12-08 22:21:28 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"test", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (30.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+Completed 500 Internal Server Error in 466ms (ActiveRecord: 296.1ms)
+
+
+
+ActionView::MissingTemplate - Missing template api/sessions/create, application/create with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/camerontanjoco/Desktop/Sneakerz_App/Sneakerz/app/views":
+  app/controllers/api/sessions_controller.rb:13:in `create'
+
+Started GET "/" for ::1 at 2020-12-08 22:24:05 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 338ms (Views: 327.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-08 22:24:13 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 717ms (Views: 708.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2020-12-08 22:25:06 -0800
+
+ArgumentError - Before process_action callback :verify_authenticity_token has not been defined:
+  app/controllers/api/users_controller.rb:3:in `<class:UsersController>'
+  app/controllers/api/users_controller.rb:1:in `<top (required)>'
+
+Started POST "/api/users" for ::1 at 2020-12-08 22:25:36 -0800
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"oliNiko", "email"=>"willWilliam", "password"=>"[FILTERED]"}}
+  [1m[35m (7.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:10
+  [1m[36mUser Exists (29.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "oliNiko"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:10
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "willWilliam"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:10
+  [1m[36mUser Create (98.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "oliNiko"], ["email", "willWilliam"], ["password_digest", "$2a$12$UJ8evi6JM3FfAtMDjVJZnuz0NXM7IePh0oM02v8f571BD0sJql7pO"], ["session_token", "ECw5QHtbP4NwLqTWyHltIA"], ["created_at", "2020-12-09 06:25:36.924857"], ["updated_at", "2020-12-09 06:25:36.924857"]]
+  ↳ app/controllers/api/users_controller.rb:10
+  [1m[35m (34.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:35
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "oliNiko"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:35
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "willWilliam"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:35
+  [1m[36mUser Update (28.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "hcswZnXTswnhTcnmJ2ACBg"], ["updated_at", "2020-12-09 06:25:37.088729"], ["id", 3]]
+  ↳ app/models/user.rb:35
+  [1m[35m (10.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:35
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (4.2ms)
+  Rendered api/users/show.json.jbuilder (8.7ms)
+Completed 200 OK in 883ms (Views: 31.0ms | ActiveRecord: 366.5ms)
+
+
+  [1m[36mUser Load (37.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for ::1 at 2020-12-08 22:26:27 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 850ms (Views: 818.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-12-08 22:27:15 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"oliNiko", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "oliNiko"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 16.7ms)
+
+
+
+ActionView::MissingTemplate - Missing template api/sessions/create, application/create with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/camerontanjoco/Desktop/Sneakerz_App/Sneakerz/app/views":
+  app/controllers/api/sessions_controller.rb:13:in `create'
+
+Started GET "/" for ::1 at 2020-12-08 22:28:59 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 317ms (Views: 304.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-12-08 22:29:04 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"oliNiko", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "oliNiko"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 11.6ms)
+
+
+
+ActionView::MissingTemplate - Missing template api/sessions/create, application/create with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/camerontanjoco/Desktop/Sneakerz_App/Sneakerz/app/views":
+  app/controllers/api/sessions_controller.rb:13:in `create'
+
+Started GET "/" for ::1 at 2020-12-08 22:32:10 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 375ms (Views: 368.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-12-08 22:32:37 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"willWilliam", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (7.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "willWilliam"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:35
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "oliNiko"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:35
+  [1m[36mUser Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "willWilliam"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:35
+  [1m[36mUser Update (3.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "9LJNJTElFE2bjRDtwv7dsw"], ["updated_at", "2020-12-09 06:32:37.612584"], ["id", 3]]
+  ↳ app/models/user.rb:35
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:35
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered api/users/show.json.jbuilder (10.3ms)
+Completed 200 OK in 517ms (Views: 30.5ms | ActiveRecord: 44.4ms)
+
+
