@@ -1,8 +1,7 @@
 import React from "react";
 
 const App = () =>  (
-    <div>
-    
+    null;
 )
 
 export default App;
