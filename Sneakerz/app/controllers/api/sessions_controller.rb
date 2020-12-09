@@ -10,8 +10,7 @@ class Api::SessionsController < ApplicationController
             login(user)
             redirect_to api_users_url
         else
-            flash[:errors] = ['Invalid email or password']
-            render :new
+            render :json ['Invalid email or password']
         end
     end
 
