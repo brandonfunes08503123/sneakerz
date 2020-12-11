@@ -27,6 +27,18 @@ class SessionForm extends Component {
     }
 
 
+    rnederErrors(){
+        let { errors } = this.props;
+        return(
+            <ul>
+                { errors.map( (error, i) => ( 
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        )
+    }
 
     render(){
         let { formType } = this.props;
@@ -34,6 +46,7 @@ class SessionForm extends Component {
         
         return(
             <form onSubmit={this.handleSubmit}>
+                {this.renderErrors()}
                 <label>Email</label>
                 <input 
                     type="email" 
@@ -48,7 +61,7 @@ class SessionForm extends Component {
                     value={ password }
                     onChange={this.handleInputChange}
                 />
-                { password.length > 3 ?
+                { password.length > 4 ?
                     <button className="btn">{ formType }</button> :
                     <button disabled>{ formType }</button>
                 }

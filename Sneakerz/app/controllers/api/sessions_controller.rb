@@ -17,8 +17,14 @@ class Api::SessionsController < ApplicationController
 
     # redirect to homepage when logged out
     def destroy
-        logout! if logged_in?
+       @user = current_user
+       if @user
+            logout
+            render "api/users/show"
+       else 
+            render json: ["Nobody signed in"], status: 404
+       end
         #redirect_to root #splash page is root the splash page?
-        render "api/users/show"
+        
     end
 end

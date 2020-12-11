@@ -1,0 +1,27 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 180px);
+  height: 90px !important;
+  margin: 0px auto;
+  padding: 0px;
+}
+
+.nav-logo {
+  display: flex;
+  flex: 0 0 auto;
+  margin-right: auto;
+  line-height: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-decoration: none;
+}
+
+.nav-items {
+  /* margin-right: 32px;
+  line-height: 5.71;
+  text-decoration: underline; */
+  display: inline;
+  padding-right: 30px;
+}
