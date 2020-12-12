@@ -1,3 +1,43 @@
-// Place all the styles related to the api/sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// SCSS for session_form
+.BigHeroContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.HeroContainer {
+  display: flex;
+  justify-content: center;
+  height: calc(-180px + 100vh);
+  max-height: 800px;
+  min-height: 500px;
+  width: 90.5%;
+}
+
+.HeroPane-shoe {
+  border: 1px solid rgb(222, 222, 222);
+  width: 50%;
+}
+
+.HeroPane-form-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid rgb(222, 222, 222);
+  width: 50%;
+
+  //   flex-direction: column;
+}
+
+.HeroPane-header {
+  display: flex;
+  //   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 3px solid red;
+}
+
+.HeroPane-form {
+  display: flex;
+  flex-direction: column;
+}

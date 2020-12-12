@@ -5,23 +5,18 @@
   width: calc(100% - 180px);
   height: 90px !important;
   margin: 0px auto;
-  padding: 0px;
 }
 
 .nav-logo {
-  display: flex;
-  flex: 0 0 auto;
+  cursor: pointer;
   margin-right: auto;
-  line-height: 1;
-  padding-top: 10px;
-  padding-bottom: 10px;
   text-decoration: none;
+  color: black;
 }
 
-.nav-items {
-  /* margin-right: 32px;
-  line-height: 5.71;
-  text-decoration: underline; */
-  display: inline;
-  padding-right: 30px;
+.nav-item {
+  display: block;
+  margin-right: 32px;
+  text-decoration: none;
+  color: black;
 }

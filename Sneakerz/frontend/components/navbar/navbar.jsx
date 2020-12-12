@@ -35,15 +35,21 @@ const Navbar = ({ currentUser, logout }) => {
   const loggedOut = () => {
     return (
       <div className="nav-container">
-        <div className="nav-logo">
-          <Link to="/">SNEAKERZ</Link>
-        </div>
-        <div className="nav-items">
-          <Link to="/">Discover</Link>
-          <Link to="/">Styles</Link>
-          <Link to="/login">Sign In</Link>
-          <Link to="/signup">Sign Up</Link>
-        </div>
+        <Link to="/" className="nav-logo">
+          S N E A K E R Z
+        </Link>
+        <Link to="/" className="nav-item">
+          Discover
+        </Link>
+        <Link to="/" className="nav-item">
+          Styles
+        </Link>
+        <Link to="/login" className="nav-item">
+          Sign In
+        </Link>
+        <Link to="/signup" className="nav-item">
+          Sign Up
+        </Link>
       </div>
     );
   };
