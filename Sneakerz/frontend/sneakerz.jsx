@@ -1,16 +1,42 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { signup } from "./util/session_api_util"
-import configureStore from './store/store';
+import configureStore from "./store/store";
+import { login, logout, removeErrors } from "./actions/session_actions";
+import Root from "./components/root";
 
 document.addEventListener("DOMContentLoaded", () => {
-    let store = configureStore();
-    const root = document.getElementById("root");
-    console.log("store: ", store)
-    window.signup = signup;
-    window.store = store;
-    window.getState = store.getState;
-    window.dispatch = store.dispatch;
+  let store = configureStore();
+  const root = document.getElementById("root");
 
-    ReactDOM.render(<h1> Finally made it </h1>, root)
-}) 
+  if (window.currentUser) {
+    const preloadedState = {
+      entities: {
+        users: { [window.currentUser.id]: window.currentUser },
+      },
+      session: { id: window.currentUser.id },
+    };
+    store = configureStore(preloadedState);
+    delete window.currentUser;
+  } else {
+    store = configureStore();
+  }
+
+  window.store = store;
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
+
+  window.login = login;
+  window.logout = logout;
+  window.removeErrors = removeErrors;
+
+  ReactDOM.render(<Root store={store} />, root);
+});
+
+/**
+ *     test app
+ *  window.store = store;
+    window.getState = store.getState;
+    window.dispatch = store.dispatch; 
+
+    window.login = login; 
+ */

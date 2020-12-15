@@ -10,15 +10,21 @@ class Api::SessionsController < ApplicationController
             login(@user)
             render '/api/users/show'
         else
-            render :json ['Invalid email or password']
+            render json: ["Invalid email or password"], status: 401
         end
     end
 
 
     # redirect to homepage when logged out
     def destroy
-        logout! if logged_in?
+       @user = current_user
+       if @user
+            logout
+            render "api/users/show"
+       else 
+            render json: ["No current user"], status: 404
+       end
         #redirect_to root #splash page is root the splash page?
-        render "api/users/show"
+        
     end
 end
