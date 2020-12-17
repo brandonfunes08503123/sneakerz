@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { logout } from "../../actions/session_actions";
-import { openModal } from "../../actions/modal_actions";
+import { openSearchModal, openMenuModal } from "../../actions/modal_actions";
 import Navbar from "./navbar";
 
 const mapStateToProps = (state) => ({
@@ -9,8 +9,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   logout: () => dispatch(logout()),
-  openModal: (value) => dispatch(openModal(value)),
-  //openModal: (value) => console.log(`Here ${value}`),
+  openSearchModal: (value) => dispatch(openSearchModal(value)),
+  openMenuModal: (value) => dispatch(openMenuModal(value)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

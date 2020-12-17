@@ -1,30 +1,68 @@
-import React from "react";
-import SearchModal from "./search_modal";
+import React, { Component } from "react";
+import SearchModal from "./search/search_modal";
+import MenuModal from "./menu/menu_modal";
 
-let Modal = ({ modal, closeModal }) => {
-  if (!modal) {
-    return null;
+class Modal extends Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
   }
 
-  let component;
-  switch (modal) {
-    case "search":
-      component = <SearchModal />;
-      break;
-    case "menu":
-      component = <MenuModal />;
-      break;
-    default:
-      return null;
+  componentDidMount() {
+    document.addEventListener("mousedown", this.handleClick, false);
   }
 
-  return (
-    <div className="modal-background modal-container" onClick={closeModal}>
-      <div className="modal-child" onClick={(e) => e.stopPropagation()}>
-        {component}
+  componentWillUnmount() {
+    document.removeEventListener("mousedown", this.handleClick, false);
+  }
+
+  handleClick(e) {
+    if (this.node.contains(e.target)) {
+      return;
+    }
+    this.handleClickOutside();
+  }
+
+  handleClickOutside() {
+    this.props.closeModal();
+  }
+
+  render() {
+    let { modal } = this.props;
+    return (
+      <div>
+        {modal.length > 0 ? (
+          modal === "search" ? (
+            <div className="modal-background modal-container">
+              <div
+                className="modal-child"
+                ref={(node) => (this.node = node)}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <SearchModal />
+              </div>
+            </div>
+          ) : (
+            <div
+              className="modal-background modal-container"
+              ref={(node) => (this.node = node)}
+            >
+              <div
+                className="modal-child"
+                ref={(node) => (this.node = node)}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <MenuModal />
+              </div>
+            </div>
+          )
+        ) : (
+          ""
+        )}
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default Modal;

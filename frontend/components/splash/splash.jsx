@@ -6,20 +6,28 @@
 import React, { Component } from "react";
 
 class Splash extends Component {
-  /**
-   * Fetch all products after
-   * componentDidMount(){
-   *  this.interval = setTimeout( () => {
-   *    this.props.fetchAllProducts()
-   *  }, 4000)
-   * }
-   *
-   */
+  constructor(props) {
+    super(props);
+  }
+  //Fetch all products after
+  // componentDidMount() {
+  //   this.props.getAllSneakers();
+  // }
 
   render() {
+    let { allSneakers } = this.props;
     return (
       <div className="splash-container">
-        <img src={window.images.jubilee11s} alt="Jubilee 11s"></img>
+        {/* <img src={window.images.jubilee11s} alt="Jubilee 11s"></img> */}
+        {allSneakers.length < 1 ? (
+          <p>LOADING</p>
+        ) : (
+          Object.values(allSneakers).map((sneaker) => {
+            return sneaker.photoUrls.map((photo) => {
+              return <img src={photo} alt="photos" />;
+            });
+          })
+        )}
       </div>
     );
   }

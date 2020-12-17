@@ -25,7 +25,7 @@ const Navbar = ({ currentUser, logout, openModal }) => {
         >
           <IoSearchOutline size={18} />
         </button>
-        <button className="nav-icon">
+        <button className="nav-icon" onClick={() => openModal("menu")}>
           <MdDehaze size={18} />
         </button>
       </div>
@@ -56,7 +56,7 @@ const Navbar = ({ currentUser, logout, openModal }) => {
         >
           <IoSearchOutline size={24} />
         </button>
-        <button className="nav-icon">
+        <button className="nav-icon" onClick={() => openModal("menu")}>
           <MdDehaze size={24} />
         </button>
       </div>
