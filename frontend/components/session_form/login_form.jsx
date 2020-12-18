@@ -1,7 +1,7 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-class SessionForm extends Component {
+class LoginForm extends Component {
   constructor(props) {
     super(props);
 
@@ -87,22 +87,6 @@ class SessionForm extends Component {
                   className="login-input"
                 />
               </div>
-
-              {/* {password.length > 4 ? (
-                <div className="btns-container">
-                  <button className="btn-login">Login</button>
-                  <button className="btn-demo" onClick={() => this.demoUser()}>
-                    Demo User
-                  </button>
-                </div>
-              ) : (
-                <div className="session-btns">
-                  <button className="btn-login">{formType}</button>
-                  <button className="btn-demo" onClick={() => this.demoUser()}>
-                    Demo User
-                  </button>
-                </div>
-              )} */}
               <div className="btns-container">
                 <button className="btn-login">Login</button>
                 <button className="btn-demo" onClick={() => this.demoUser()}>
@@ -117,4 +101,4 @@ class SessionForm extends Component {
   }
 }
 
-export default SessionForm;
+export default LoginForm;
