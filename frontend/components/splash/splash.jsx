@@ -10,16 +10,16 @@ class Splash extends Component {
     super(props);
   }
   //Fetch all products after
-  // componentDidMount() {
-  //   this.props.getAllSneakers();
-  // }
+  componentDidMount() {
+    this.props.getAllSneakers();
+  }
 
   render() {
     let { allSneakers } = this.props;
     return (
       <div className="splash-container">
         {/* <img src={window.images.jubilee11s} alt="Jubilee 11s"></img> */}
-        {allSneakers.length < 1 ? (
+        {/* {allSneakers.length < 1 ? (
           <p>LOADING</p>
         ) : (
           Object.values(allSneakers).map((sneaker) => {
@@ -27,7 +27,8 @@ class Splash extends Component {
               return <img src={photo} alt="photos" />;
             });
           })
-        )}
+        )} */}
+        Loading
       </div>
     );
   }

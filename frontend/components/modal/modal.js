@@ -1,12 +1,16 @@
-import React, { Component } from "react";
-import SearchModal from "./search/search_modal";
-import MenuModal from "./menu/menu_modal";
+import React, { Component, createRef } from "react";
+import SearchContainer from "./search/search_container";
+import MenuContainer from "./menu/menu_modal";
 
 class Modal extends Component {
   constructor(props) {
     super(props);
+
     this.handleClick = this.handleClick.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
+    this.handleMenu = this.handleMenu.bind(this);
+    this.modalChild = createRef();
   }
 
   componentDidMount() {
@@ -18,50 +22,72 @@ class Modal extends Component {
   }
 
   handleClick(e) {
-    if (this.node.contains(e.target)) {
-      return;
+    try {
+      if (this.modalChild.current.contains(e.target)) {
+        return;
+      }
+    } catch (e) {
+      e;
     }
+
     this.handleClickOutside();
   }
 
   handleClickOutside() {
-    this.props.closeModal();
+    let {
+      searchModal,
+      menuModal,
+      closeMenuModal,
+      closeSearchModal,
+    } = this.props;
+    if (searchModal === "search") {
+      closeSearchModal();
+    } else if (menuModal === "menu") {
+      closeMenuModal();
+    }
+  }
+
+  handleSearch() {
+    return (
+      <div className="modal-background modal-container">
+        <div
+          className="modal-child"
+          ref={this.modalChild}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <SearchContainer />
+        </div>
+      </div>
+    );
+  }
+
+  handleMenu() {
+    return (
+      <div className="modal-background modal-container">
+        <div
+          className="modal-child"
+          ref={this.modalChild}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <MenuContainer />
+        </div>
+      </div>
+    );
   }
 
   render() {
-    let { modal } = this.props;
-    return (
-      <div>
-        {modal.length > 0 ? (
-          modal === "search" ? (
-            <div className="modal-background modal-container">
-              <div
-                className="modal-child"
-                ref={(node) => (this.node = node)}
-                onClick={(e) => e.stopPropagation()}
-              >
-                <SearchModal />
-              </div>
-            </div>
-          ) : (
-            <div
-              className="modal-background modal-container"
-              ref={(node) => (this.node = node)}
-            >
-              <div
-                className="modal-child"
-                ref={(node) => (this.node = node)}
-                onClick={(e) => e.stopPropagation()}
-              >
-                <MenuModal />
-              </div>
-            </div>
-          )
-        ) : (
-          ""
-        )}
-      </div>
-    );
+    let { searchModal, menuModal } = this.props;
+    let modal;
+
+    if (searchModal.length === 0 && menuModal.length === 0) {
+      return null;
+    } else if (searchModal === "search") {
+      modal = this.handleSearch();
+    } else if (menuModal === "menu") {
+      modal = this.handleMenu();
+    }
+
+    return <div>{modal}</div>;
   }
 }
 

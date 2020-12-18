@@ -1,12 +1,15 @@
-import { OPEN_MODAL, CLOSE_MODAL } from "../actions/modal_actions";
+import {
+  OPEN_SEARCH_MODAL,
+  CLOSE_SEARCH_MODAL,
+} from "../actions/modal_actions";
 
-const searchModalReducer = (oldState = [], action) => {
+const searchModalReducer = (oldState = "", action) => {
   Object.freeze(oldState);
 
   switch (action.type) {
-    case OPEN_MODAL:
+    case OPEN_SEARCH_MODAL:
       return action.value;
-    case CLOSE_MODAL:
+    case CLOSE_SEARCH_MODAL:
       return [];
     default:
       return oldState;

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { IoSearchOutline } from "react-icons/io5";
 import { MdDehaze } from "react-icons/md";
 
-const Navbar = ({ currentUser, logout, openModal }) => {
+const Navbar = ({ currentUser, logout, openSearchModal, openMenuModal }) => {
   const loggedIn = () => {
     return (
       <div className="nav-container">
@@ -21,11 +21,11 @@ const Navbar = ({ currentUser, logout, openModal }) => {
         </button>
         <button
           className="nav-item nav-icon"
-          onClick={() => openModal("search")}
+          onClick={() => openSearchModal("search")}
         >
           <IoSearchOutline size={18} />
         </button>
-        <button className="nav-icon" onClick={() => openModal("menu")}>
+        <button className="nav-icon" onClick={() => openMenuModal("menu")}>
           <MdDehaze size={18} />
         </button>
       </div>
@@ -52,11 +52,11 @@ const Navbar = ({ currentUser, logout, openModal }) => {
         </Link>
         <button
           className="nav-item nav-icon"
-          onClick={() => openModal("search")}
+          onClick={() => openSearchModal("search")}
         >
           <IoSearchOutline size={24} />
         </button>
-        <button className="nav-icon" onClick={() => openModal("menu")}>
+        <button className="nav-icon" onClick={() => openMenuModal("menu")}>
           <MdDehaze size={24} />
         </button>
       </div>

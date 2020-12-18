@@ -1,6 +1,6 @@
 import { OPEN_MENU_MODAL, CLOSE_MENU_MODAL } from "../actions/modal_actions";
 
-const menuModalReducer = (oldState = [], action) => {
+const menuModalReducer = (oldState = "", action) => {
   Object.freeze(oldState);
 
   switch (action.type) {
