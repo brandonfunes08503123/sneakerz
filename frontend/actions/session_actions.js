@@ -20,7 +20,6 @@ export const receiveErrors = (errors) => ({
 });
 
 export const removeErrors = () => {
-  console.log("REMOVE ERRORS");
   return {
     type: REMOVE_ERRORS,
   };

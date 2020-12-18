@@ -2,6 +2,7 @@
   width: 350px;
   height: 100%;
   background-color: white;
+  flex-direction: column;
 }
 
 .search-modal-input-wrapper {
@@ -22,3 +23,12 @@
   max-width: 100%;
 }
 
+.search-results-container {
+  display: flex;
+  justify-content: center;
+}
+
+.search-results {
+  list-style-type: none;
+  align-items: center;
+}

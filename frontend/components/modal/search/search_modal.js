@@ -36,9 +36,6 @@ class SearchModal extends Component {
       if (subStr.toLowerCase() === input.toLowerCase()) {
         matches.push(sneaker);
       }
-      if (substr.includes(input)) {
-        matches.push(sneaker);
-      }
     });
 
     if (matches.length === 0) {
@@ -64,12 +61,13 @@ class SearchModal extends Component {
   render() {
     let { input } = this.state;
     let results;
+
     if (this.matches() === "") {
       results = "";
     } else {
       results = this.matches().map((result, i) => {
         return (
-          <li key={i} onClick={this.selectSneaker}>
+          <li className={"search-results"} key={i} onClick={this.selectSneaker}>
             {result.name}
           </li>
         );
@@ -88,8 +86,12 @@ class SearchModal extends Component {
               placeholder="TYPE TO SEARCH "
               className="search-input"
             />
-            <ul>{results}</ul>
           </div>
+          <div className="results-container">
+            <p>{input}</p>
+            <p>{results.length} RESULT</p>
+          </div>
+          <ul className="search-results-container">{results}</ul>
         </div>
       </div>
     );
@@ -97,15 +99,3 @@ class SearchModal extends Component {
 }
 
 export default SearchModal;
-
-{
-  /* <datalist id="sneakers" className="search-datalist">
-  {sneakers.map((sneaker) => (
-    <option
-      className="search-option"
-      key={sneaker.sku}
-      value={sneaker.name}
-    />
-  ))}
-</datalist>; */
-}

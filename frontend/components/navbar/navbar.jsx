@@ -23,10 +23,10 @@ const Navbar = ({ currentUser, logout, openSearchModal, openMenuModal }) => {
           className="nav-item nav-icon"
           onClick={() => openSearchModal("search")}
         >
-          <IoSearchOutline size={18} />
+          <IoSearchOutline size={24} />
         </button>
         <button className="nav-icon" onClick={() => openMenuModal("menu")}>
-          <MdDehaze size={18} />
+          <MdDehaze size={24} />
         </button>
       </div>
     );
@@ -63,7 +63,6 @@ const Navbar = ({ currentUser, logout, openSearchModal, openMenuModal }) => {
     );
   };
 
-  // console.log(`Current User: ${JSON.stringify(currentUser)}`);
   return currentUser === undefined ? loggedOut() : loggedIn();
 };
 
