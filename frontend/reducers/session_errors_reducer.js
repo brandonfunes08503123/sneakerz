@@ -1,5 +1,3 @@
-/** This file will keep track of any error messages */
-
 import {
   RECEIVE_SESSION_ERRORS,
   RECEIVE_CURRENT_USER,
