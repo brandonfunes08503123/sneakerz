@@ -15,7 +15,10 @@ class Splash extends Component {
    * }
    *
    */
-
+  componentDidMount(){
+    this.props.fetchAllProducts()
+  }
+  
   render() {
     return (
       <div className="splash-container">

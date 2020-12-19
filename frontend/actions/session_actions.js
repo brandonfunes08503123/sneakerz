@@ -20,15 +20,12 @@ export const receiveErrors = (errors) => ({
 });
 
 export const removeErrors = () => {
-  console.log("REMOVE ERRORS");
   return {
     type: REMOVE_ERRORS,
   };
 };
 
-
 export const signup = (user) => (dispatch) => {
-  console.log("Im here");
   return APIUtil.signup(user).then(
     (user) => dispatch(receiveCurrentUser(user)),
     (error) => dispatch(receiveErrors(error))

@@ -1,25 +1,12 @@
 import React, { Component } from "react";
 
-/**
- * Initial thoughts:
- * 
- * 1.) this.fetchAllProducts will be be on initial render
- * 
- * 
- *  <datalist className="products">
-                { products.map( product => {
-
-                })}
-            </datalist>
- */
-
-class SearchModal extends Component {
+class MenuModal extends Component {
   constructor(props) {
     super(props);
     this.state = {
       input: "",
     };
-    
+
     this.handleInputChange = this.handleInputChange.bind(this);
   }
 
@@ -52,4 +39,4 @@ class SearchModal extends Component {
   }
 }
 
-export default SearchModal;
+export default MenuModal;
