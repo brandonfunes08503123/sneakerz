@@ -6,6 +6,14 @@ import SignupFormContainer from "./session_form/signup_form_container";
 import SplashContainer from "./splash/splash_container";
 import ModalContainer from "./modal/modal_container";
 import NavbarContainer from "./navbar/navbar_container";
+import SneakerContainer from "./sneakers/sneaker_container";
+import SneakersContainer from "./sneakers/sneakers_container";
+
+/**
+ * Need to think about checkout
+ * sneakers/skuId/available-sizes
+ *
+ */
 
 const App = () => (
   <div className="app-container">
@@ -14,6 +22,8 @@ const App = () => (
     <Switch>
       <AuthRoute path="/login" component={LoginFormContainer} />
       <AuthRoute path="/signup" component={SignupFormContainer} />
+      <Route path={`/sneakers/:skuId`} component={SneakerContainer} />
+      <Route path="/sneakers" component={SneakersContainer} />
       <Route path="/" component={SplashContainer} />
     </Switch>
   </div>

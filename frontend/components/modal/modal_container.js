@@ -1,12 +1,16 @@
 import { connect } from "react-redux";
-import { closeModal } from "../../actions/modal_actions";
+import { closeSearchModal, closeMenuModal } from "../../actions/modal_actions";
 import Modal from "./modal";
-const mapStateToProps = (state) => ({
-  modal: state.ui.modal,
-});
+const mapStateToProps = (state) => {
+  return {
+    searchModal: state.ui.search,
+    menuModal: state.ui.menu,
+  };
+};
 
 const mapDispatchToProps = (dispatch) => ({
-  close: () => dispatch(closeModal()),
+  closeSearchModal: () => dispatch(closeSearchModal()),
+  closeMenuModal: () => dispatch(closeMenuModal()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Modal);

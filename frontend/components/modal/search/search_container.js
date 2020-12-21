@@ -1,8 +1,13 @@
 import { connect } from "react-redux";
+import { closeSearchModal } from "../../../actions/modal_actions";
 import SearchModal from "./search_modal";
 
 const mapStateToProps = (state) => ({
   allSneakers: state.entities.sneakers,
 });
 
-export default connect(mapStateToProps, null)(SearchModal);
+const mapDispatchToProps = (dispatch) => ({
+  closeModal: () => dispatch(closeSearchModal()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchModal);

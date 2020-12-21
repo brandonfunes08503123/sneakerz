@@ -1,17 +1,6 @@
-import React, { Component } from "react";
-
-/**
- * Initial thoughts:
- * 
- * 1.) this.fetchAllProducts will be be on initial render
- * 
- * 
- *  <datalist className="products">
-                { products.map( product => {
-
-                })}
-            </datalist>
- */
+import React, { Component, Fragment } from "react";
+import { Link } from "react-router-dom";
+import { IoIosArrowForward } from "react-icons/io";
 
 class SearchModal extends Component {
   constructor(props) {
@@ -21,6 +10,15 @@ class SearchModal extends Component {
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.popularSearch = this.popularSearch.bind(this);
+  }
+
+  handleInputChange(e) {
+    let { name, value } = e.target;
+
+    this.setState({
+      [name]: value,
+    });
   }
 
   matches() {
@@ -45,17 +43,26 @@ class SearchModal extends Component {
     return matches;
   }
 
-  selectSneaker(event) {
-    const name = event.currentTarget.innerText;
-    this.setState({ input: name });
-  }
-
-  handleInputChange(e) {
-    let { name, value } = e.target;
-
-    this.setState({
-      [name]: value,
-    });
+  popularSearch() {
+    return (
+      <div className="search-section-container">
+        <h3>Popular Searches</h3>
+        <ul className="search-list">
+          <li className="search-items">
+            Nike
+            <IoIosArrowForward size={16} />
+          </li>
+          <li className="search-items">
+            Jordan
+            <IoIosArrowForward size={16} />
+          </li>
+          <li className="search-items">
+            Adidas
+            <IoIosArrowForward size={16} />
+          </li>
+        </ul>
+      </div>
+    );
   }
 
   render() {
@@ -67,8 +74,13 @@ class SearchModal extends Component {
     } else {
       results = this.matches().map((result, i) => {
         return (
-          <li className={"search-results"} key={i} onClick={this.selectSneaker}>
-            {result.name}
+          <li className="search-results" key={i}>
+            <Link
+              to={`sneakers/${result.sku}`}
+              onClick={() => this.props.closeModal()}
+            >
+              {result.name}
+            </Link>
           </li>
         );
       });
@@ -87,11 +99,20 @@ class SearchModal extends Component {
               className="search-input"
             />
           </div>
-          <div className="results-container">
-            <p>{input}</p>
-            <p>{results.length} RESULT</p>
+          <div className="apparel-type-container">
+            <p>Sneakers</p>
           </div>
-          <ul className="search-results-container">{results}</ul>
+          {input.length < 1 ? (
+            this.popularSearch()
+          ) : (
+            <Fragment>
+              <div className="results-container">
+                <p>{input}</p>
+                <p>{results.length} RESULT</p>
+              </div>
+              <ul className="search-results-container">{results}</ul>
+            </Fragment>
+          )}
         </div>
       </div>
     );

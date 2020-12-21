@@ -10,6 +10,7 @@ const sneakersReducer = (oldState = {}, action) => {
     case RECEIEVE_ALL_SNEAKERS:
       return action.sneakers;
     case RECEIVE_SNEAKER:
+      console.log("Sneaker id: ", action.sneaker.id);
       return Object.assign({}, oldState, {
         [action.sneaker.id]: action.sneaker,
       });

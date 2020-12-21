@@ -31,12 +31,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   ReactDOM.render(<Root store={store} />, root);
 });
-
-/**
- *     test app
- *  window.store = store;
-    window.getState = store.getState;
-    window.dispatch = store.dispatch; 
-
-    window.login = login; 
- */

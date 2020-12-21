@@ -1,0 +1,122 @@
+.BigHeroContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.HeroContainer {
+  display: flex;
+  justify-content: center;
+  height: calc(-180px + 100vh);
+  max-height: 800px;
+  min-height: 500px;
+  width: 90.5%;
+}
+
+.HeroPane-shoe {
+  border: 1px solid rgb(222, 222, 222);
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.HeroPane-form-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid rgb(222, 222, 222);
+  width: 50%;
+}
+
+.HeroPane-header-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 25%;
+}
+
+.HeroPane-header-container h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.HeroPane-header {
+  width: 87%;
+  padding-top: 15px;
+  text-align: center;
+}
+
+.HeroPane-form {
+  display: flex;
+  flex-direction: column;
+  height: 55%;
+  margin-top: auto;
+}
+
+.HeroPane-login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  padding: 30px;
+}
+
+.HeroPane-session-errors {
+  list-style-type: none;
+  color: red;
+  font-size: 10px;
+}
+
+.login-labels {
+  padding-bottom: 12px;
+  padding-top: 10px;
+}
+
+.login-input {
+  border: none;
+  font-size: 14px;
+  line-height: 17px;
+  border-bottom: 1px solid rgb(222, 222, 222);
+  filter: none;
+}
+
+.btns-container {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.btn-signup {
+  width: 100%;
+  border: none;
+  background: none;
+  font-size: 14px;
+  color: white;
+  padding: 10px 0;
+  background-color: black;
+  cursor: pointer;
+}
+
+.btn-login {
+  width: 50%;
+  border: none;
+  background: none;
+  font-size: 14px;
+  color: white;
+  padding: 10px 0;
+  background-color: black;
+  cursor: pointer;
+}
+
+.btn-demo {
+  width: 50%;
+  border: none;
+  background: none;
+  font-size: 14px;
+  color: white;
+  padding: 10px 0;
+  background-color: black;
+  cursor: pointer;
+  border-left: 1px solid white;
+}
