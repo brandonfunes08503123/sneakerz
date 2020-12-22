@@ -5,16 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-<<<<<<< HEAD:db/seeds.rb
 
-Dir[Rails.root.join('db/seeds/*.rb')].sort.each do |file|
-    puts "Processing #{file.split('/').last}"
-    require file
-=======
-require "open-uri"
+
 
 Dir[Rails.root.join('db/seeds/*.rb')].sort.each do |file|
 puts "Processing #{file.split('/').last}"
 require file
->>>>>>> search_products:Sneakerz/db/seeds.rb
 end

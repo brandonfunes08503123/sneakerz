@@ -1,10 +1,9 @@
-<<<<<<< HEAD
+
 # Ignore bundler config.
 /.bundle
 # Ignore all logfiles and tempfiles.
 
-=======
->>>>>>> search_products
+
 /log/*
 /tmp/*
 !/log/.keep
