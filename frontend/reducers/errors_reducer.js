@@ -8,6 +8,9 @@ import sessionErrorsReducer from "./session_errors_reducer";
 =======
 import { combineReducers } from 'redux';
 import sessionErrorsReducer from './sessions_errors_reducer';
+<<<<<<< HEAD
+>>>>>>> 7296f746f9e9d1371f7b3a12bbc1e54886645aa5
+=======
 >>>>>>> 7296f746f9e9d1371f7b3a12bbc1e54886645aa5
 
 const errorsReducer = combineReducers({
