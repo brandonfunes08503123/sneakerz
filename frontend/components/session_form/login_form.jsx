@@ -45,8 +45,8 @@ class LoginForm extends Component {
 
   demoUser() {
     this.setState({
-      email: "demo@demouser.com",
-      password: "demo1234",
+      email: "demo@example.com",
+      password: "password",
     });
   }
 
