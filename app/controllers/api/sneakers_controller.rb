@@ -2,7 +2,7 @@ class Api::SneakersController < ApplicationController
 
     def index
         @sneakers = Sneaker.all
-
+        
         render :index
     end
 

@@ -7,7 +7,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  closeModal: () => dispatch(closeSearchModal()),
+  closeSearchModal: () => dispatch(closeSearchModal()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchModal);

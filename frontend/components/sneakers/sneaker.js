@@ -35,4 +35,3 @@ class Sneaker extends Component {
 }
 
 export default Sneaker;
-//   <div>HELLO THIS IS IT {this.props.sneaker.name}</div>

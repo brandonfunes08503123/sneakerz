@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
+import { IoSearchOutline } from "react-icons/io5";
 
 class SearchModal extends Component {
   constructor(props) {
@@ -15,7 +16,6 @@ class SearchModal extends Component {
 
   handleInputChange(e) {
     let { name, value } = e.target;
-
     this.setState({
       [name]: value,
     });
@@ -67,6 +67,7 @@ class SearchModal extends Component {
 
   render() {
     let { input } = this.state;
+    let { closeModal } = this.props;
     let results;
 
     if (this.matches() === "") {
@@ -77,7 +78,7 @@ class SearchModal extends Component {
           <li className="search-results" key={i}>
             <Link
               to={`sneakers/${result.sku}`}
-              onClick={() => this.props.closeModal()}
+              onClick={() => closeSearchModal()}
             >
               {result.name}
             </Link>
@@ -90,6 +91,12 @@ class SearchModal extends Component {
       <div className="search-modal-container">
         <div className="search-modal-input">
           <div className="search-modal-input-wrapper">
+            <button
+              className="nav-item nav-icon"
+              onClick={() => closeSearchModal()}
+            >
+              <IoSearchOutline size={24} />
+            </button>
             <input
               type="text"
               name="input"
