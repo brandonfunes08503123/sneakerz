@@ -18,23 +18,23 @@ jubilee = Sneaker.create(
     category_id: lifestyle.id
 )
 
-jubilee_sm_checkout = open('https://sneakerz-seeds.s3-us-west-1.amazonaws.com/Jordans/11s/Jubilee/Jubilee_SM_Checkout.jpg')
-jubilee_lrg_checkout = open('https://sneakerz-seeds.s3-us-west-1.amazonaws.com/Jordans/11s/Jubilee/Jubilee_LRG_Checkout.jpg')
+jubilee_mac_profile= open('https://sneakerz-seeds.s3-us-west-1.amazonaws.com/Jordans/11s/Jubilee/Jubilee_SM_Checkout.jpg')
+jubilee_profile = open('https://sneakerz-seeds.s3-us-west-1.amazonaws.com/Jordans/11s/Jubilee/Jubilee_LRG_Checkout.jpg')
 jubilee_sm_splash = open('https://sneakerz-seeds.s3-us-west-1.amazonaws.com/Jordans/11s/Jubilee/Jubilee-sm.jpg')
 
 jubilee.photos.attach(
-    io: jubilee_sm_checkout,
-    filename: 'jubilee_sm_checkout.png'
+    io: jubilee_mac_profile,
+    filename: 'jubilee_mac_size.jpg'
 )
 
 jubilee.photos.attach(
-    io: jubilee_lrg_checkout,
-    filename: 'jubilee_lrg_checkout.png'
+    io: jubilee_profile,
+    filename: 'jubilee_profile.jpg'
 )
 
 jubilee.photos.attach(
     io: jubilee_sm_splash,
-    filename: 'jubilee_sm_splash.png'
+    filename: 'jubilee_sm_splash.jpg'
 )
 
 kaws4 = Sneaker.create(
@@ -46,4 +46,17 @@ kaws4 = Sneaker.create(
     price: 2310,
     designer_id: tinker.id,
     category_id: lifestyle.id
+)
+
+kaws4_mac_sz = open('https://sneakerz-seeds.s3-us-west-1.amazonaws.com/Jordans/4s/KAWS_Cool_Grey/Kaws_4s_Mac_Sz.jpg')
+kaws4_profile = open('https://sneakerz-seeds.s3-us-west-1.amazonaws.com/Jordans/4s/KAWS_Cool_Grey/Kaws_4s_profile.jpg')
+
+kaws4.photos.attach(
+    io: kaws4_mac_sz,
+    filename: 'kaws_mac_sz.jpg'
+)
+
+kaws4.photos.attach(
+    io: kaws4_profile,
+    filename: 'kaws_profile.jpg'
 )

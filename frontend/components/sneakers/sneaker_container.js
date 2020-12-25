@@ -5,17 +5,15 @@
 import { connect } from "react-redux";
 import Sneaker from "./sneaker";
 
-// ownProps destructured
-
 const mapStateToProps = (state, { match }) => {
-  let shoe = Object.values(state.entities.sneakers).map((shoe) => {
+  let shoes = [];
+  Object.values(state.entities.sneakers).map((shoe) => {
     if (shoe.sku === match.params.skuId) {
-      return shoe;
-    } else {
-      return {};
+      shoes.push(shoe);
     }
   });
-  let sneaker = shoe[0];
+
+  let sneaker = shoes[0];
   return {
     sneaker,
   };

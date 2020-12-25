@@ -12,6 +12,7 @@ class SearchModal extends Component {
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.popularSearch = this.popularSearch.bind(this);
+    this.noMatches = this.noMatches.bind(this);
   }
 
   handleInputChange(e) {
@@ -19,6 +20,20 @@ class SearchModal extends Component {
     this.setState({
       [name]: value,
     });
+  }
+
+  noMatches() {
+    return (
+      <Fragment>
+        <div className="results-container">
+          <p className="results-container-input">{this.state.input}</p>
+          <p className="results-container-length">0 RESULTS</p>
+        </div>
+        <div className="trending-container">
+          <h3>NO RESULTS FOUND</h3>
+        </div>
+      </Fragment>
+    );
   }
 
   matches() {
@@ -30,14 +45,19 @@ class SearchModal extends Component {
     }
 
     Object.values(allSneakers).forEach((sneaker) => {
-      const subStr = sneaker.name.slice(0, input.length);
-      if (subStr.toLowerCase() === input.toLowerCase()) {
+      // const subStr = sneaker.name.slice(0, input.length);
+      // if (subStr.toLowerCase() === input.toLowerCase()) {
+      //   console.log("HERE");
+      //   matches.push(sneaker);
+      // }
+
+      if (sneaker.name.toLowerCase().includes(input.toLowerCase())) {
         matches.push(sneaker);
       }
     });
 
     if (matches.length === 0) {
-      matches.push("No matches");
+      return "No matches";
     }
 
     return matches;
@@ -67,10 +87,10 @@ class SearchModal extends Component {
 
   render() {
     let { input } = this.state;
-    let { closeModal } = this.props;
+    let { closeSearchModal } = this.props;
     let results;
 
-    if (this.matches() === "") {
+    if (this.matches() === "No matches" || this.matches() == "") {
       results = "";
     } else {
       results = this.matches().map((result, i) => {
@@ -79,9 +99,11 @@ class SearchModal extends Component {
             <Link
               to={`sneakers/${result.sku}`}
               onClick={() => closeSearchModal()}
+              className="results-link"
             >
               {result.name}
             </Link>
+            <IoIosArrowForward size={16} className="results-icon" />
           </li>
         );
       });
@@ -91,12 +113,13 @@ class SearchModal extends Component {
       <div className="search-modal-container">
         <div className="search-modal-input">
           <div className="search-modal-input-wrapper">
-            <button
+            <Link
+              to={`/search?query=${input}`}
               className="nav-item nav-icon"
               onClick={() => closeSearchModal()}
             >
               <IoSearchOutline size={24} />
-            </button>
+            </Link>
             <input
               type="text"
               name="input"
@@ -113,11 +136,22 @@ class SearchModal extends Component {
             this.popularSearch()
           ) : (
             <Fragment>
-              <div className="results-container">
-                <p>{input}</p>
-                <p>{results.length} RESULT</p>
-              </div>
-              <ul className="search-results-container">{results}</ul>
+              {results.length < 1 ? (
+                this.noMatches()
+              ) : (
+                <Fragment>
+                  <div className="results-container">
+                    <p className="results-container-input">{input}</p>
+                    <p className="results-container-length">
+                      {results.length} RESULT
+                    </p>
+                  </div>
+                  <div className="trending-container">
+                    <h3>Trending</h3>
+                  </div>
+                  <ul className="search-results-container">{results}</ul>
+                </Fragment>
+              )}
             </Fragment>
           )}
         </div>
@@ -127,3 +161,11 @@ class SearchModal extends Component {
 }
 
 export default SearchModal;
+
+//
+
+// {results === "No matches" ? (
+//               this.noMatches()
+//             ) : (
+
+//              )}

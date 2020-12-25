@@ -8,6 +8,7 @@ import ModalContainer from "./modal/modal_container";
 import NavbarContainer from "./navbar/navbar_container";
 import SneakerContainer from "./sneakers/sneaker_container";
 import SneakersContainer from "./sneakers/sneakers_container";
+import SearchItemsContainer from "./search_items/search_items_container"
 
 /**
  * Need to think about checkout
@@ -22,6 +23,7 @@ const App = () => (
     <Switch>
       <AuthRoute path="/login" component={LoginFormContainer} />
       <AuthRoute path="/signup" component={SignupFormContainer} />
+      <Route path="/search" component={SearchItemsContainer} />
       <Route path={`/sneakers/:skuId`} component={SneakerContainer} />
       <Route path="/sneakers" component={SneakersContainer} />
       <Route path="/" component={SplashContainer} />
