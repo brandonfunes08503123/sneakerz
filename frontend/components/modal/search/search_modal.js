@@ -45,12 +45,6 @@ class SearchModal extends Component {
     }
 
     Object.values(allSneakers).forEach((sneaker) => {
-      // const subStr = sneaker.name.slice(0, input.length);
-      // if (subStr.toLowerCase() === input.toLowerCase()) {
-      //   console.log("HERE");
-      //   matches.push(sneaker);
-      // }
-
       if (sneaker.name.toLowerCase().includes(input.toLowerCase())) {
         matches.push(sneaker);
       }
@@ -161,11 +155,3 @@ class SearchModal extends Component {
 }
 
 export default SearchModal;
-
-//
-
-// {results === "No matches" ? (
-//               this.noMatches()
-//             ) : (
-
-//              )}
