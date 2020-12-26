@@ -95,9 +95,11 @@ class SearchModal extends Component {
               onClick={() => closeSearchModal()}
               className="results-link"
             >
-              {result.name}
+              <div className="results-item-container">
+                {result.name}
+                <IoIosArrowForward size={16} className="results-icon" />
+              </div>
             </Link>
-            <IoIosArrowForward size={16} className="results-icon" />
           </li>
         );
       });
