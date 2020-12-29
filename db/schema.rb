@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_18_163110) do
+ActiveRecord::Schema.define(version: 2020_12_29_032721) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,10 +37,10 @@ ActiveRecord::Schema.define(version: 2020_12_18_163110) do
   end
 
   create_table "categories", force: :cascade do |t|
-    t.string "category_name", null: false
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["category_name"], name: "index_categories_on_category_name", unique: true
+    t.index ["name"], name: "index_categories_on_name", unique: true
   end
 
   create_table "designers", force: :cascade do |t|
@@ -50,28 +50,29 @@ ActiveRecord::Schema.define(version: 2020_12_18_163110) do
     t.index ["name"], name: "index_designers_on_name", unique: true
   end
 
+  create_table "inventories", force: :cascade do |t|
+    t.integer "sneaker_id", null: false
+    t.integer "quantity", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["quantity"], name: "index_inventories_on_quantity"
+  end
+
   create_table "sneakers", force: :cascade do |t|
     t.string "brand", null: false
     t.string "name", null: false
+    t.string "nickname", null: false
     t.text "description", null: false
     t.string "date", null: false
     t.string "sku", null: false
     t.integer "price", null: false
-    t.integer "designer_id", null: false
     t.integer "category_id", null: false
+    t.integer "designer_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["brand"], name: "index_sneakers_on_brand"
     t.index ["designer_id"], name: "index_sneakers_on_designer_id"
     t.index ["name"], name: "index_sneakers_on_name", unique: true
-  end
-
-  create_table "stocks", force: :cascade do |t|
-    t.integer "sneakers_id", null: false
-    t.integer "quantity", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["quantity"], name: "index_stocks_on_quantity"
   end
 
   create_table "users", force: :cascade do |t|

@@ -21,9 +21,9 @@ class Sneaker extends Component {
             </div>
             <form onSubmit={this.handleSubmit} className="HeroPane-form">
               <div className="btns-container">
-                <button className="btn-login">Login</button>
+                <button className="btn-login">Buy New</button>
                 <button className="btn-demo" onClick={() => this.demoUser()}>
-                  Demo User
+                  Buy Used
                 </button>
               </div>
             </form>

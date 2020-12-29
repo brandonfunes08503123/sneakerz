@@ -1,1 +1,1 @@
-json.extract! sneaker, :brand, :name, :description, :date, :sku, :price, :designer_id, :category_id
+json.extract! sneaker, :brand, :name, :nickname, :description, :date, :sku, :price, :designer_id, :category_id
