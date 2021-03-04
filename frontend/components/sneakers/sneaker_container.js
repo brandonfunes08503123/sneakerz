@@ -16,6 +16,7 @@ const mapStateToProps = (state, { match }) => {
   let sneaker = shoes[0];
   return {
     sneaker,
+    isAuthenticated: state.session.null,
   };
 };
 
