@@ -9,9 +9,9 @@ class Splash extends Component {
   constructor(props) {
     super(props);
   }
-  componentDidMount() {
-    this.props.getAllSneakers();
-  }
+  // componentDidMount() {
+  //   this.props.getAllSneakers();
+  // }
 
   render() {
     return (

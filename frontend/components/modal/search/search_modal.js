@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoSearchOutline } from "react-icons/io5";
+import _ from "lodash";
 
 class SearchModal extends Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class SearchModal extends Component {
     this.handleInputChange = this.handleInputChange.bind(this);
     this.popularSearch = this.popularSearch.bind(this);
     this.noMatches = this.noMatches.bind(this);
+    this.searchedValue = _.debounce(this.searchedValue, 400);
   }
 
   handleInputChange(e) {
@@ -20,6 +22,13 @@ class SearchModal extends Component {
     this.setState({
       [name]: value,
     });
+
+    this.searchedValue(value);
+  }
+
+  searchedValue(value) {
+    console.log("this is the value: ", value);
+    this.props.searchValue(value);
   }
 
   noMatches() {
@@ -36,26 +45,26 @@ class SearchModal extends Component {
     );
   }
 
-  matches() {
-    let { input } = this.state;
-    let { allSneakers } = this.props;
-    const matches = [];
-    if (input.length === 0) {
-      return "";
-    }
+  // matches() {
+  //   let { input } = this.state;
+  //   let { allSneakers } = this.props;
+  //   const matches = [];
+  //   if (input.length === 0) {
+  //     return "";
+  //   }
 
-    Object.values(allSneakers).forEach((sneaker) => {
-      if (sneaker.name.toLowerCase().includes(input.toLowerCase())) {
-        matches.push(sneaker);
-      }
-    });
+  //   Object.values(allSneakers).forEach((sneaker) => {
+  //     if (sneaker.name.toLowerCase().includes(input.toLowerCase())) {
+  //       matches.push(sneaker);
+  //     }
+  //   });
 
-    if (matches.length === 0) {
-      return "No matches";
-    }
+  //   if (matches.length === 0) {
+  //     return "No matches";
+  //   }
 
-    return matches;
-  }
+  //   return matches;
+  // }
 
   popularSearch() {
     return (
@@ -81,29 +90,29 @@ class SearchModal extends Component {
 
   render() {
     let { input } = this.state;
-    let { closeSearchModal } = this.props;
+    let { closeSearchModal, searchResults } = this.props;
     let results;
 
-    if (this.matches() === "No matches" || this.matches() == "") {
-      results = "";
-    } else {
-      results = this.matches().map((result, i) => {
-        return (
-          <li className="search-results" key={i}>
-            <Link
-              to={`sneakers/${result.sku}`}
-              onClick={() => closeSearchModal()}
-              className="results-link"
-            >
-              <div className="results-item-container">
-                {result.name}
-                <IoIosArrowForward size={16} className="results-icon" />
-              </div>
-            </Link>
-          </li>
-        );
-      });
-    }
+    // if (this.matches() === "No matches" || this.matches() == "") {
+    //   results = "";
+    // } else {
+    //   results = this.matches().map((result, i) => {
+    //     return (
+    //       <li className="search-results" key={i}>
+    //         <Link
+    //           to={`sneakers/${result.sku}`}
+    //           onClick={() => closeSearchModal()}
+    //           className="results-link"
+    //         >
+    //           <div className="results-item-container">
+    //             {result.name}
+    //             <IoIosArrowForward size={16} className="results-icon" />
+    //           </div>
+    //         </Link>
+    //       </li>
+    //     );
+    //   });
+    // }
 
     return (
       <div className="search-modal-container">
@@ -121,7 +130,7 @@ class SearchModal extends Component {
               name="input"
               value={input}
               onChange={this.handleInputChange}
-              placeholder="TYPE TO SEARCH "
+              placeholder="TYPE TO SEARCH"
               className="search-input"
             />
           </div>
@@ -132,7 +141,7 @@ class SearchModal extends Component {
             this.popularSearch()
           ) : (
             <Fragment>
-              {results.length < 1 ? (
+              {searchResults[0] === "No results found" ? (
                 this.noMatches()
               ) : (
                 <Fragment>

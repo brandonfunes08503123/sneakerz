@@ -9,9 +9,8 @@ class Api::SneakersController < ApplicationController
 
     #
     def show
-        @sneaker = Sneaker.find_by(id: params[:id])
-
+        @sneaker = Sneaker.find_by(sku: params[:id])
+        # @inventory = Inventories.find_by(sneakers_id: {id: })
         render :show
     end
-
 end
