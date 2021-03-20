@@ -1,7 +1,10 @@
-.BigHeroContainer {
+.ProductContainer {
   display: flex;
   justify-content: center;
   width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .HeroContainer {
@@ -22,7 +25,7 @@
   overflow: hidden;
 }
 
-.HeroPane-form-container {
+.ProductPane-form-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -30,14 +33,14 @@
   width: 50%;
 }
 
-.HeroPane-header-container {
+.ProductPane-header-container {
   display: flex;
   align-items: center;
   flex-direction: column;
   margin-top: 25%;
 }
 
-.HeroPane-header {
+.ProductPane-header {
   width: 87%;
   padding-top: 15px;
   text-align: center;
@@ -129,4 +132,33 @@
   letter-spacing: 1.5px;
   color: rgb(129, 129, 129);
   margin-top: 23px;
+}
+
+.ProductDetails {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px 40px;
+}
+
+.ProductDetails_Title {
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.83;
+  margin-bottom: 31px;
+}
+
+.ProductDetails_Desc {
+  color: rgb(11, 11, 11);
+  position: relative;
+  width: 100%;
+  line-height: 1.5;
+  overflow: hidden;
+  text-align: center;
+  font-size: 18px;
+}
+
+.Divider_Dash {
+  height: 1px;
+  width: calc(100% - 180px);
+  background-color: rgb(222, 222, 222);
 }
