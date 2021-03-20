@@ -99,7 +99,7 @@ class SearchModal extends Component {
           <Link
             to={`sneakers/${result.sku}`}
             onClick={() => {
-              getSneaker(result.sku), closeSearchModal();
+              closeSearchModal();
             }}
             className="results-link"
           >

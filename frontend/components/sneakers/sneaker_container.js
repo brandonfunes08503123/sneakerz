@@ -3,6 +3,7 @@
  * the correct actions for the Sneaker component
  */
 import { connect } from "react-redux";
+import { getSneaker } from "../../actions/sneakers_actions";
 import Sneaker from "./sneaker";
 
 // const mapStateToProps = (state, { match }) => {
@@ -20,8 +21,12 @@ import Sneaker from "./sneaker";
 //   };
 // };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state, { match }) => ({
   sneaker: state.entities.sneaker,
 });
 
-export default connect(mapStateToProps)(Sneaker);
+const mapDispatchToProps = (dispatch, { match }) => ({
+  getSneaker: () => dispatch(getSneaker(match.params.skuId)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Sneaker);

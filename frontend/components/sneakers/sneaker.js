@@ -5,30 +5,39 @@
 import React, { Component } from "react";
 
 class Sneaker extends Component {
+  componentDidMount() {
+    console.log("These are the props: ", this.props);
+    this.props.getSneaker();
+  }
   render() {
     let { sneaker } = this.props;
     return (
       <div className="BigHeroContainer">
-        <div className="HeroContainer">
-          <div className="HeroPane-shoe">
-            <img src={sneaker.photoUrls[1]} alt={`${sneaker.name}`}></img>
-          </div>
-          <div className="HeroPane-form-container">
-            <div className="HeroPane-header-container">
-              <header className="HeroPane-header">
-                <h1>{sneaker.name}</h1>
-              </header>
+        {sneaker.length < 1 ? (
+          " "
+        ) : (
+          <div className="HeroContainer">
+            <div className="HeroPane-shoe">
+              <img src={sneaker.photoUrls[1]} alt={`${sneaker.name}`}></img>
             </div>
-            <form onSubmit={this.handleSubmit} className="HeroPane-form">
-              <div className="btns-container">
-                <button className="btn-login" onClick={() => <Listing />}>
-                  Buy New
-                </button>
-                <button className="btn-demo">Buy Used</button>
+            <div className="HeroPane-form-container">
+              <div className="HeroPane-header-container">
+                <header className="HeroPane-header">
+                  <h1 className="ProductTitle">{sneaker.name}</h1>
+                </header>
+                <p className="ProductTitle_Sku">SKU: {sneaker.sku}</p>
               </div>
-            </form>
+              <form onSubmit={this.handleSubmit} className="HeroPane-form">
+                <div className="btns-container">
+                  <button className="btn-login" onClick={() => <Listing />}>
+                    Buy New
+                  </button>
+                  <button className="btn-demo">Buy Used</button>
+                </div>
+              </form>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     );
   }
