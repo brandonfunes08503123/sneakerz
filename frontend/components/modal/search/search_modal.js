@@ -90,29 +90,27 @@ class SearchModal extends Component {
 
   render() {
     let { input } = this.state;
-    let { closeSearchModal, searchResults } = this.props;
+    let { closeSearchModal, searchResults, getSneaker } = this.props;
     let results;
 
-    // if (this.matches() === "No matches" || this.matches() == "") {
-    //   results = "";
-    // } else {
-    //   results = this.matches().map((result, i) => {
-    //     return (
-    //       <li className="search-results" key={i}>
-    //         <Link
-    //           to={`sneakers/${result.sku}`}
-    //           onClick={() => closeSearchModal()}
-    //           className="results-link"
-    //         >
-    //           <div className="results-item-container">
-    //             {result.name}
-    //             <IoIosArrowForward size={16} className="results-icon" />
-    //           </div>
-    //         </Link>
-    //       </li>
-    //     );
-    //   });
-    // }
+    results = searchResults.map((result, i) => {
+      return (
+        <li className="search-results" key={i}>
+          <Link
+            to={`sneakers/${result.sku}`}
+            onClick={() => {
+              getSneaker(result.sku), closeSearchModal();
+            }}
+            className="results-link"
+          >
+            <div className="results-item-container">
+              {result.name}
+              <IoIosArrowForward size={16} className="results-icon" />
+            </div>
+          </Link>
+        </li>
+      );
+    });
 
     return (
       <div className="search-modal-container">
@@ -141,14 +139,14 @@ class SearchModal extends Component {
             this.popularSearch()
           ) : (
             <Fragment>
-              {searchResults[0] === "No results found" ? (
+              {typeof searchResults[0] === "string" ? (
                 this.noMatches()
               ) : (
                 <Fragment>
                   <div className="results-container">
                     <p className="results-container-input">{input}</p>
                     <p className="results-container-length">
-                      {results.length} RESULT
+                      {searchResults.length} RESULT
                     </p>
                   </div>
                   <div className="trending-container">

@@ -1,8 +1,7 @@
 class Api::SneakersController < ApplicationController
 
     def index
-        @sneakers = Sneaker.all
-        
+        @sneakers = Sneaker.all       
         render :index
     end
 
@@ -10,7 +9,7 @@ class Api::SneakersController < ApplicationController
     #
     def show
         @sneaker = Sneaker.find_by(sku: params[:id])
-        # @inventory = Inventories.find_by(sneakers_id: {id: })
+        @inventory = Inventory.where(sneaker_id: @sneaker.id)
         render :show
     end
 end

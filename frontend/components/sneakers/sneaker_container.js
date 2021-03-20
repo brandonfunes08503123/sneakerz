@@ -5,19 +5,23 @@
 import { connect } from "react-redux";
 import Sneaker from "./sneaker";
 
-const mapStateToProps = (state, { match }) => {
-  let shoes = [];
-  Object.values(state.entities.sneakers).map((shoe) => {
-    if (shoe.sku === match.params.skuId) {
-      shoes.push(shoe);
-    }
-  });
+// const mapStateToProps = (state, { match }) => {
+//   let shoes = [];
+//   Object.values(state.entities.sneakers).map((shoe) => {
+//     if (shoe.sku === match.params.skuId) {
+//       shoes.push(shoe);
+//     }
+//   });
 
-  let sneaker = shoes[0];
-  return {
-    sneaker,
-    isAuthenticated: state.session.null,
-  };
-};
+//   let sneaker = shoes[0];
+//   return {
+//     sneaker,
+//     isAuthenticated: state.session.null,
+//   };
+// };
+
+const mapStateToProps = (state) => ({
+  sneaker: state.entities.sneaker,
+});
 
 export default connect(mapStateToProps)(Sneaker);

@@ -19,8 +19,11 @@ export const getAllSneakers = () => (dispatch) => {
   );
 };
 
-export const getSneaker = (shoe) => (dispatch) => {
-  return APIUtil.getShoe(shoe).then((sneaker) =>
+// need to add a route for the different collections
+//
+
+export const getSneaker = (skuID) => (dispatch) => {
+  return APIUtil.getShoe(skuID).then((sneaker) =>
     dispatch(collectSneaker(sneaker))
   );
 };
