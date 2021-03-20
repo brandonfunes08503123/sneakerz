@@ -6,9 +6,12 @@
 import React, { Component } from "react";
 
 class Splash extends Component {
-  componentDidMount() {
-    this.props.getAllSneakers();
+  constructor(props) {
+    super(props);
   }
+  // componentDidMount() {
+  //   this.props.getAllSneakers();
+  // }
 
   render() {
     return (

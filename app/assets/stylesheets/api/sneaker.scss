@@ -37,11 +37,6 @@
   margin-top: 25%;
 }
 
-.HeroPane-header-container h1 {
-  font-size: 20px;
-  font-weight: bold;
-}
-
 .HeroPane-header {
   width: 87%;
   padding-top: 15px;
@@ -119,4 +114,19 @@
   background-color: black;
   cursor: pointer;
   border-left: 1px solid white;
+}
+
+.ProductTitle {
+  font-size: 32px;
+  padding: 0px 0px 5px;
+  text-align: center;
+  margin: 0px;
+}
+
+.ProductTitle_Sku {
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  color: rgb(129, 129, 129);
+  margin-top: 23px;
 }

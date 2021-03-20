@@ -3,20 +3,30 @@
  * the correct actions for the Sneaker component
  */
 import { connect } from "react-redux";
+import { getSneaker } from "../../actions/sneakers_actions";
 import Sneaker from "./sneaker";
 
-const mapStateToProps = (state, { match }) => {
-  let shoes = [];
-  Object.values(state.entities.sneakers).map((shoe) => {
-    if (shoe.sku === match.params.skuId) {
-      shoes.push(shoe);
-    }
-  });
+// const mapStateToProps = (state, { match }) => {
+//   let shoes = [];
+//   Object.values(state.entities.sneakers).map((shoe) => {
+//     if (shoe.sku === match.params.skuId) {
+//       shoes.push(shoe);
+//     }
+//   });
 
-  let sneaker = shoes[0];
-  return {
-    sneaker,
-  };
-};
+//   let sneaker = shoes[0];
+//   return {
+//     sneaker,
+//     isAuthenticated: state.session.null,
+//   };
+// };
 
-export default connect(mapStateToProps)(Sneaker);
+const mapStateToProps = (state, { match }) => ({
+  sneaker: state.entities.sneaker,
+});
+
+const mapDispatchToProps = (dispatch, { match }) => ({
+  getSneaker: () => dispatch(getSneaker(match.params.skuId)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Sneaker);

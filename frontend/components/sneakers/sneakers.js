@@ -3,10 +3,10 @@
  */
 import React, { Component } from "react";
 
-class Sneaker extends Component {
+class Sneakers extends Component {
   render() {
     return <div>im here</div>;
   }
 }
 
-export default Sneaker;
+export default Sneakers;

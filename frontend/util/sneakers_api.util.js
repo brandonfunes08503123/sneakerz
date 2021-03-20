@@ -5,7 +5,7 @@ export const getAllShoes = () =>
     url: "/api/sneakers",
   });
 
-export const getShoe = (sneakerId) =>
+export const getShoe = (skuId) =>
   $.ajax({
-    url: `/api/sneakers/${sneakerId}`,
+    url: `/api/sneakers/${skuId}`,
   });

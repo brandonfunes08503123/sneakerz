@@ -3,6 +3,7 @@ require "open-uri"
 Sneaker.destroy_all
 Designer.destroy_all
 Category.destroy_all
+# Inventory.destroy_all
 
 tinker = Designer.create(name: "Tinker Hatfield")
 lifestyle = Category.create(name: "Lifestyle")
@@ -45,7 +46,7 @@ kaws4 = Sneaker.create(
     description: "The KAWS x Air Jordan 4 Retro is a collaboration between the Jordan Brand and Brooklyn-based street artist KAWS, a.k.a. Brian Donnelly. The design removes the silhouette’s traditional plastic accents and dresses the entire upper and midsole in a premium grey suede upper. The sneaker also features KAWS’ ‘XX’ branding on the heel tab. The shoes were released alongside a small capsule collection that included a coaches jacket, hoodie, t-shirt, and hat in March of 2017. The hype was so intense for this release that the in-store raffle at Patta in London was read the riot act by the police and sneakerheads hacked into Donnelly’s website for a chance at the drop.",
     date: "2017-03-31",
     sku: "930155 003",
-    price: 2310,
+    price: 231,
     designer_id: tinker.id,
     category_id: lifestyle.id
 )
@@ -62,3 +63,29 @@ kaws4.photos.attach(
     io: kaws4_profile,
     filename: 'kaws_profile.jpg'
 )
+
+
+# creating the Inventory
+# sneakers = Sneaker.all
+# sizes = []
+# prices = []
+
+# (4..12).step(0.5) do |n|
+#     sizes << n
+# end
+
+# sizes.each do |size|
+#     if(size < 8)
+#         prices << rand(150..220)
+#     else
+#         prices << rand(220..500)
+#     end
+# end 
+
+# sneakers.each do |sneaker|
+#     Inventory.create(
+#         id: sneaker.id,
+#         size: sizes,
+#         price: prices
+#     )
+# end
