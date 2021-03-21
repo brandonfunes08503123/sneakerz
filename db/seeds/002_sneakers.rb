@@ -34,6 +34,16 @@ nostalgia_sbs = [
     },
     {
         brand: "Nike",
+        nickname: "Raygun",
+        name: "Dunk Low Pro SB 'Raygun'",
+        description: "When Nike SB first unveiled the ‘Raygun’ edition of the Dunk Low Pro SB in 2005, the shoe was part of a two-pack collection of black and white renditions. The shoe takes inspiration from Nike’s fictional ABA team known as the Roswell Rayguns. The colorway is based on the team’s home uniforms, with the Raygun team logo appearing on the heel.",
+        date: "2005-02-01",
+        sku: "304292 803",
+        designer_id: peterMoore.id,
+        category_id: skateboard.id
+    },
+    {
+        brand: "Nike",
         nickname: "Tiffany",
         name: "Diamond Supply Co. x Dunk Low Pro SB 'Tiffany'",
         description: "Releasing in August 2005 as part of the Team Manager series, the Diamond Supply Co. x Dunk Low Pro SB ‘Tiffany’ drew long lines and campouts at skate shops throughout the country. The leather upper is finished in Aqua and accented with a metallic silver Swoosh. The black leather overlays feature a crocodile-embossed texture and contrast white stitching.",
@@ -162,59 +172,72 @@ nostalgia_sbs = [
         designer_id: peterMoore.id,
         category_id: skateboard.id
     }
-
 ]
 
-jubilee = Sneaker.create(
-    brand: "Air Jordan",
-    nickname: "Jubilee",
-    name: "Air Jordan 11 Retro 'Jubilee / 25th Anniversary'",
-    description: "The Air Jordan 11 ‘Jubilee’, also known as the Air Jordan 11 '25th Anniversary', celebrates the classic silhouette’s quarter-century birthday with a monochrome black finish throughout the upper, constructed from a traditional blend of ballistic mesh and patent leather. In keeping with the shoe’s silver anniversary, a 3D metallic Jumpman and matching ‘23’ branding decorate the heel, while ‘Jordan’ is spelled out in stylized silver lettering on each of the sneaker’s eyelets. The mid-top rides on a classic white foam midsole, supported by a translucent rubber outsole.",
-    date: "2020-12-12",
-    sku: "CT8012 011",
-    designer_id: tinker.id,
-    category_id: lifestyle.id
-)
+nostalgia_sbs.each {|sneaker| Sneaker.create!(sneaker)}
 
-jubilee_mac_profile= open('https://sneakerz-seeds.s3-us-west-1.amazonaws.com/Jordans/11s/Jubilee/Jubilee_SM_Checkout.jpg')
-jubilee_profile = open('https://sneakerz-seeds.s3-us-west-1.amazonaws.com/Jordans/11s/Jubilee/Jubilee_LRG_Checkout.jpg')
-jubilee_sm_splash = open('https://sneakerz-seeds.s3-us-west-1.amazonaws.com/Jordans/11s/Jubilee/Jubilee-sm.jpg')
+Sneaker.each do |sneaker| 
+    sku = sneaker[:sku].split(" ").join("")
+    photo = open("https://sneakerz-seeds.s3-us-west-1.amazonaws.com/#{sku}.jpg")
+    sneaker.photo.attach(
+        io: photo,
+        filename: "#{sku}.jpg"
+    )
+end
 
-jubilee.photos.attach(
-    io: jubilee_mac_profile,
-    filename: 'jubilee_mac_size.jpg'
-)
 
-jubilee.photos.attach(
-    io: jubilee_profile,
-    filename: 'jubilee_profile.jpg'
-)
 
-jubilee.photos.attach(
-    io: jubilee_sm_splash,
-    filename: 'jubilee_sm_splash.jpg'
-)
 
-kaws4 = Sneaker.create(
-    brand: "Air Jordan",
-    name: "KAWS x Air Jordan 4 Retro Cool Grey",
-    nickname: "Cool Grey",
-    description: "The KAWS x Air Jordan 4 Retro is a collaboration between the Jordan Brand and Brooklyn-based street artist KAWS, a.k.a. Brian Donnelly. The design removes the silhouette’s traditional plastic accents and dresses the entire upper and midsole in a premium grey suede upper. The sneaker also features KAWS’ ‘XX’ branding on the heel tab. The shoes were released alongside a small capsule collection that included a coaches jacket, hoodie, t-shirt, and hat in March of 2017. The hype was so intense for this release that the in-store raffle at Patta in London was read the riot act by the police and sneakerheads hacked into Donnelly’s website for a chance at the drop.",
-    date: "2017-03-31",
-    sku: "930155 003",
-    designer_id: tinker.id,
-    category_id: lifestyle.id
-)
+# jubilee = Sneaker.create(
+#     brand: "Air Jordan",
+#     nickname: "Jubilee",
+#     name: "Air Jordan 11 Retro 'Jubilee / 25th Anniversary'",
+#     description: "The Air Jordan 11 ‘Jubilee’, also known as the Air Jordan 11 '25th Anniversary', celebrates the classic silhouette’s quarter-century birthday with a monochrome black finish throughout the upper, constructed from a traditional blend of ballistic mesh and patent leather. In keeping with the shoe’s silver anniversary, a 3D metallic Jumpman and matching ‘23’ branding decorate the heel, while ‘Jordan’ is spelled out in stylized silver lettering on each of the sneaker’s eyelets. The mid-top rides on a classic white foam midsole, supported by a translucent rubber outsole.",
+#     date: "2020-12-12",
+#     sku: "CT8012 011",
+#     designer_id: tinker.id,
+#     category_id: lifestyle.id
+# )
 
-kaws4_mac_sz = open('https://sneakerz-seeds.s3-us-west-1.amazonaws.com/Jordans/4s/KAWS_Cool_Grey/Kaws_4s_Mac_Sz.jpg')
-kaws4_profile = open('https://sneakerz-seeds.s3-us-west-1.amazonaws.com/Jordans/4s/KAWS_Cool_Grey/Kaws_4s_profile.jpg')
+# jubilee_mac_profile= open('https://sneakerz-seeds.s3-us-west-1.amazonaws.com/Jordans/11s/Jubilee/Jubilee_SM_Checkout.jpg')
+# jubilee_profile = open('https://sneakerz-seeds.s3-us-west-1.amazonaws.com/Jordans/11s/Jubilee/Jubilee_LRG_Checkout.jpg')
+# jubilee_sm_splash = open('https://sneakerz-seeds.s3-us-west-1.amazonaws.com/Jordans/11s/Jubilee/Jubilee-sm.jpg')
 
-kaws4.photos.attach(
-    io: kaws4_mac_sz,
-    filename: 'kaws_mac_sz.jpg'
-)
+# jubilee.photos.attach(
+#     io: jubilee_mac_profile,
+#     filename: 'jubilee_mac_size.jpg'
+# )
 
-kaws4.photos.attach(
-    io: kaws4_profile,
-    filename: 'kaws_profile.jpg'
-)
+# jubilee.photos.attach(
+#     io: jubilee_profile,
+#     filename: 'jubilee_profile.jpg'
+# )
+
+# jubilee.photos.attach(
+#     io: jubilee_sm_splash,
+#     filename: 'jubilee_sm_splash.jpg'
+# )
+
+# kaws4 = Sneaker.create(
+#     brand: "Air Jordan",
+#     name: "KAWS x Air Jordan 4 Retro Cool Grey",
+#     nickname: "Cool Grey",
+#     description: "The KAWS x Air Jordan 4 Retro is a collaboration between the Jordan Brand and Brooklyn-based street artist KAWS, a.k.a. Brian Donnelly. The design removes the silhouette’s traditional plastic accents and dresses the entire upper and midsole in a premium grey suede upper. The sneaker also features KAWS’ ‘XX’ branding on the heel tab. The shoes were released alongside a small capsule collection that included a coaches jacket, hoodie, t-shirt, and hat in March of 2017. The hype was so intense for this release that the in-store raffle at Patta in London was read the riot act by the police and sneakerheads hacked into Donnelly’s website for a chance at the drop.",
+#     date: "2017-03-31",
+#     sku: "930155 003",
+#     designer_id: tinker.id,
+#     category_id: lifestyle.id
+# )
+
+# kaws4_mac_sz = open('https://sneakerz-seeds.s3-us-west-1.amazonaws.com/Jordans/4s/KAWS_Cool_Grey/Kaws_4s_Mac_Sz.jpg')
+# kaws4_profile = open('https://sneakerz-seeds.s3-us-west-1.amazonaws.com/Jordans/4s/KAWS_Cool_Grey/Kaws_4s_profile.jpg')
+
+# kaws4.photos.attach(
+#     io: kaws4_mac_sz,
+#     filename: 'kaws_mac_sz.jpg'
+# )
+
+# kaws4.photos.attach(
+#     io: kaws4_profile,
+#     filename: 'kaws_profile.jpg'
+# )
