@@ -157,8 +157,8 @@ nostalgia_sbs = [
         nickname: "Twin Peaks",
         name: "Dunk High Premium SB 'Twin Peaks'",
         description: "The 1990s TV show Twin Peaks was a surreal addition to the airwaves back in the day, and the Nike SB Dunk High Premium ‘Twin Peaks’ pays homage to the series by utilizing features rarely seen in the silhouette. The upper trades off between suede and cracked leather, with bright green piping and an owl graphic sitting atop the Swoosh, and the insole also features TV graphics. This 2009 limited-edition shoe was only sold at select Nike SB outlets.",
-        date: "2006-12-01",
-        sku: "304292 311",
+        date: "2008-12-31",
+        sku: "313171 006",
         designer_id: peterMoore.id,
         category_id: skateboard.id
     }
