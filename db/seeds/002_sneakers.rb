@@ -256,7 +256,7 @@ nostalgia_sbs = [
 
 nostalgia_sbs.each {|sneaker| Sneaker.create!(sneaker)}
 
-Sneaker.each do |sneaker| 
+Sneaker.all.each do |sneaker| 
     sku = sneaker[:sku].split(" ").join("")
     photo = open("https://sneakerz-seeds.s3-us-west-1.amazonaws.com/#{sku}.jpg")
     sneaker.photo.attach(
