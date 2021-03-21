@@ -7,7 +7,11 @@ class CreateSneakers < ActiveRecord::Migration[5.2]
       t.text "description", null: false
       t.string "date", null: false
       t.string "sku", null: false
-      t.integer "price", null: false
+      t.string "upper_material"
+      t.string "main_color"
+      t.string "colorway"
+      t.string "technology"
+      t.string "silhouette"
       t.integer "category_id", null: false
       t.integer "designer_id", null: false
       t.timestamps
