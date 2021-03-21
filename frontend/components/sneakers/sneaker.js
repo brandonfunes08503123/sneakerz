@@ -18,7 +18,7 @@ class Sneaker extends Component {
           <Fragment>
             <div className="HeroContainer">
               <div className="HeroPane-shoe">
-                <img src={sneaker.photoUrls[1]} alt={`${sneaker.name}`}></img>
+                <img src={sneaker.photoUrl} alt={`${sneaker.name}`}></img>
               </div>
               <div className="ProductPane-form-container">
                 <div className="ProductPane-header-container">
