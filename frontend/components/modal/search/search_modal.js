@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoSearchOutline } from "react-icons/io5";
 import _ from "lodash";
@@ -97,7 +97,7 @@ class SearchModal extends Component {
       return (
         <li className="search-results" key={i}>
           <Link
-            to={`sneakers/${result.sku}`}
+            to={`/sneakers/${result.sku}`}
             onClick={() => {
               closeSearchModal();
             }}

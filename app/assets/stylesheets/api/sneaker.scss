@@ -16,13 +16,30 @@
   width: 90.5%;
 }
 
-.HeroPane-shoe {
+// shoe wrapper is the first pane
+
+.HeroPane-first-wrapper {
   border: 1px solid rgb(222, 222, 222);
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+
+.HeroPane-shoe-wrapper {
+  //position: absolute;
+  width: 100%;
+  background: rgb(255, 255, 255) none repeat 0% 0%;
+}
+
+.ProductPane-shoe-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 65%;
+  margin: 0 auto;
 }
 
 .ProductPane-form-container {

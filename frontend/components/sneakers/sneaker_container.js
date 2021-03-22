@@ -23,6 +23,7 @@ import Sneaker from "./sneaker";
 
 const mapStateToProps = (state, { match }) => ({
   sneaker: state.entities.sneaker,
+  skuID: match.params.skuId,
 });
 
 const mapDispatchToProps = (dispatch, { match }) => ({

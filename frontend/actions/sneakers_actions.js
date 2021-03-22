@@ -2,6 +2,7 @@ import * as APIUtil from "../util/sneakers_api.util";
 
 export const RECEIEVE_ALL_SNEAKERS = "RECEIEVE_ALL_SNEAKERS";
 export const RECEIVE_SNEAKER = "RECEIVE_SNEAKER";
+export const REMOVE_SNEAKER = "REMOVE_SNEAKER";
 
 export const collectAllSneakers = (sneakers) => ({
   type: RECEIEVE_ALL_SNEAKERS,

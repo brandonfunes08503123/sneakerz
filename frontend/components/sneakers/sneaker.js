@@ -8,6 +8,23 @@ class Sneaker extends Component {
   componentDidMount() {
     this.props.getSneaker();
   }
+
+  componentDidUpdate(prevProps) {
+    console.log("current sneaker props: ", this.props.sneaker.sku);
+    console.log("current url sku id: ", this.props.skuID);
+    console.log("these are the prevProps: ", prevProps);
+    if (
+      this.props.skuID !== prevProps.sneaker.sku &&
+      prevProps.sneaker.length !== 0
+    ) {
+      this.props.getSneaker();
+    }
+  }
+
+  // componentWillUnmount() {
+  //   this.props.deleteSneaker();
+  // }
+
   render() {
     let { sneaker } = this.props;
     return (
@@ -17,9 +34,18 @@ class Sneaker extends Component {
         ) : (
           <Fragment>
             <div className="HeroContainer">
-              <div className="HeroPane-shoe">
-                <img src={sneaker.photoUrl} alt={`${sneaker.name}`}></img>
+              <div className="HeroPane-first-wrapper">
+                <div className="HeroPane-shoe-wrapper">
+                  <div className="ProductPane-shoe-wrapper">
+                    <img
+                      src={sneaker.photoUrl}
+                      alt={`${sneaker.name}`}
+                      className="sneakerImg"
+                    ></img>
+                  </div>
+                </div>
               </div>
+
               <div className="ProductPane-form-container">
                 <div className="ProductPane-header-container">
                   <header className="ProductPane-header">
