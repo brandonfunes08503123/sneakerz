@@ -3,16 +3,24 @@
  * an individual sneaker based on the the sneakerId
  */
 import React, { Component, Fragment } from "react";
+import Inventory from "../inventory/inventory";
 
 class Sneaker extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showInventory: false,
+    };
+
+    this.handleClick = this.handleClick.bind(this);
+    this.closeInventory = this.closeInventory.bind(this);
+  }
   componentDidMount() {
     this.props.getSneaker();
   }
 
   componentDidUpdate(prevProps) {
-    console.log("current sneaker props: ", this.props.sneaker.sku);
-    console.log("current url sku id: ", this.props.skuID);
-    console.log("these are the prevProps: ", prevProps);
     if (
       this.props.skuID !== prevProps.sneaker.sku &&
       prevProps.sneaker.length !== 0
@@ -21,9 +29,17 @@ class Sneaker extends Component {
     }
   }
 
-  // componentWillUnmount() {
-  //   this.props.deleteSneaker();
-  // }
+  handleClick() {
+    this.setState({
+      showInventory: true,
+    });
+  }
+
+  closeInventory() {
+    this.setState({
+      showInventory: false,
+    });
+  }
 
   render() {
     let { sneaker } = this.props;
@@ -48,14 +64,23 @@ class Sneaker extends Component {
 
               <div className="ProductPane-form-container">
                 <div className="ProductPane-header-container">
-                  <header className="ProductPane-header">
-                    <h1 className="ProductTitle">{sneaker.name}</h1>
-                  </header>
-                  <p className="ProductTitle_Sku">SKU: {sneaker.sku}</p>
+                  {this.state.showInventory ? (
+                    <Inventory closeInventory={this.closeInventory} />
+                  ) : (
+                    <Fragment>
+                      <header className="ProductPane-header">
+                        <h1 className="ProductTitle">{sneaker.name}</h1>
+                      </header>
+                      <p className="ProductTitle_Sku">SKU: {sneaker.sku}</p>
+                    </Fragment>
+                  )}
                 </div>
                 <form onSubmit={this.handleSubmit} className="HeroPane-form">
                   <div className="btns-container">
-                    <button className="btn-login" onClick={() => <Listing />}>
+                    <button
+                      className="btn-login"
+                      onClick={() => this.handleClick()}
+                    >
                       Buy New
                     </button>
                     <button className="btn-demo">Buy Used</button>
