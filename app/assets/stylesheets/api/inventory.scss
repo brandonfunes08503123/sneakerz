@@ -1,0 +1,36 @@
+.ProductSelectSize-scrollable {
+  padding-bottom: 30px;
+  flex-grow: 1;
+  overflow-y: scroll;
+  padding: 0px 0px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.ProductSelectSize-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 5px solid red;
+}
+.ProductList-container {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  z-index: auto;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+}
+
+.ProductSelect-closeOut {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  top: 120px;
+  right: 7%;
+}

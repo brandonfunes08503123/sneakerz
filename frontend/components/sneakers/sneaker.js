@@ -43,6 +43,7 @@ class Sneaker extends Component {
 
   render() {
     let { sneaker } = this.props;
+    // if this this.props.get snekar else loading
     return (
       <div className="ProductContainer">
         {sneaker.length < 1 ? (
@@ -62,30 +63,32 @@ class Sneaker extends Component {
                 </div>
               </div>
 
-              <div className="ProductPane-form-container">
-                <div className="ProductPane-header-container">
-                  {this.state.showInventory ? (
-                    <Inventory closeInventory={this.closeInventory} />
-                  ) : (
-                    <Fragment>
-                      <header className="ProductPane-header">
-                        <h1 className="ProductTitle">{sneaker.name}</h1>
-                      </header>
-                      <p className="ProductTitle_Sku">SKU: {sneaker.sku}</p>
-                    </Fragment>
-                  )}
-                </div>
-                <form onSubmit={this.handleSubmit} className="HeroPane-form">
-                  <div className="btns-container">
-                    <button
-                      className="btn-login"
-                      onClick={() => this.handleClick()}
-                    >
-                      Buy New
-                    </button>
-                    <button className="btn-demo">Buy Used</button>
-                  </div>
-                </form>
+              <div className="ProductPane-container">
+                {this.state.showInventory ? (
+                  <Inventory
+                    closeInventory={this.closeInventory}
+                    inventory={this.props.sneaker.inventory}
+                  />
+                ) : (
+                  <Fragment>
+                    <div clasName="HeroPane-right">
+                      <div className="ProductPane-header-container">
+                        <header className="ProductPane-header">
+                          <h1 className="ProductTitle">{sneaker.name}</h1>
+                        </header>
+                        <p className="ProductTitle_Sku">SKU: {sneaker.sku}</p>
+                      </div>
+                    </div>
+                    <div className="btn-buy-container">
+                      <button
+                        onClick={() => this.handleClick()}
+                        className="btn-buy"
+                      >
+                        Buy New
+                      </button>
+                    </div>
+                  </Fragment>
+                )}
               </div>
             </div>
             <div className="ProductDetails">
