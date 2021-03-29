@@ -28,6 +28,7 @@ function InventoryDetails(props) {
       <span className="slide-items-titles">name</span>
       <span className="slide-items-details">{sneakerDetails.name}</span>
     </div>,
+
     <div className="slide-items">
       <span className="slide-items-titles">colorway</span>
       <span className="slide-items-details">{sneakerDetails.colorway}</span>
@@ -52,15 +53,20 @@ function InventoryDetails(props) {
     </div>,
   ];
 
-  console.log("props details length: ", propsDetails.length);
   const goLeft = () => {
-    console.log("x: ", x);
-    x === 0 ? setX(-100 * (propsDetails.length - 5)) : setX(x + 100);
+    if (window.innerWidth <= 1280) {
+      x === 0 ? setX(-121 * (propsDetails.length - 6)) : setX(x + 121);
+    } else {
+      x === 0 ? setX(-125 * (propsDetails.length - 8)) : setX(x + 125);
+    }
   };
 
   const goRight = () => {
-    console.log("x: ", x);
-    x === -100 * (propsDetails.length - 5) ? setX(0) : setX(x - 100);
+    if (window.innerWidth <= 1280) {
+      x === -121 * (propsDetails.length - 6) ? setX(0) : setX(x - 121);
+    } else {
+      x === -125 * (propsDetails.length - 8) ? setX(0) : setX(x - 125);
+    }
   };
   // designer
 
