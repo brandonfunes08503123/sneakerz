@@ -4,6 +4,7 @@
  */
 import React, { Component, Fragment } from "react";
 import Inventory from "../inventory/inventory";
+import InventoryDetails from "./inventory_details";
 
 class Sneaker extends Component {
   constructor(props) {
@@ -46,7 +47,7 @@ class Sneaker extends Component {
     // if this this.props.get snekar else loading
     return (
       <div className="ProductContainer">
-        {sneaker.length < 1 ? (
+        {sneaker.length < 1 || this.props.skuID !== sneaker.sku ? (
           " "
         ) : (
           <Fragment>
@@ -71,7 +72,7 @@ class Sneaker extends Component {
                   />
                 ) : (
                   <Fragment>
-                    <div clasName="HeroPane-right">
+                    <div className="HeroPane-right">
                       <div className="ProductPane-header-container">
                         <header className="ProductPane-header">
                           <h1 className="ProductTitle">{sneaker.name}</h1>
@@ -96,6 +97,7 @@ class Sneaker extends Component {
               <p className="ProductDetails_Desc">{sneaker.description}</p>
             </div>
             <div className="Divider_Dash"></div>
+            <InventoryDetails sneakerDetails={sneaker} />
           </Fragment>
         )}
       </div>

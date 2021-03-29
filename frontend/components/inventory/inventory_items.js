@@ -7,11 +7,11 @@ class InventoryItems extends Component {
 
   render() {
     let { sneakerItem } = this.props;
+    console.log("this is sneakerItem: ", sneakerItem);
     return (
       <div className="ProductItem-list">
-        <p>
-          {sneakerItem.size}M ${sneakerItem.price}
-        </p>
+        <div>{sneakerItem.size}M </div>
+        <div>${sneakerItem.price}</div>
       </div>
     );
   }
