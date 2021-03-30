@@ -63,6 +63,17 @@
   padding: 30px;
 }
 
+.shoeIMG {
+  width: 100%;
+  min-width: 100%;
+}
+
+body img {
+  display: block;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 .HeroPane-session-errors {
   list-style-type: none;
   color: red;

@@ -8,11 +8,11 @@ import ModalContainer from "./modal/modal_container";
 import NavbarContainer from "./navbar/navbar_container";
 import SneakerContainer from "./sneakers/sneaker_container";
 import SneakersContainer from "./sneakers/sneakers_container";
-import SearchItemsContainer from "./search_items/search_items_container"
+import SearchItemsContainer from "./search_items/search_items_container";
 
 /**
  * Need to think about checkout
- * sneakers/skuId/available-sizes
+ * sneakers/skuId/?size=${size}
  *
  */
 

@@ -50,7 +50,11 @@ class SignUp extends Component {
       <div className="BigHeroContainer">
         <div className="HeroContainer">
           <div className="HeroPane-shoe">
-            <img src={window.images.banned1s} alt="1994_Banned_1s"></img>
+            <img
+              src={window.images.banned1s}
+              alt="1994_Banned_1s"
+              className="shoeIMG"
+            ></img>
           </div>
           <div className="HeroPane-form-container">
             <div className="HeroPane-header-container">
