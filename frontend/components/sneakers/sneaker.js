@@ -96,7 +96,6 @@ class Sneaker extends Component {
               <h2 className="ProductDetails_Title">Product Details</h2>
               <p className="ProductDetails_Desc">{sneaker.description}</p>
             </div>
-
             <InventoryDetails sneakerDetails={sneaker} />
           </Fragment>
         )}
