@@ -10,7 +10,8 @@ class Inventory extends Component {
     super(props);
   }
   render() {
-    let { inventory, closeInventory, skuID } = this.props;
+    let { inventory, closeInventory, skuID, closeProductPanel } = this.props;
+    console.log("inventory: ", inventory);
     return (
       <div className="ProductList-container">
         <IoMdClose
@@ -24,12 +25,17 @@ class Inventory extends Component {
         </div>
         <div className="ProductList-items">
           {inventory.map((item) => (
-            <a
-              href={`#/sneaker/${skuID}/preCheckout`}
+            <Link
+              to={`/sneaker/${skuID}/order-ticket`}
               className="ProductList-link-wrapper"
+              key={`inventory_link_${item.id}`}
+              onClick={() => {
+                closeInventory();
+                closeProductPanel();
+              }}
             >
-              <InventoryItems sneakerItem={item} key={item.id} />
-            </a>
+              <InventoryItems sneakerItem={item} key={`inventory_${item.id}`} />
+            </Link>
           ))}
         </div>
       </div>
