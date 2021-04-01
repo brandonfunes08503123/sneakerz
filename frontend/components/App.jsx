@@ -10,12 +10,6 @@ import SneakerContainer from "./sneakers/sneaker_container";
 import SneakersContainer from "./sneakers/sneakers_container";
 import SearchItemsContainer from "./search_items/search_items_container";
 
-/**
- * Need to think about checkout
- * sneakers/skuId/?size=${size}
- *
- */
-
 const App = () => (
   <div className="app-container">
     <ModalContainer />
@@ -24,11 +18,13 @@ const App = () => (
       <AuthRoute path="/login" component={LoginFormContainer} />
       <AuthRoute path="/signup" component={SignupFormContainer} />
       <Route path="/search" component={SearchItemsContainer} />
-      <Route path={`/sneakers/:skuId`} component={SneakerContainer} />
       <Route path="/sneakers" component={SneakersContainer} />
+      <Route path={`/sneaker/:skuId`} component={SneakerContainer} />
       <Route path="/" component={SplashContainer} />
     </Switch>
   </div>
 );
 
 export default App;
+
+// sneakers/sneaker/skuID

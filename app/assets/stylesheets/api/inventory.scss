@@ -50,3 +50,21 @@
   flex-direction: column;
   margin-top: 10%;
 }
+
+.ProductList-link-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  color: black;
+  font-family: "Noto Sans JP", sans-serif;
+}

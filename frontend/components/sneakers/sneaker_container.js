@@ -4,6 +4,7 @@
  */
 import { connect } from "react-redux";
 import { getSneaker } from "../../actions/sneakers_actions";
+import { withRouter } from "react-router-dom";
 import Sneaker from "./sneaker";
 
 // const mapStateToProps = (state, { match }) => {
@@ -21,10 +22,17 @@ import Sneaker from "./sneaker";
 //   };
 // };
 
-const mapStateToProps = (state, { match }) => ({
-  sneaker: state.entities.sneaker,
-  skuID: match.params.skuId,
-});
+// const mapStateToProps = (state, { match }) => ({
+//   sneaker: state.entities.sneaker,
+//   skuID: match.params.skuId,
+// });
+
+const mapStateToProps = (state, { match }) => {
+  return {
+    sneaker: state.entities.sneaker,
+    skuID: match.params.skuId,
+  };
+};
 
 const mapDispatchToProps = (dispatch, { match }) => ({
   getSneaker: () => dispatch(getSneaker(match.params.skuId)),

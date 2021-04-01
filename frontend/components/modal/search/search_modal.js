@@ -97,7 +97,7 @@ class SearchModal extends Component {
       return (
         <li className="search-results" key={i}>
           <Link
-            to={`/sneakers/${result.sku}`}
+            to={`/sneaker/${result.sku}`}
             onClick={() => {
               closeSearchModal();
             }}

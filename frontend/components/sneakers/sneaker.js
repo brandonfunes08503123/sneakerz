@@ -3,8 +3,10 @@
  * an individual sneaker based on the the sneakerId
  */
 import React, { Component, Fragment } from "react";
-import Inventory from "../inventory/inventory";
-import InventoryDetails from "./inventory_details";
+import { Route } from "react-router-dom";
+import SneakerProductPanel from "./sneaker_product_panel";
+import SneakerDetails from "./sneaker_details";
+import PreCheckout from "../preCheckout/preCheckout";
 
 class Sneaker extends Component {
   constructor(props) {
@@ -12,10 +14,11 @@ class Sneaker extends Component {
 
     this.state = {
       showInventory: false,
+      showProductPanel: true,
     };
 
-    this.handleClick = this.handleClick.bind(this);
-    this.closeInventory = this.closeInventory.bind(this);
+    this.closeProductPanel = this.closeProductPanel.bind(this);
+    this.openProductPanel = this.openProductPanel.bind(this);
   }
   componentDidMount() {
     this.props.getSneaker();
@@ -30,21 +33,21 @@ class Sneaker extends Component {
     }
   }
 
-  handleClick() {
+  closeProductPanel() {
     this.setState({
-      showInventory: true,
+      showProductPanel: false,
     });
   }
 
-  closeInventory() {
+  openProductPanel() {
     this.setState({
-      showInventory: false,
+      showProductPanel: true,
     });
   }
 
   render() {
     let { sneaker } = this.props;
-    // if this this.props.get snekar else loading
+
     return (
       <div className="ProductContainer">
         {sneaker.length < 1 || this.props.skuID !== sneaker.sku ? (
@@ -65,30 +68,18 @@ class Sneaker extends Component {
               </div>
 
               <div className="ProductPane-container">
-                {this.state.showInventory ? (
-                  <Inventory
-                    closeInventory={this.closeInventory}
-                    inventory={this.props.sneaker.inventory}
+                {this.state.showProductPanel ? (
+                  <SneakerProductPanel
+                    closeProductPanel={this.closeProductPanel}
+                    sneaker={sneaker}
                   />
                 ) : (
-                  <Fragment>
-                    <div className="HeroPane-right">
-                      <div className="ProductPane-header-container">
-                        <header className="ProductPane-header">
-                          <h1 className="ProductTitle">{sneaker.name}</h1>
-                        </header>
-                        <p className="ProductTitle_Sku">SKU: {sneaker.sku}</p>
-                      </div>
-                    </div>
-                    <div className="btn-buy-container">
-                      <button
-                        onClick={() => this.handleClick()}
-                        className="btn-buy"
-                      >
-                        Buy New
-                      </button>
-                    </div>
-                  </Fragment>
+                  <Route path="/sneaker/:skuID/pre-checkout-review">
+                    <PreCheckout
+                      skuID={sneaker.sku}
+                      openProductPanel={this.openProductPanel}
+                    />
+                  </Route>
                 )}
               </div>
             </div>
@@ -96,7 +87,7 @@ class Sneaker extends Component {
               <h2 className="ProductDetails_Title">Product Details</h2>
               <p className="ProductDetails_Desc">{sneaker.description}</p>
             </div>
-            <InventoryDetails sneakerDetails={sneaker} />
+            <SneakerDetails itemDetails={sneaker} />
           </Fragment>
         )}
       </div>
