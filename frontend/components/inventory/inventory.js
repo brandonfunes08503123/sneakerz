@@ -26,7 +26,7 @@ class Inventory extends Component {
         <div className="ProductList-items">
           {inventory.map((item) => (
             <Link
-              to={`/sneaker/${skuID}/order-ticket`}
+              to={`/sneaker/${skuID}/pre-checkout-review`}
               className="ProductList-link-wrapper"
               key={`inventory_link_${item.id}`}
               onClick={() => {

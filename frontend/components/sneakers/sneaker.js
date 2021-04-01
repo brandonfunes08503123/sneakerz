@@ -6,7 +6,7 @@ import React, { Component, Fragment } from "react";
 import { Route } from "react-router-dom";
 import SneakerProductPanel from "./sneaker_product_panel";
 import SneakerDetails from "./sneaker_details";
-import OrderTicket from "../order_ticket/order_ticket";
+import PreCheckout from "../preCheckout/preCheckout";
 
 class Sneaker extends Component {
   constructor(props) {
@@ -18,6 +18,7 @@ class Sneaker extends Component {
     };
 
     this.closeProductPanel = this.closeProductPanel.bind(this);
+    this.openProductPanel = this.openProductPanel.bind(this);
   }
   componentDidMount() {
     this.props.getSneaker();
@@ -35,6 +36,12 @@ class Sneaker extends Component {
   closeProductPanel() {
     this.setState({
       showProductPanel: false,
+    });
+  }
+
+  openProductPanel() {
+    this.setState({
+      showProductPanel: true,
     });
   }
 
@@ -67,10 +74,12 @@ class Sneaker extends Component {
                     sneaker={sneaker}
                   />
                 ) : (
-                  <Route
-                    path="/sneaker/:skuID/order-ticket"
-                    component={OrderTicket}
-                  />
+                  <Route path="/sneaker/:skuID/pre-checkout-review">
+                    <PreCheckout
+                      skuID={sneaker.sku}
+                      openProductPanel={this.openProductPanel}
+                    />
+                  </Route>
                 )}
               </div>
             </div>
