@@ -1,13 +1,16 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { IoMdClose } from "react-icons/io";
 import InventoryItems from "./inventory_items";
+
+// this creates a list of sizes and prices of a specific shoe
 
 class Inventory extends Component {
   constructor(props) {
     super(props);
   }
   render() {
-    let { inventory, closeInventory } = this.props;
+    let { inventory, closeInventory, skuID } = this.props;
     return (
       <div className="ProductList-container">
         <IoMdClose
@@ -20,8 +23,13 @@ class Inventory extends Component {
           <h1>US Men Sizes</h1>
         </div>
         <div className="ProductList-items">
-          {inventory.map((item, index) => (
-            <InventoryItems sneakerItem={item} key={index} />
+          {inventory.map((item) => (
+            <a
+              href={`#/sneaker/${skuID}/preCheckout`}
+              className="ProductList-link-wrapper"
+            >
+              <InventoryItems sneakerItem={item} key={item.id} />
+            </a>
           ))}
         </div>
       </div>

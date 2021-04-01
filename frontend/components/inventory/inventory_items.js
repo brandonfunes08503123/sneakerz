@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment, Link } from "react";
 
 class InventoryItems extends Component {
   constructor(props) {

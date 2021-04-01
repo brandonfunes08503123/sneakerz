@@ -3,8 +3,10 @@
  * an individual sneaker based on the the sneakerId
  */
 import React, { Component, Fragment } from "react";
+import { Route } from "react-router-dom";
 import Inventory from "../inventory/inventory";
 import InventoryDetails from "./inventory_details";
+import Checkout from "../checkout/checkout";
 
 class Sneaker extends Component {
   constructor(props) {
@@ -68,7 +70,8 @@ class Sneaker extends Component {
                 {this.state.showInventory ? (
                   <Inventory
                     closeInventory={this.closeInventory}
-                    inventory={this.props.sneaker.inventory}
+                    inventory={sneaker.inventory}
+                    skuID={sneaker.sku}
                   />
                 ) : (
                   <Fragment>
@@ -97,6 +100,11 @@ class Sneaker extends Component {
               <p className="ProductDetails_Desc">{sneaker.description}</p>
             </div>
             <InventoryDetails sneakerDetails={sneaker} />
+            <Route
+              exact
+              path={`/sneaker/:skuID/preCheckout`}
+              component={Checkout}
+            />
           </Fragment>
         )}
       </div>

@@ -35,4 +35,7 @@ class User < ApplicationRecord
         self.save!
         self.session_token
     end
+
+    # this will ensure that a user only has one cart associated with it
+    has_one :cart
 end
