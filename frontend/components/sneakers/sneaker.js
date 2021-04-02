@@ -15,10 +15,12 @@ class Sneaker extends Component {
     this.state = {
       showInventory: false,
       showProductPanel: true,
+      selectedSneaker: null,
     };
 
     this.closeProductPanel = this.closeProductPanel.bind(this);
     this.openProductPanel = this.openProductPanel.bind(this);
+    this.setSelectedSneaker = this.setSelectedSneaker.bind(this);
   }
   componentDidMount() {
     this.props.getSneaker();
@@ -42,6 +44,12 @@ class Sneaker extends Component {
   openProductPanel() {
     this.setState({
       showProductPanel: true,
+    });
+  }
+
+  setSelectedSneaker(sneaker) {
+    this.setState({
+      selectedSneaker: sneaker,
     });
   }
 
@@ -71,12 +79,14 @@ class Sneaker extends Component {
                 {this.state.showProductPanel ? (
                   <SneakerProductPanel
                     closeProductPanel={this.closeProductPanel}
+                    setSelectedSneaker={this.setSelectedSneaker}
                     sneaker={sneaker}
                   />
                 ) : (
                   <Route path="/sneaker/:skuID/pre-checkout-review">
                     <PreCheckout
-                      skuID={sneaker.sku}
+                      selectedSneaker={this.state.selectedSneaker}
+                      sneaker={sneaker}
                       openProductPanel={this.openProductPanel}
                     />
                   </Route>

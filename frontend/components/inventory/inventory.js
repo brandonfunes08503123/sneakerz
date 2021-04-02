@@ -10,7 +10,13 @@ class Inventory extends Component {
     super(props);
   }
   render() {
-    let { inventory, closeInventory, skuID, closeProductPanel } = this.props;
+    let {
+      inventory,
+      closeInventory,
+      skuID,
+      closeProductPanel,
+      setSelectedSneaker,
+    } = this.props;
     console.log("inventory: ", inventory);
     return (
       <div className="ProductList-container">
@@ -32,6 +38,7 @@ class Inventory extends Component {
               onClick={() => {
                 closeInventory();
                 closeProductPanel();
+                setSelectedSneaker(item);
               }}
             >
               <InventoryItems sneakerItem={item} key={`inventory_${item.id}`} />
