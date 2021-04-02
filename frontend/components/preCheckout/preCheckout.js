@@ -51,9 +51,7 @@ class PreCheckout extends Component {
             </button>
           </Link>
 
-          <button className="checkout-add-cart-btn" onClick={}>
-            Checkout
-          </button>
+          <button className="checkout-add-cart-btn">Checkout</button>
         </div>
       </Fragment>
     );

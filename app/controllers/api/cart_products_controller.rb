@@ -1,34 +1,34 @@
-class Api::CartsController < ApplicationController
+class Api::CartProductsController < ApplicationController
 
     # should have create, index, update, destroy
     def index
-        @cart = current_user.cart
+        @cart_products = current_user.cart_products
 
-        render "api/carts/index"
+        render "api/cart_products/index"
     end
 
 
-    # this add the sneaker to the cart
+    # this adds the sneaker to the cart
     def create
-        @cart = Cart.new(cart_params)
+        @cart_product = CartProduct.new(cart_product_params)
 
-        if @cart.save
+        if @cart_product.save
             render "api/cart_products/show"
         else
-            render json: @cart.errors.full_messages, status: 422
+            render json: @cart_products.errors.full_messages, status: 422
         end
     end
   
 
     def destroy
-        @cart = Cart.find_by(id: params[:id])
-        @cart.destroy
+        @cart_product = CartProduct.find_by(id: params[:id])
+        @cart_product.destroy
     end
 
     private
 
-    def cart_params
-        params.require(:cart).permit(:user_id, :inventory_id)
+    def cart_product_params
+        params.require(:cart_product).permit(:user_id, :inventory_id)
     end
 
 end

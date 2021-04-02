@@ -7,7 +7,9 @@ class User < ApplicationRecord
     before_validation :ensure_session_token
 
     # a user can have many products in their cart 
-    has_many :cart_products
+    has_many :cart_products,
+        foreign_key: :user_id,
+        class_name: :CartProduct
 
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)
