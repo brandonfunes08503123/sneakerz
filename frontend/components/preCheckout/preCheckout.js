@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 class PreCheckout extends Component {
   constructor(props) {
     super(props);
@@ -7,17 +7,22 @@ class PreCheckout extends Component {
 
   render() {
     let { selectedSneaker, openProductPanel, sneaker } = this.props;
+
     return (
       <Fragment>
         <div className="pre-checkout-container">
           <Link to={`/sneaker/${sneaker.sku}`}>
             <button
               onClick={() => openProductPanel()}
-              className="ProductSelect-closeOut"
+              className="ProductSelect-closeOut btn-cancel"
             >
               Cancel
             </button>
           </Link>
+          <div className="checkout-header">
+            <h2>Lowest Price</h2>
+            <h1>${selectedSneaker.price}</h1>
+          </div>
           <div className="checkout-container">
             <div className="checkout-items">
               <span className="checkout-name">item</span>
@@ -40,10 +45,13 @@ class PreCheckout extends Component {
           </div>
         </div>
         <div className="checkout-btns-container">
-          <button className="btn-login">
-            Add to Cart and Continue Shopping
-          </button>
-          <button className="btn-demo" onClick={() => this.demoUser()}>
+          <Link to="/">
+            <button className="checkout-add-cart-cont-btn">
+              Add to cart and continue shopping
+            </button>
+          </Link>
+
+          <button className="checkout-add-cart-btn" onClick={}>
             Checkout
           </button>
         </div>

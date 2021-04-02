@@ -7,26 +7,17 @@ class Api::CartsController < ApplicationController
         render "api/carts/index"
     end
 
+
+    # this add the sneaker to the cart
     def create
         @cart = Cart.new(cart_params)
 
         if @cart.save
-            render "api/carts/show"
+            render "api/cart_products/show"
         else
             render json: @cart.errors.full_messages, status: 422
         end
     end
-
-    # def update
-    #     @cart = Cart.find_by(id: params[:id])
-        
-    #     if @cart.update(cart_params)
-    #         render :show
-    #     else
-    #         render json: @cart.errors.full_messages, status: 422
-    #     end
-    # end
-
   
 
     def destroy
