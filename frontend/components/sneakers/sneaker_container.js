@@ -31,6 +31,7 @@ const mapStateToProps = (state, { match }) => {
   return {
     sneaker: state.entities.sneaker,
     skuID: match.params.skuId,
+    currentUser: state.session.id,
   };
 };
 

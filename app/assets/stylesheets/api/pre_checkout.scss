@@ -83,8 +83,15 @@
   border: 1px solid #dedede;
 }
 
-.checkout-add-cart-cont-btn {
+.checkout-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   width: 50%;
+}
+
+.checkout-add-cart-cont-btn {
   background-color: white;
   font-size: 14px;
   padding: 10px 0;

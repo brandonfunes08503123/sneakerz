@@ -25,6 +25,32 @@ module.exports = {
           loader: "url-loader",
         },
       },
+
+      {
+        test: /\.(sass|css|less)$/,
+        use: [
+          { loader: "style-loader" },
+          { loader: "css-loader" },
+          // {
+          //   loader: "postcss-loader",
+          //   options: {
+          //     plugins: () => [require("autoprefixer")()],
+          //   },
+          // },
+          { loader: "less-loader" },
+        ],
+      },
+      {
+        test: /\.(eot|ttf|woff|woff2)$/,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "[name].[ext]",
+            publicPath: "fonts",
+            outputPath: "fonts",
+          },
+        },
+      },
     ],
   },
   devtool: "inline-source-map",
