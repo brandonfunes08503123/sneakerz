@@ -254,6 +254,10 @@ nostalgia_sbs = [
     }
 ]
 
+air_jordans = [
+    
+]
+
 nostalgia_sbs.each {|sneaker| Sneaker.create!(sneaker)}
 
 Sneaker.all.each do |sneaker| 

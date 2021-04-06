@@ -4,9 +4,19 @@ Rails.application.routes.draw do
   root to: 'static_pages#root'
 
   namespace :api, defaults: { format: :json} do
+    
+    resources :sneakers, only: [:index, :show] do 
+      member do 
+        get "also_viewed"
+      end
+    end
+
+
+
     resources :users, only: [:new, :create, :destroy]
+    
     resources :cart_products, only: [ :index, :create, :destroy]    
-    resources :sneakers, only: [:index, :show] 
+  
     resources :searches, only: [:index]
     resource :session, only: [:create, :destroy]
   

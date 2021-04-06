@@ -6,12 +6,8 @@ import React, { Component, Fragment } from "react";
 import { Route } from "react-router-dom";
 import SneakerProductPanel from "./sneaker_product_panel";
 import ItemDetailsCarousel from "./item_details_carousel";
-
-// import Carousel from "react-multi-carousel";
-
-// import "react-multi-carousel/lib/styles.css";
-
 import PreCheckout from "../preCheckout/preCheckout";
+import AlsoViewedCarousel from "./also_viewed_carousel";
 
 class Sneaker extends Component {
   constructor(props) {
@@ -29,9 +25,12 @@ class Sneaker extends Component {
   }
   componentDidMount() {
     this.props.getSneaker();
+    this.props.getAlsoViewed(this.props.sneaker.id);
   }
 
   componentDidUpdate(prevProps) {
+    console.log("this is prevProps: ", prevProps.sneaker.sku);
+    console.log("this is props: ", this.props.skuID);
     if (
       this.props.skuID !== prevProps.sneaker.sku &&
       prevProps.sneaker.length !== 0
@@ -59,27 +58,7 @@ class Sneaker extends Component {
   }
 
   render() {
-    let { sneaker, currentUser } = this.props;
-
-    const responsive = {
-      superLargeDesktop: {
-        // the naming can be any, depends on you.
-        breakpoint: { max: 4000, min: 3000 },
-        items: 7,
-      },
-      desktop: {
-        breakpoint: { max: 3000, min: 1024 },
-        items: 7,
-      },
-      tablet: {
-        breakpoint: { max: 1024, min: 464 },
-        items: 5,
-      },
-      mobile: {
-        breakpoint: { max: 464, min: 0 },
-        items: 3,
-      },
-    };
+    let { sneaker, currentUser, alsoViewedSneakers } = this.props;
 
     return (
       <div className="ProductContainer">
@@ -119,11 +98,14 @@ class Sneaker extends Component {
                 )}
               </div>
             </div>
-            <div className="ProductDetails">
-              <h2 className="ProductDetails_Title">Product Details</h2>
-              <p className="ProductDetails_Desc">{sneaker.description}</p>
+            <div className="ProductDetails-wrapper">
+              <div className="ProductDetails">
+                <h2 className="ProductDetails_Title">Product Details</h2>
+                <p className="ProductDetails_Desc">{sneaker.description}</p>
+              </div>
             </div>
             <ItemDetailsCarousel itemDetails={sneaker} />
+            <AlsoViewedCarousel sneakers={alsoViewedSneakers} />
           </Fragment>
         )}
       </div>
