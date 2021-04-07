@@ -4,8 +4,11 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
-function AlsoViewedCarousel(props) {
+function FrontPageCarousel(props) {
   let { sneakers } = props;
+
+  console.log("These are the collecion sneakers: ", sneakers);
+
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -47,41 +50,36 @@ function AlsoViewedCarousel(props) {
   };
 
   return (
-    <div className="main-carousel-container">
-      <div className="people-viewed-container">
-        <h3>People Also Viewed</h3>
-      </div>
-      <div className="section-img-container">
-        <Carousel
-          partialVisible={true}
-          responsive={responsive}
-          className="carousel-container"
-          customLeftArrow={<LeftArrow />}
-          customRightArrow={<RightArrow />}
-        >
-          {sneakers.map((sneaker, index) => {
-            return (
-              <div className="carousel-shoe-wrapper" key={index}>
-                <Link
-                  to={`/sneaker/${sneaker.sku}`}
-                  className="carousel-shoe-link"
-                >
-                  <img
-                    src={sneaker.photoUrl}
-                    alt={sneaker.name}
-                    className="carousel-shoe-img"
-                  ></img>
-                </Link>
-                <div className="carousel-shoe-detail-container">
-                  <div className="carousel-shoe-detail">{sneaker.name}</div>
-                </div>
+    <div className="section-img-container">
+      <Carousel
+        partialVisible={true}
+        responsive={responsive}
+        className="carousel-container"
+        customLeftArrow={<LeftArrow />}
+        customRightArrow={<RightArrow />}
+      >
+        {sneakers.map((sneaker, index) => {
+          return (
+            <div className="carousel-shoe-wrapper" key={index}>
+              <Link
+                to={`/sneaker/${sneaker.sku}`}
+                className="carousel-shoe-link"
+              >
+                <img
+                  src={sneaker.photoUrl}
+                  alt={sneaker.name}
+                  className="carousel-shoe-img"
+                ></img>
+              </Link>
+              <div className="carousel-shoe-detail-container">
+                <div className="carousel-shoe-detail">{sneaker.name}</div>
               </div>
-            );
-          })}
-        </Carousel>
-      </div>
+            </div>
+          );
+        })}
+      </Carousel>
     </div>
   );
 }
 
-export default AlsoViewedCarousel;
+export default FrontPageCarousel;

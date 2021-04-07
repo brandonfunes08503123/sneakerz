@@ -1,6 +1,6 @@
 import { RECEIVE_ALSO_VIEWED_SNEAKERS } from "../actions/sneakers_actions";
 
-const sneakerReducer = (state = [], action) => {
+const alsoViewedReducer = (state = [], action) => {
   Object.freeze(state);
 
   switch (action.type) {
@@ -11,4 +11,4 @@ const sneakerReducer = (state = [], action) => {
   }
 };
 
-export default sneakerReducer;
+export default alsoViewedReducer;

@@ -1,13 +1,24 @@
 import { connect } from "react-redux";
-import { getAllSneakers } from "../../actions/sneakers_actions";
+import {
+  getAdidasFrontPageCollection,
+  getYeezyFrontPageCollection,
+  getSbsFrontPageCollection,
+  getJordanFrontPageCollection,
+} from "../../actions/sneakers_actions";
 import Splash from "./splash";
 
 const mapStateToProps = (state) => ({
-  allSneakers: state.entities.sneakers,
+  adidasFrontPageCollection: state.entities.adidasFrontPageCollection,
+  jordanFrontPageCollection: state.entities.jordanFrontPageCollection,
+  sbsFrontPageCollection: state.entities.sbsFrontPageCollection,
+  yeezyFrontPageCollection: state.entities.yeezyFrontPageCollection,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  getAllSneakers: () => dispatch(getAllSneakers()),
+  getAdidasFrontPageCollection: () => dispatch(getAdidasFrontPageCollection()),
+  getYeezyFrontPageCollection: () => dispatch(getYeezyFrontPageCollection()),
+  getSbsFrontPageCollection: () => dispatch(getSbsFrontPageCollection()),
+  getJordanFrontPageCollection: () => dispatch(getJordanFrontPageCollection()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Splash);
