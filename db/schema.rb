@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_02_214618) do
+ActiveRecord::Schema.define(version: 2021_04_06_204102) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -79,12 +79,11 @@ ActiveRecord::Schema.define(version: 2021_04_02_214618) do
     t.string "colorway"
     t.string "technology"
     t.string "silhouette"
-    t.integer "category_id", null: false
-    t.integer "designer_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "designer"
+    t.string "category"
     t.index ["brand"], name: "index_sneakers_on_brand"
-    t.index ["designer_id"], name: "index_sneakers_on_designer_id"
     t.index ["name"], name: "index_sneakers_on_name", unique: true
   end
 

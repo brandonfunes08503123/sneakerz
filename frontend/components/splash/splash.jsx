@@ -17,8 +17,13 @@ class Splash extends Component {
   render() {
     return (
       <div className="splash-main-container">
-        <div className>
+        <div className="jubilee-container">
           <img src={window.images.jubilee11s} alt="Jubilee 11s"></img>
+        </div>
+        <div className="jordan-container">
+          <div className="jordan-header-container">
+            <h3>Air Jordans</h3>
+          </div>
         </div>
       </div>
     );

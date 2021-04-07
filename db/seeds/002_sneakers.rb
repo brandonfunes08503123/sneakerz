@@ -11,6 +11,7 @@ lifestyle = Category.create(name: "Lifestyle")
 skateboard = Category.create(name: "Skateboarding")
 
 
+
 nostalgia_sbs = [
     {
         brand: "Nike",
@@ -24,8 +25,8 @@ nostalgia_sbs = [
         colorway: "Medium Grey/Black/White/Clear Jade",
         technology: "Zoom Air",
         silhouette: "Dunk SB",
-        designer_id: peterMoore.id,
-        category_id: skateboard.id
+        designer: "Peter Moore",
+        category: "Skateboard"
     },
     {
         brand: "Nike",
@@ -39,8 +40,8 @@ nostalgia_sbs = [
         colorway: "Nightshade/Dark Slate",
         technology: "Zoom Air",
         silhouette: "Dunk SB",
-        designer_id: peterMoore.id,
-        category_id: skateboard.id
+        designer: "Peter Moore",
+        category: "Skateboard"
     },
     {
         brand: "Nike",
@@ -54,8 +55,8 @@ nostalgia_sbs = [
         colorway: "Orange Flash/Black-Black",
         technology: "Zoom Air",
         silhouette: "Dunk SB",
-        designer_id: peterMoore.id,
-        category_id: skateboard.id
+        designer: "Peter Moore",
+        category: "Skateboard"
     },
     {
         brand: "Nike",
@@ -69,8 +70,8 @@ nostalgia_sbs = [
         colorway: "Aqua/Chrome",
         technology: "Zoom Air",
         silhouette: "Dunk SB",
-        designer_id: peterMoore.id,
-        category_id: skateboard.id
+        designer: "Peter Moore",
+        category: "Skateboard"
     },
     {
         brand: "Nike",
@@ -84,8 +85,8 @@ nostalgia_sbs = [
         colorway: "Classic Green/Black-White-Red",
         technology: "Zoom Air",
         silhouette: "Dunk SB",
-        designer_id: peterMoore.id,
-        category_id: skateboard.id
+        designer: "Peter Moore",
+        category: "Skateboard"
     },
     {
         brand: "Nike",
@@ -99,8 +100,8 @@ nostalgia_sbs = [
         colorway: "Khaki/Baroque Brown-Safari",
         technology: "Zoom Air",
         silhouette: "Dunk SB",
-        designer_id: peterMoore.id,
-        category_id: skateboard.id
+        designer: "Peter Moore",
+        category: "Skateboard"
     },
     {
         brand: "Nike",
@@ -114,8 +115,8 @@ nostalgia_sbs = [
         colorway: "Sport Red/Pink Clay",
         technology: "Zoom Air",
         silhouette: "Dunk SB",
-        designer_id: peterMoore.id,
-        category_id: skateboard.id
+        designer: "Peter Moore",
+        category: "Skateboard"
     },
     {
         brand: "Nike",
@@ -129,8 +130,8 @@ nostalgia_sbs = [
         colorway: "Black/ Black-Midnight Fog",
         technology: "Zoom Air",
         silhouette: "Dunk SB",
-        designer_id: peterMoore.id,
-        category_id: skateboard.id
+        designer: "Peter Moore",
+        category: "Skateboard"
     }, 
     {
         brand: "Nike",
@@ -144,8 +145,8 @@ nostalgia_sbs = [
         colorway: "Voltage Purple/Court Purple-Voltage Purple",
         technology: "Zoom Air",
         silhouette: "Dunk SB",
-        designer_id: peterMoore.id,
-        category_id: skateboard.id
+        designer: "Peter Moore",
+        category: "Skateboard"
     },
     {
         brand: "Nike",
@@ -159,8 +160,8 @@ nostalgia_sbs = [
         colorway: "Light Graphite/Prism Violet",
         technology: "Zoom Air",
         silhouette: "Dunk SB",
-        designer_id: peterMoore.id,
-        category_id: skateboard.id
+        designer: "Peter Moore",
+        category: "Skateboard"
     },
     {
         brand: "Nike",
@@ -174,8 +175,8 @@ nostalgia_sbs = [
         colorway: "Red/Jean-Blue/White/Gummy-Brown",
         technology: "Zoom Air",
         silhouette: "Dunk SB",
-        designer_id: peterMoore.id,
-        category_id: skateboard.id
+        designer: "Peter Moore",
+        category: "Skateboard"
     },
     {
         brand: "Nike",
@@ -189,8 +190,8 @@ nostalgia_sbs = [
         colorway: "Fire Red/Black-Cement Grey",
         technology: "Zoom Air",
         silhouette: "Dunk SB",
-        designer_id: peterMoore.id,
-        category_id: skateboard.id
+        designer: "Peter Moore",
+        category: "Skateboard"
     },
     {
         brand: "Nike",
@@ -204,8 +205,8 @@ nostalgia_sbs = [
         colorway: "White/Black-Cement Grey",
         technology: "Zoom Air",
         silhouette: "Dunk SB",
-        designer_id: peterMoore.id,
-        category_id: skateboard.id
+        designer: "Peter Moore",
+        category: "Skateboard"
     },
     {
         brand: "Nike",
@@ -219,8 +220,8 @@ nostalgia_sbs = [
         colorway: "Chlorine Blue/White",
         technology: "Zoom Air",
         silhouette: "Dunk SB",
-        designer_id: peterMoore.id,
-        category_id: skateboard.id
+        designer: "Peter Moore",
+        category: "Skateboard"
     },
     {
         brand: "Nike",
@@ -234,8 +235,8 @@ nostalgia_sbs = [
         colorway: "Grass/White",
         technology: "Zoom Air",
         silhouette: "Dunk SB",
-        designer_id: peterMoore.id,
-        category_id: skateboard.id
+        designer: "Peter Moore",
+        category: "Skateboard"
     },
     {
         brand: "Nike",
@@ -249,16 +250,731 @@ nostalgia_sbs = [
         colorway: "Black/Black",
         technology: "Zoom Air",
         silhouette: "Dunk SB",
-        designer_id: peterMoore.id,
-        category_id: skateboard.id
+        designer: "Peter Moore",
+        category: "Skateboard"
     }
 ]
 
 air_jordans = [
-    
+    {
+        brand: "Air Jordan",
+        nickname: "Black Cement",
+        name: "Air Jordan 3 Retro 'Black Cement' 2001",
+        description: "The Air Jordan 3 Retro 2001 brings back a classic in the original colors from 1988 including the Nike Air logo on the heel. This shoe also features a black leather upper with perforated grey details on the eyestay and collar lining, and solid Cement Grey details on the tongue. The sneaker also sports the iconic elephant print on the mudguard and heel, University Red accents on the Jumpman logo and lower eyelets, and a partially encapsulated Air unit in the midsole for cushioning.",
+        date: "2001-07-14",
+        sku: "136064001",
+        upper_material: "Leather",
+        main_color: "Black",
+        colorway: "Black/Cement Grey",
+        technology: "Air",
+        silhouette: "Air Jordan 3",
+        designer: "Tinker Hatfield",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Air Jordan",
+        nickname: "Black Toe",
+        name: "Union LA x Air Jordan 1 Retro High NRG 'Black Toe'",
+        description: "The Union LA x Air Jordan 1 Retro High NRG 'Black Toe' sees the venerable Los Angeles retailer take inspiration from thrifting and DIY culture to create a new take on the sneaker that started it all. In addition to a pre-yellowed midsole for a vintage aesthetic, a mismatched collar is attached to the rest of the upper with zigzag stitching that gives the impression of a makeshift design.",
+        date: "2018-11-17",
+        sku: "BV1300106",
+        upper_material: "Leather",
+        main_color: "Black",
+        colorway: "White/Black/Varsity Red/Wolf Grey",
+        technology: "Air",
+        silhouette: "Air Jordan 1",
+        designer: "Peter Moore",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Air Jordan",
+        nickname: "Bred",
+        name: "Air Jordan 4 Retro 'Bred' 2019",
+        description: "The Air Jordan 4 Retro OG GS 'Bred' 2019 celebrates the model's 30th anniversary with its popular black, Cement Grey, Summit White and Fire Red colorway. Released in May 2019, the kids' shoe stays true to the original, which MJ wore when he hit 'The Shot' in the 1989 NBA Playoffs. It features the iconic Jumpman logo on the tongue, a nubuck upper with mesh-netted overlays and Nike Air branding on the heel. Visible Air and an outsole with a multidirectional traction pattern finish the style.",
+        date: "2019-05-04",
+        sku: "408452060",
+        upper_material: "Leather",
+        main_color: "Black",
+        colorway: "White/Black/Varsity Red/Wolf Grey",
+        technology: "Air",
+        silhouette: "Air Jordan 4",
+        designer: "Tinker Hatfield",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Air Jordan",
+        nickname: "Chicago",
+        name: "Air Jordan 1 Retro High 'Chicago' 1994",
+        description: "The Air Jordan 1 emerges in the Chicago colorway that reissued for the first time back in 1994, featuring white and Varsity Red color blocking on the upper’s premium leather construction. Black accents emerge on the branding and collar, while the white midsole houses encapsulated Air. Varsity Red on the outsole completes the look.",
+        date: "1994-01-01",
+        sku: "130207101",
+        upper_material: "Leather",
+        main_color: "Red",
+        colorway: "White/Black-Red",
+        technology: "Air",
+        silhouette: "Air Jordan 1",
+        designer: "Peter Moore",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Air Jordan",
+        nickname: "Doernbecher",
+        name: "Air Jordan 6 DB 'Doernbecher'",
+        description: "Every year, Nike teams up with patients at the Doernbecher Children’s hospital to design sneakers to raise spirits and raise money for the hospital. The Air Jordan 6 DB ‘Doernbecher’ celebrates the 2009 design of patient Jordan Dark, whose original design proved one of the most popular ever. Dark adorned his blue, red and white creation with numbers marking his first and last day of chemo, making this reissue a true cause for celebration.",
+        date: "2009-11-14",
+        sku: "392789401",
+        upper_material: "Suede",
+        main_color: "Blue",
+        colorway: "Midnight Navy/White-Varsity Red-Metallic Gold",
+        technology: "Air",
+        silhouette: "Air Jordan 6",
+        designer: "Tinker Hatfield",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Air Jordan",
+        nickname: "Concord",
+        name: "Air Jordan 11 Retro 'Concord' 2011",
+        description: "The Air Jordan Retro 11 ‘Concord’ 2011 features a white mesh upper with black patent leather overlays and concord branding. Jordan first wore these sneakers in Game 2 of the 1995 Eastern Conference Finals. This is the first basketball shoe with a patent leather upper and was famously paired with tuxedos at the 1996 Grammys by Boyz II Men. The sneaker was retroed for the first time in 2000, and again in 2006 as part of the Defining Moments Package (alongside the Air Jordan 6).",
+        date: "2011-12-23",
+        sku: "378037107",
+        upper_material: "Leather",
+        main_color: "White",
+        colorway: "White/Black-Dark Concord",
+        technology: "Air",
+        silhouette: "Air Jordan 11",
+        designer: "Tinker Hatfield",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Air Jordan",
+        nickname: "Carmine",
+        name: "Air Jordan 6 Retro 'Carmine'",
+        description: "Released in 1991 as one of the OG Air Jordan 6 colorways, the Air Jordan 6 ‘Carmine’ quickly became a sneakerhead favorite as Jordan laced them up en route to his first NBA title. The ‘Carmine’ remained in Nike’s archives until 2008 when it was first retro'd as part of the 17/6 Collezione ‘Countdown’ Pack (alongside an Air Jordan 17 sneaker).",
+        date: "2008-05-24",
+        sku: "322719161",
+        upper_material: "Leather",
+        main_color: "White",
+        colorway: "White/Carmine-Black",
+        technology: "Air",
+        silhouette: "Air Jordan 6",
+        designer: "Tinker Hatfield",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Air Jordan",
+        nickname: "Banned",
+        name: "Air Jordan 1 Retro High 'Banned' 2011",
+        description: "This 2011 version of the iconic Air Jordan 1 ‘Banned’ or ‘Bred’ colorway includes several subtle design details that reference its famous 1985 NBA ban for violating the uniform code. The shoe’s heel features a tonal red embossed X, the inner lining includes the date they were banned, and a special ‘Banned’ message hits up the insole. The sneaker also received retro re-releases in 1994, 2009, 2013, and 2016.",
+        date: "2011-06-02",
+        sku: "432001001",
+        upper_material: "Leather",
+        main_color: "Black",
+        colorway: "Black/Varsity Red-White",
+        technology: "Air",
+        silhouette: "Air Jordan 1",
+        designer: "Peter Moore",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Air Jordan",
+        nickname: "Bin23",
+        name: "Air Jordan 7 Retro Premio 'Bin23'",
+        description: "The ‘Bin23’ colorway of the Air Jordan 7 is based on one of the original drawings Tinker Hatfield created when designing the shoe. The sketch shows the black and white heel detail present on this retro. The actual application boasts more hits of color along the midsole, with a leather upper and neoprene sleeve making up the rest of the construction. Limited to only 2,059 pairs upon release in 2010, each shoe is individually numbered on the underside of the tongue.",
+        date: "2010-11-26",
+        sku: "436206101",
+        upper_material: "Leather",
+        main_color: "White",
+        colorway: "White/Del Sol-Black-Challenge Red",
+        technology: "Air",
+        silhouette: "Air Jordan 7",
+        designer: "Tinker Hatfield",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Air Jordan",
+        nickname: "Cement",
+        name: "Air Jordan 4 Retro 'Cement' 2012",
+        description: "The Air Jordan 4 Retro 'Cement’ 2012 combines a white leather upper with Fire Red, Black, and speckled Cement Grey accents. Released in 1989 as one of the four original colorways, the sneaker was retro’d in 1999 and 2016, but this 2012 Air Jordan 4 Retro 'Cement’ is the only version that swaps the OG Nike Air branding for a Jumpman logo on the heel.",
+        date: "2012-02-18",
+        sku: "308497103",
+        upper_material: "Leather",
+        main_color: "White",
+        colorway: "White/Black-Cement Grey",
+        technology: "Air",
+        silhouette: "Air Jordan 4",
+        designer: "Tinker Hatfield",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Air Jordan",
+        nickname: "Jubilee",
+        name: "Air Jordan 11 Retro 'Jubilee / 25th Anniversary'",
+        description: "The Air Jordan 11 ‘Jubilee’, also known as the Air Jordan 11 '25th Anniversary', celebrates the classic silhouette’s quarter-century birthday with a monochrome black finish throughout the upper, constructed from a traditional blend of ballistic mesh and patent leather. In keeping with the shoe’s silver anniversary, a 3D metallic Jumpman and matching ‘23’ branding decorate the heel, while ‘Jordan’ is spelled out in stylized silver lettering on each of the sneaker’s eyelets. The mid-top rides on a classic white foam midsole, supported by a translucent rubber outsole.",
+        date: "2020-12-12",
+        sku: "CT8012011",
+        upper_material: "Patent Leather",
+        main_color: "Black",
+        colorway: "Black/Clear/White/Metallic Silver",
+        technology: "Air",
+        silhouette: "Air Jordan 4",
+        designer: "Tinker Hatfield",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Air Jordan",
+        nickname: "Aqua",
+        name: "Air Jordan 8 Retro 'Aqua' 2007",
+        description: "Bringing back an original colorway of the Air Jordan 8, this anticipated Retro came out in 2007 and brings back the 1993 true to form; both releases shared a black, green and blue colorway with premium nubuck and the Chenille Jumpman logo on the tongue. This version delves deeply into 1990s design, with a thin Air Jordan strap across the ankle, textured overlays, and ’90s graphics on the outsole.",
+        date: "2007-09-22",
+        sku: "305381041",
+        upper_material: "Durabuck",
+        main_color: "Black",
+        colorway: "Black/Bright Concord-Aqua Tone",
+        technology: "Air",
+        silhouette: "Air Jordan 8",
+        designer: "Tinker Hatfield",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Air Jordan",
+        nickname: "Last Shot",
+        name: "Air Jordan 14 Retro 'Last Shot' 2005",
+        description: "The Air Jordan 14 Retro ‘Last Shot’ was worn by Michael Jordan in Game 6 of the 1998 NBA Finals against the Utah Jazz, when he scored the title-winning shot in his last game with the Chicago Bulls. The colorway has been nicknamed the ‘Last Shot' ever since. Also retroed in 2011, this 2005 version is nearly identical to the OG, with black leather side panels, a suede toe box, Varsity Red accents and a Ferrari-inspired yellow and black Jumpman badge on the ankle.",
+        date: "2005-12-24",
+        sku: "311832002",
+        upper_material: "Leather",
+        main_color: "Black",
+        colorway: "Black/Varsity Red/Black",
+        technology: "Air",
+        silhouette: "Air Jordan 14",
+        designer: "Tinker Hatfield",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Air Jordan",
+        nickname: "Space Jam",
+        name: "Air Jordan 11 Retro 'Space Jam' 2016",
+        description: "The Air Jordan 11 Retro ‘Space Jam’ 2016 commemorates the 20th anniversary of the movie ‘Space Jam.’ Worn by Michael Jordan as a Player Exclusive (PE) in both the movie and the 1995 NBA Playoffs, the 2016 retro ended up being Nike’s largest and most successful shoe launch ever. This 2016 sneaker is a more faithful reproduction of the original PE than the 2000 and 2009 retros. The sneaker also swaps the traditional #23 for MJ’s comeback #45 on the heel, a first for an Air Jordan 11 retail release.",
+        date: "2016-12-09",
+        sku: "378037003",
+        upper_material: "Leather",
+        main_color: "Black",
+        colorway: "Black/Concord-White",
+        technology: "Air",
+        silhouette: "Air Jordan 11",
+        designer: "Tinker Hatfield",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Air Jordan",
+        nickname: "Raptor",
+        name: "Air Jordan 7 Retro 'Raptor' 2012",
+        description: "The Nike Air Jordan 7 Retro 'Raptor' 2012 offers a version of the OG 1992 colorway that's also been retro-released in 2002 and 2009. The design combines a black nubuck upper with True Red and Club Purple accents. Released in September 2012, the colorway gets its nickname from its similarity to the Toronto Raptors team colors.",
+        date: "2016-12-09",
+        sku: "304775018",
+        upper_material: "Nubuck",
+        main_color: "Black",
+        colorway: "Black/Tr Rd-Drk Chrcl-Clb Prpl",
+        technology: "Air",
+        silhouette: "Air Jordan 7",
+        designer: "Tinker Hatfield",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Air Jordan",
+        nickname: "Mars",
+        name: "Air Jordan 4 Retro 'Mars' 2006",
+        description: "This Jordan 4 Retro is based on the 1989 OG ‘Fire Red’ colorway, although its name references fictional character Mars Blackmon. A picture of Mars, who was made famous by the movies ‘She’s Gotta Have It’ as well as a series of subsequent Air Jordan commercials, appears on the side profile of the shoe. The black and white that make up most of the design are highlighted by Varsity Red on the sole and lace application. A 2012 retro of the colorway was released without the Mars Blackmon graphic.",
+        date: "2006-07-22",
+        sku: "308497162",
+        upper_material: "Leather",
+        main_color: "White",
+        colorway: "White/Varsity Red-Black",
+        technology: "Air",
+        silhouette: "Air Jordan 4",
+        designer: "Tinker Hatfield",
+        category: "Lifestyle"
+    }
 ]
 
+adidas = [
+    {
+        brand: "Adidas",
+        nickname: "Tokyo",
+        name: "Adidas NMD Runner 'Tokyo'",
+        description: "The NMD Runner 'Tokyo' carries a comfortable sock-like upper, finished in black and built with breathable and stretchy knit textile. The monochromatic coloring is accented with tonal no-sew three-stripes and a contrasting white heel tab, the latter embossed with adidas trefoil branding. Dual EVA plugs in royal blue and black add stability to the full-length Boost midsole in white.",
+        date: "2016-03-17",
+        sku: "S79162",
+        upper_material: "Primeknit",
+        main_color: "Black",
+        colorway: "Black/Tokyo Blue/White",
+        technology: "Boost",
+        silhouette: "NMD Runner",
+        designer: "Nic Galway",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Adidas",
+        nickname: "Nice Kicks R1",
+        name: "Nice Kicks x Adidas NMD Runner PK 'Red White'",
+        description: "The adidas x Nice Kicks NMD Runner PK was a February 2016 collaboration between adidas Consortium and Austin sneaker store Nice Kicks to celebrate their new retail store in San Francisco's Haight/Ashbury. Inspired by the neighborhood's hippie past, the design features a red and black tie-dye design on the upper. The highly prized sneakers also come with Nice Kicks branded pull tabs.",
+        date: "2016-02-06",
+        sku: "AQ4791",
+        upper_material: "Primeknit",
+        main_color: "Red",
+        colorway: "Red/Black/White",
+        technology: "Boost",
+        silhouette: "NMD Runner",
+        designer: "Nic Galway",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Adidas",
+        nickname: "Tee Time",
+        name: "Sneakersnstuff x Adidas UltraBoost 1.0 'Tee Time'",
+        description: "Stockholm’s top sneaker retailer Sneakernstuff teamed up with adidas consortium to drop this golf-inspired Ultra Boost in a ‘tee time’ two-pack alongside a wing-tipped leather EQT 93. This January 2016 limited release includes SNS branded heel tabs and aglets, blue and black tab holes on the tongues, and a grass printed insole.",
+        date: "2016-01-22",
+        sku: "AF5756",
+        upper_material: "Primeknit",
+        main_color: "White",
+        colorway: "Black/White",
+        technology: "Boost",
+        silhouette: "Ultra Boost",
+        designer: "Ben Herath",
+        category: "Lifestyle"
+    }, 
+    {
+        brand: "Adidas",
+        nickname: "Aspen",
+        name: "Kith x Adidas UltraBoost Mid 'Aspen'",
+        description: "In December 2016, Kith Founder Ronnie Fieg celebrated the opening of his premiere pop-up location in Aspen, Colorado with this first-ever Ultra Boost Mid. Aptly named ‘Aspen,’ the design features a sweater-like Primeknit upper and matching multicolor laces as a nod to the area’s signature mountain style. The cage-less construction, sock-fit collar, and responsive Boost sole provide a cozy fit regardless of the weather.",
+        date: "2016-12-31",
+        sku: "BY2592",
+        upper_material: "Primeknit",
+        main_color: "Multi-Color",
+        colorway: "White/Core Black/Clear Brown",
+        technology: "Boost",
+        silhouette: "Ultra Boost",
+        designer: "Ben Herath",
+        category: "Running"
+    },
+    {
+        brand: "Adidas",
+        nickname: "Chinese New Year",
+        name: "Adidas UltraBoost 1.0 'Chinese New Year'",
+        description: "In celebration of Chinese New Year, adidas launched this holiday-themed colorway of the Ultra Boost in February 2016. The lightweight runner dons a Primeknit upper in navy blue, reinforced with a midfoot cage and heel counter in a matching navy shade. Contrasting pops of navy red make their way to the collar lining and tongue tag, while the toe sports a multicolor effect. It all rests on a white Boost midsole, supported underfoot by a Continental Rubber outsole in black.",
+        date: "2016-02-08",
+        sku: "AQ3305",
+        upper_material: "Primeknit",
+        main_color: "Blue",
+        colorway: "Navy/Red/White",
+        technology: "Boost",
+        silhouette: "Ultra Boost",
+        designer: "Ben Herath",
+        category: "Lifestyle"
+    },
+     {
+        brand: "Adidas",
+        nickname: "Oreo",
+        name: "Adidas UltraBoost 3.0 'Oreo'",
+        description: "Released in February of 2017, the adidas Ultra Boost 3.0 ‘Oreo’ colorway features a black and white Primeknit upper and translucent white cage. It also comes with a black heel cup with metallic silver and gold ultra boost lettering, white Boost midsole, and white Continental rubber outsole.",
+        date: "2017-02-01",
+        sku: "S80636",
+        upper_material: "Primeknit",
+        main_color: "White",
+        colorway: "White/Core Black",
+        technology: "Boost",
+        silhouette: "Ultra Boost",
+        designer: "Ben Herath",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Adidas",
+        nickname: "Human Race",
+        name: "Pharrell x NMD Human Race 'Yellow'",
+        description: "The Pharrell x NMD 'Human Race' ‘EQT Yellow’ feature equipment yellow Primeknit uppers with black embroidery reading ‘HUMAN’ on the right foot and ‘RACE’ on the left. Released in July of 2016, the design also includes a black foot cage, white Boost midsoles, black bumpers, and a white outsole.",
+        date: "2016-07-22",
+        sku: "BB0619",
+        upper_material: "Primeknit",
+        main_color: "Yellow",
+        colorway: "Yellow/Black",
+        technology: "Boost",
+        silhouette: "NMD Human Race",
+        designer: "Nic Galway",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Adidas",
+        nickname: "Vintage White",
+        name: "Sneakersnstuff x Social Status x Adidas UltraBoost Lux 'Vintage White'",
+        description: "Sneakersnstuff teamed up with Social Status and adidas on the UltraBoost for an elegant rendition of the classic performance runner. The Lux iteration features khaki hues on the Primeknit upper, which is accented by tan suede overlays on the toe and tongue patch. The full-length Boost midsole underfoot appears in white.",
+        date: "2017-12-20",
+        sku: "DB0338",
+        upper_material: "Primeknit",
+        main_color: "Tan",
+        colorway: "Vintage White/Chocolate Brown",
+        technology: "Boost",
+        silhouette: "Ultra Boost",
+        designer: "Ben Herath",
+        category: "Lifestyle"
+    },
+     {
+        brand: "Adidas",
+        nickname: "Core Black",
+        name: "Adidas Y-3 PureBoost ZG Primeknit 'Core Black'",
+        description: "Released in March 2016, the adidas Y-3 Pure Boost ZG Primeknit features a black and white Primeknit upper with Y-3 branding on a white leather tongue, a molded white TPU 3-stripes cage with Yohji Yamamoto branding, and a black TPU heel counter. Other details include a white EVA and Boost midsole, and a white Rubber outsole.",
+        date: "2016-03-18",
+        sku: "AQ5731",
+        upper_material: "Primeknit",
+        main_color: "Black",
+        colorway: "Black/White",
+        technology: "Boost",
+        silhouette: "PureBoost ZG",
+        designer: "Yohji Yamamoto",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Adidas",
+        nickname: "Vintage White",
+        name: "Adidas NMD R1 PK 'Vintage White'",
+        description: "Adidas NMD R1 ‘Vintage White’ earned its name for being the reverse colorway of the NMD R1 ‘OG’ released in 2015. While most of the shoe is white, the bright red and blue EVA plugs — reminiscent of the NMD R1 ‘OG’’ — grab all the attention. The NMD R1 ‘Vintage White’ was released internationally on May 28, 2016, and hit the U.S. on July 15, 2016.",
+        date: "2016-05-28",
+        sku: "S79482",
+        upper_material: "Primeknit",
+        main_color: "White",
+        colorway: "Vintage White/Lush Red",
+        technology: "Boost",
+        silhouette: "NMD Runner",
+        designer: "Nic Galway",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Adidas",
+        nickname: "Red Apple",
+        name: "Adidas NMD R1 Primeknit 'Red Apple'",
+        description: "Adidas NMD R1 ‘Vintage White’ earned its name for being the reverse colorway of the NMD R1 ‘OG’ released in 2015. While most of the shoe is white, the bright red and blue EVA plugs — reminiscent of the NMD R1 ‘OG’’ — grab all the attention. The NMD R1 ‘Vintage White’ was released internationally on May 28, 2016, and hit the U.S. on July 15, 2016.",
+        date: "2016-05-28",
+        sku: "BY1905",
+        upper_material: "Primeknit",
+        main_color: "Red",
+        colorway: "Bright Red/White/Black",
+        technology: "Boost",
+        silhouette: "NMD Runner",
+        designer: "Nic Galway",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Adidas",
+        nickname: "Olive Cargo",
+        name: "Adidas NMD R1 'Olive Cargo'",
+        description: "Designed for city nomads, this JD Sports European-exclusive NMD_R1 'Olive Cargo' colorway has an Olive Cargo stretch nylon upper, fused side panel 3-stripes, Olive Cargo EVA midsole bumpers, and a black rubber outsole. It also features a bolstered heel panel with a white heel tab to match the white Boost midsole.",
+        date: "2016-08-26",
+        sku: "BY2504",
+        upper_material: "Primeknit",
+        main_color: "Green",
+        colorway: "Olive/White",
+        technology: "Boost",
+        silhouette: "NMD Runner",
+        designer: "Nic Galway",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Adidas",
+        nickname: "Triple Black",
+        name: "Adidas UltraBoost 1.0 Limited 'Triple Black'",
+        description: "Released in December 2016, this all black colorway was the first Ultra Boost to feature a black boost midsole. It also marked the first time a performance shoe was available through the adidas Confirmed app for NYC residents only.",
+        date: "2016-12-01",
+        sku: "BB4677",
+        upper_material: "Primeknit",
+        main_color: "Black",
+        colorway: "Core Black/Core Black/Core Black",
+        technology: "Boost",
+        silhouette: "Ultra Boost",
+        designer: "Ben Herath",
+        category: "Lifestyle"
+    },
+     {
+        brand: "Adidas",
+        nickname: "Gold Medal",
+        name: "Adidas UltraBoost 2.0 Limited 'Gold Medal'",
+        description: "Released in a three-piece ‘medal pack’ right before the 2016 Rio Summer Olympics, the ‘gold medal’ distinguishes itself from the silver and bronze colorways, with its upgraded premium black leather tongue and cage, metallic gold heel counter, and subtle hints of gold in its black Primeknit upper.",
+        date: "2016-08-17",
+        sku: "BB3929",
+        upper_material: "Primeknit",
+        main_color: "Black",
+        colorway: "Core Black/Metallic Gold",
+        technology: "Boost",
+        silhouette: "Ultra Boost",
+        designer: "Ben Herath",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Adidas",
+        nickname: "Silver Medal",
+        name: "Adidas UltraBoost 2.0 Limited 'Silver Medal'",
+        description: "Released in a three-piece ‘medal pack’ right before the 2016 Rio Summer Olympics, the ‘silver medal’ features a much bolder black and dark grey 2.0 gradient Primeknit pattern than its Gold and Bronze counterparts. Its design is rounded out with a metallic silver heel cup, white boost midsole, and black continental rubber outsole.",
+        date: "2016-08-17",
+        sku: "BB4077",
+        upper_material: "Primeknit",
+        main_color: "Black",
+        colorway: "Core Black/Metallic Silver",
+        technology: "Boost",
+        silhouette: "Ultra Boost",
+        designer: "Ben Herath",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Adidas",
+        nickname: "Bronze Medal",
+        name: "Adidas UltraBoost 2.0 Limited 'Bronze Medal'",
+        description: "The adidas Ultra Boost 2.0 'Bronze Medal' was part of a medal-inspired three-pack before the 2016 Summer Olympic games in Rio. The design features a black 2.0 Primeknit upper with a matte metallic bronze TPU heel counter, white Boost midsole, and black outsole.",
+        date: "2016-08-17",
+        sku: "BB4078",
+        upper_material: "Primeknit",
+        main_color: "Black",
+        colorway: "Core Black/Bronze",
+        technology: "Boost",
+        silhouette: "Ultra Boost",
+        designer: "Ben Herath",
+        category: "Lifestyle"
+    },
+]
+
+yeezy_collection = [
+    {
+        brand: "Adidas",
+        nickname: "Turtle Dove",
+        name: "Adidas Yeezy Boost 350 'Turtle Dove'",
+        description: "First seen on Kanye and his models at the Yeezy Season 1 fashion show in February 2015, the Yeezy Boost 350 ‘Turtle Dove’ was the second shoe released in the adidas Yeezy collection after the Yeezy Boost 750 ‘OG.’ Dropped on June 27, 2015, the ‘Turtle Dove’ sold out instantly online and was eventually anointed 2015’s Shoe of the Year at the Footwear News 29th Annual Achievement Awards.",
+        date: "2015-06-27",
+        sku: "AQ4832",
+        upper_material: "Primeknit",
+        main_color: "Grey",
+        colorway: "Turtle Dove/Blue Gray/Core White",
+        technology: "Boost",
+        silhouette: "Yeezy Boost 350",
+        designer: "Kanye West",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Adidas",
+        nickname: "Oxford Tan",
+        name: "Adidas Yeezy Boost 350 'Oxford Tan'",
+        description: "The adidas Yeezy Boost 350 ‘Oxford Tan’ features an oxford/light stone Primeknit upper with tonal oxford laces, suede patches on the medial sides, and a tan Boost outsole. First worn by Kanye at the August 2015 MTV VMAs, the fourth colorway of the Yeezy 350 was released at select adidas Originals Retail stores on December 29th, 2015.",
+        date: "2015-12-29",
+        sku: "AQ2661",
+        upper_material: "Primeknit",
+        main_color: "Tan",
+        colorway: "Light Stone/Oxford Tan/Light Stone",
+        technology: "Boost",
+        silhouette: "Yeezy Boost 350",
+        designer: "Kanye West",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Adidas",
+        nickname: "Pirate Black",
+        name: "Adidas Yeezy Boost 350 'Pirate Black' 2016",
+        description: "Released on February 15th, 2016, the Yeezy Boost 350 ‘Pirate Black’ 2016 is identical to the Yeezy Boost 350 ‘Pirate Black’ 2015 release except for its upgraded padding on the inside of the heel and softer suede on its branded medial patches. The design combines a pirate black/ dark grey Primeknit upper with patterned dark grey rope laces, red accents on the heel tabs, and a black Boost outsole.",
+        date: "2016-02-19",
+        sku: "BB5350",
+        upper_material: "Primeknit",
+        main_color: "Black",
+        colorway: "Pirate Black/Blue Gray/Core Black",
+        technology: "Boost",
+        silhouette: "Yeezy Boost 350",
+        designer: "Kanye West",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Adidas",
+        nickname: "Moonrock",
+        name: "Adidas Yeezy Boost 350 'Moonrock'",
+        description: "Following the ‘Turtle Dove’ and ‘Pirate’ colorways, the Yeezy Boost 350 ‘Moonrock’ features a moonrock/agate grey Primeknit upper and a moonrock Boost outsole. First previewed on Instagram by Kim Kardashian and released on November 14th, 2015, the Yeezy Boost 350 ‘Moon Rock’ was sold exclusively at stores that carried Yeezy Season One apparel.",
+        date: "2015-11-14",
+        sku: "AQ2660",
+        upper_material: "Primeknit",
+        main_color: "Grey",
+        colorway: "Agate Gray/Moonrock/Agate Gray",
+        technology: "Boost",
+        silhouette: "Yeezy Boost 350",
+        designer: "Kanye West",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Adidas",
+        nickname: "Grey Gum",
+        name: "Adidas Yeezy Boost 750 'Grey Gum'",
+        description: "Released June 11, 2016, the Yeezy Boost 750 ‘Glow in the Dark’ features a light grey nubuck upper with elasticated mid-foot strap. It also comes with an ankle zipper, perforated vamp, and a glow in the dark translucent gum Boost midsole.",
+        date: "2016-06-11",
+        sku: "BB1840",
+        upper_material: "Suede",
+        main_color: "Grey",
+        colorway: "Light Grey/Light Grey/Gum",
+        technology: "Boost",
+        silhouette: "Yeezy Boost 750",
+        designer: "Kanye West",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Adidas",
+        nickname: "Triple Black",
+        name: "Adidas Yeezy Boost 750 'Triple Black'",
+        description: "Kanye teased the Yeezy Boost 750 ‘Black’ colorway in a February 2015 interview with New York’s Power 105.1 FM. Later he was spotted wearing a black suede/gum sole iteration of the sneaker at a Givenchy show during New York Fashion Week. Released on December 19, 2015, as the second colorway of the Yeezy Boost 750 line, the ‘Black’ sneaker features a full suede upper, perforated vamp, and ankle zipper.",
+        date: "2015-12-19",
+        sku: "BB1839",
+        upper_material: "Suede",
+        main_color: "Black",
+        colorway: "Core Black/Core Black/Core Black",
+        technology: "Boost",
+        silhouette: "Yeezy Boost 750",
+        designer: "Kanye West",
+        category: "Lifestyle"
+    },
+     {
+        brand: "Adidas",
+        nickname: "OG",
+        name: "Adidas Yeezy Boost 750 'OG''",
+        description: "Kanye West’s very first collaborative adidas shoe, the Yeezy Boost 750 ‘OG’ released worldwide February 2017 in extremely limited quantities. The towering boot-like builds showcases a radical departure from West’s previous designs, featuring a light brown all-suede upper mounted atop a partially ribbed, Boost-equipped rubber tooling in a subtle Off-White shade. The minimalist design is accented with oversized rope laces, perforated detailing on the toe box, and a wide midfoot strap in a tonal twill fabrication. A hidden zipper on the lateral side provides easy on and off.",
+        date: "2015-02-14",
+        sku: "B35309",
+        upper_material: "Suede",
+        main_color: "Grey",
+        colorway: "Light Brown/Carbon White/Light Brown",
+        technology: "Boost",
+        silhouette: "Yeezy Boost 750",
+        designer: "Kanye West",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Adidas",
+        nickname: "Beluga 2.0",
+        name: "Adidas Yeezy Boost 350 V2 'Beluga 2.0'",
+        description: "With its name coming from the colorway similarities found on the first Yeezy Boost 350 V2, the Yeezy Boost 350 V2 'Beluga 2.0' dropped on November 25, 2017. It was quickly restocked on November 30th after selling out. The shoe features a muted grey stripe on the laterals instead of the bright orange stripe found on the original ‘Beluga’ sneaker. The Yeezy Boost 350 V2 'Beluga 2.0' also features a heel pull tab with orange stitching and orange ‘SPLY-350’ lettering in reverse on the laterals.",
+        date: "2017-11-25",
+        sku: "AH2203",
+        upper_material: "Primeknit",
+        main_color: "Grey",
+        colorway: "Grey/Bold Orange/Dark Solid Grey",
+        technology: "Boost",
+        silhouette: "Yeezy Boost 350",
+        designer: "Kanye West",
+        category: "Lifestyle"
+    },
+     {
+        brand: "Adidas",
+        nickname: "Zebra",
+        name: "Adidas Yeezy Boost 350 V2 'Zebra'",
+        description: "TReleased on February 25, 2017, the Yeezy Boost 350 V2 ‘Zebra’ combines a white/core black Primeknit upper with red SPLY 350 branding and a translucent white midsole housing full-length Boost. Sold exclusively at adidas.com, Yeezy Supply, and select adidas flagship stores, the ‘Zebra’ sold out instantly but was restocked on June 24th, 2017. Another restock of the ‘Zebra’ arrived November 16, 2018, with more pairs hitting the marketplace and delivering on Kanye’s promise of Yeezy’s being more accessible to anyone that wanted them.",
+        date: "2017-02-25",
+        sku: "CP9654",
+        upper_material: "Primeknit",
+        main_color: "White",
+        colorway: "White/Core Black/Red",
+        technology: "Boost",
+        silhouette: "Yeezy Boost 350",
+        designer: "Kanye West",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Adidas",
+        nickname: "Tail Light",
+        name: "Adidas Yeezy Boost 350 V2 'Tail Light'",
+        description: "The Yeezy Boost 350 V2 'Tail Light' showcases a pop of bright orange at the stitched textile heel tab, along with a less concentrated shade of the same hue on the signature post-dyed monofilament side stripe. The rest of the upper is constructed from light grey Primeknit in a minimalist one-piece build, complete with a distinctive center stitch running down the vamp. A semi-translucent rubber midsole houses adidas Boost cushioning for a smooth ride. The 'Tail Light' colorway is only available in Europe, Russia and Ukraine.",
+        date: "2020-02-22",
+        sku: "FX9017",
+        upper_material: "Primeknit",
+        main_color: "Grey",
+        colorway: "Tail Light/Tail Light/Tail Light",
+        technology: "Boost",
+        silhouette: "Yeezy Boost 350",
+        designer: "Kanye West",
+        category: "Lifestyle"
+    },
+     {
+        brand: "Adidas",
+        nickname: "Kyanite",
+        name: "Adidas Yeezy 700 V3 'Kyanite'",
+        description: "The adidas Yeezy 700 V3 ‘Kyanite’ showcases flowing stripes of blue coloring throughout the breathable upper, constructed from monofilament engineered mesh with exoskeletal RPU overlays coated in a glow-in-the-dark finish. Interior bootie construction delivers a snug fit, while a reinforced rubber toe cap provides added durability. The sneaker rides on a lightweight EVA midsole encapsulated in an off-white PU cage, supported by a herringbone rubber outsole.",
+        date: "2021-03-25",
+        sku: "GY0260",
+        upper_material: "Mesh",
+        main_color: "White",
+        colorway: "Kyanite/Kyanite/Kyanite",
+        technology: "Boost",
+        silhouette: "Yeezy 700 V3",
+        designer: "Kanye West",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Nike",
+        nickname: "Red October",
+        name: "Nike Air Yeezy 2 SP 'Red October'",
+        description: "The Air Yeezy 2 SP ‘Red October’ stands out from its two companion colorways. There’s the monochromatic scarlet finish, contrasted only by metallic gold lace tips. There’s the unique design, which sees the side panels ditch the standard anaconda texture in favor of rows upon rows of small triangular studs. Finally, there’s the chaos that surrounded the shoe’s much-delayed release. By the time the Red Octobers finally launched online with no advance notice in February 2014, Kanye West had already severed all ties with Nike.",
+        date: "2014-02-09",
+        sku: "508214660",
+        upper_material: "Leather",
+        main_color: "Red",
+        colorway: "Red",
+        technology: "Air",
+        silhouette: "Air Yeezy 2",
+        designer: "Kanye West",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Nike",
+        nickname: "Solar Red",
+        name: "Nike Air Yeezy 2 NRG 'Solar Red'",
+        description: "The Air Yeezy 2 NRG ‘Solar Red’ may share a familiar color palette with its Air Yeezy ‘Blink’ predecessor, but the newer model stands out with a more refined silhouette, accented with special details crafted specifically for Kanye. They include a molded rubber heel, anaconda textured side panel, and Egyptology references on the tongue and midfoot strap. One feature carried over from the original Air Yeezy is the glow-in-the-dark outsole, utilized here on tooling lifted from the Nike Air Tech Challenge II.",
+        date: "2012-06-09",
+        sku: "508214006",
+        upper_material: "Leather",
+        main_color: "Black",
+        colorway: "Black/Black-Solar Red",
+        technology: "Air",
+        silhouette: "Air Yeezy 2",
+        designer: "Kanye West",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Nike",
+        nickname: "Pure Platinum",
+        name: "Nike Air Yeezy 2 NRG 'Pure Platinum'",
+        description: "The Air Yeezy 2 NRG 'Pure Platinum' launched in June 2012 featuring a subdued colorway that blends varying shades of grey on the upper and a contrasting pop of bright red on the collar lining. The unique design allows it to straddle the line between fashion and sport. The snakeskin texture on the side panels and prominent ridges on the molded rubber heel serve to elevate the design, but the Air Tech Challenge II midsole keeps the shoe grounded in the heritage of the Swoosh.",
+        date: "2012-06-09",
+        sku: "508214010",
+        upper_material: "Leather",
+        main_color: "Grey",
+        colorway: "Wolf Grey/Pure Platinum",
+        technology: "Air",
+        silhouette: "Air Yeezy 2",
+        designer: "Kanye West",
+        category: "Lifestyle"
+    },
+    {
+        brand: "Nike",
+        nickname: "Blink",
+        name: "Nike Air Yeezy 'Blink'",
+        description: "The Air Yeezy ‘Blink’ from April 2009 is one of three sneakers that kicked off Kanye West’s partnership with Nike. The high-top blends a variety of materials and textures on the upper, finished in tonal black with a pop of bright pink on the lining, lace lock, and ‘Yeezy’ print on the heel loop. While the vamp features smooth suede construction, the midfoot strap and heel panel are covered in an all-over ‘Y’ print for an eye-catching texture.",
+        date: "2009-05-01",
+        sku: "366164003",
+        upper_material: "Leather",
+        main_color: "Black",
+        colorway: "Black/Black",
+        technology: "Air",
+        silhouette: "Air Yeezy",
+        designer: "Kanye West",
+        category: "Lifestyle"
+    }
+
+]
+
+
 nostalgia_sbs.each {|sneaker| Sneaker.create!(sneaker)}
+air_jordans.each {|sneaker| Sneaker.create!(sneaker) }
+adidas.each {|sneaker| Sneaker.create!(sneaker)}
+yeezy_collection.each {|sneaker| Sneaker.create!(sneaker) }
 
 Sneaker.all.each do |sneaker| 
     sku = sneaker[:sku].split(" ").join("")
@@ -268,60 +984,3 @@ Sneaker.all.each do |sneaker|
         filename: "#{sku}.jpg"
     )
 end
-
-
-
-
-# jubilee = Sneaker.create(
-#     brand: "Air Jordan",
-#     nickname: "Jubilee",
-#     name: "Air Jordan 11 Retro 'Jubilee / 25th Anniversary'",
-#     description: "The Air Jordan 11 ‘Jubilee’, also known as the Air Jordan 11 '25th Anniversary', celebrates the classic silhouette’s quarter-century birthday with a monochrome black finish throughout the upper, constructed from a traditional blend of ballistic mesh and patent leather. In keeping with the shoe’s silver anniversary, a 3D metallic Jumpman and matching ‘23’ branding decorate the heel, while ‘Jordan’ is spelled out in stylized silver lettering on each of the sneaker’s eyelets. The mid-top rides on a classic white foam midsole, supported by a translucent rubber outsole.",
-#     date: "2020-12-12",
-#     sku: "CT8012 011",
-#     designer_id: tinker.id,
-#     category_id: lifestyle.id
-# )
-
-# jubilee_mac_profile= open('https://sneakerz-seeds.s3-us-west-1.amazonaws.com/Jordans/11s/Jubilee/Jubilee_SM_Checkout.jpg')
-# jubilee_profile = open('https://sneakerz-seeds.s3-us-west-1.amazonaws.com/Jordans/11s/Jubilee/Jubilee_LRG_Checkout.jpg')
-# jubilee_sm_splash = open('https://sneakerz-seeds.s3-us-west-1.amazonaws.com/Jordans/11s/Jubilee/Jubilee-sm.jpg')
-
-# jubilee.photos.attach(
-#     io: jubilee_mac_profile,
-#     filename: 'jubilee_mac_size.jpg'
-# )
-
-# jubilee.photos.attach(
-#     io: jubilee_profile,
-#     filename: 'jubilee_profile.jpg'
-# )
-
-# jubilee.photos.attach(
-#     io: jubilee_sm_splash,
-#     filename: 'jubilee_sm_splash.jpg'
-# )
-
-# kaws4 = Sneaker.create(
-#     brand: "Air Jordan",
-#     name: "KAWS x Air Jordan 4 Retro Cool Grey",
-#     nickname: "Cool Grey",
-#     description: "The KAWS x Air Jordan 4 Retro is a collaboration between the Jordan Brand and Brooklyn-based street artist KAWS, a.k.a. Brian Donnelly. The design removes the silhouette’s traditional plastic accents and dresses the entire upper and midsole in a premium grey suede upper. The sneaker also features KAWS’ ‘XX’ branding on the heel tab. The shoes were released alongside a small capsule collection that included a coaches jacket, hoodie, t-shirt, and hat in March of 2017. The hype was so intense for this release that the in-store raffle at Patta in London was read the riot act by the police and sneakerheads hacked into Donnelly’s website for a chance at the drop.",
-#     date: "2017-03-31",
-#     sku: "930155 003",
-#     designer_id: tinker.id,
-#     category_id: lifestyle.id
-# )
-
-# kaws4_mac_sz = open('https://sneakerz-seeds.s3-us-west-1.amazonaws.com/Jordans/4s/KAWS_Cool_Grey/Kaws_4s_Mac_Sz.jpg')
-# kaws4_profile = open('https://sneakerz-seeds.s3-us-west-1.amazonaws.com/Jordans/4s/KAWS_Cool_Grey/Kaws_4s_profile.jpg')
-
-# kaws4.photos.attach(
-#     io: kaws4_mac_sz,
-#     filename: 'kaws_mac_sz.jpg'
-# )
-
-# kaws4.photos.attach(
-#     io: kaws4_profile,
-#     filename: 'kaws_profile.jpg'
-# )
