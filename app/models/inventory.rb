@@ -5,7 +5,7 @@ class Inventory < ApplicationRecord
         foreign_key: :sneaker_id,
         class_name: :Sneaker
 
-    has_many :cart,
+    has_many :cart_products,
         foreign_key: :inventory_id,
-        class_name: :Cart
+        class_name: :Cart_Products
 end

@@ -5,8 +5,9 @@
 import React, { Component, Fragment } from "react";
 import { Route } from "react-router-dom";
 import SneakerProductPanel from "./sneaker_product_panel";
-import SneakerDetails from "./sneaker_details";
+import ItemDetailsCarousel from "./item_details_carousel";
 import PreCheckout from "../preCheckout/preCheckout";
+import AlsoViewedCarousel from "./also_viewed_carousel";
 
 class Sneaker extends Component {
   constructor(props) {
@@ -15,16 +16,21 @@ class Sneaker extends Component {
     this.state = {
       showInventory: false,
       showProductPanel: true,
+      selectedSneaker: null,
     };
 
     this.closeProductPanel = this.closeProductPanel.bind(this);
     this.openProductPanel = this.openProductPanel.bind(this);
+    this.setSelectedSneaker = this.setSelectedSneaker.bind(this);
   }
   componentDidMount() {
     this.props.getSneaker();
+    this.props.getAlsoViewed(this.props.sneaker.id);
   }
 
   componentDidUpdate(prevProps) {
+    console.log("this is prevProps: ", prevProps.sneaker.sku);
+    console.log("this is props: ", this.props.skuID);
     if (
       this.props.skuID !== prevProps.sneaker.sku &&
       prevProps.sneaker.length !== 0
@@ -45,8 +51,14 @@ class Sneaker extends Component {
     });
   }
 
+  setSelectedSneaker(sneaker) {
+    this.setState({
+      selectedSneaker: sneaker,
+    });
+  }
+
   render() {
-    let { sneaker } = this.props;
+    let { sneaker, currentUser, alsoViewedSneakers } = this.props;
 
     return (
       <div className="ProductContainer">
@@ -71,23 +83,29 @@ class Sneaker extends Component {
                 {this.state.showProductPanel ? (
                   <SneakerProductPanel
                     closeProductPanel={this.closeProductPanel}
+                    setSelectedSneaker={this.setSelectedSneaker}
                     sneaker={sneaker}
                   />
                 ) : (
                   <Route path="/sneaker/:skuID/pre-checkout-review">
                     <PreCheckout
-                      skuID={sneaker.sku}
+                      selectedSneaker={this.state.selectedSneaker}
+                      sneaker={sneaker}
                       openProductPanel={this.openProductPanel}
+                      currentUser={currentUser}
                     />
                   </Route>
                 )}
               </div>
             </div>
-            <div className="ProductDetails">
-              <h2 className="ProductDetails_Title">Product Details</h2>
-              <p className="ProductDetails_Desc">{sneaker.description}</p>
+            <div className="ProductDetails-wrapper">
+              <div className="ProductDetails">
+                <h2 className="ProductDetails_Title">Product Details</h2>
+                <p className="ProductDetails_Desc">{sneaker.description}</p>
+              </div>
             </div>
-            <SneakerDetails itemDetails={sneaker} />
+            <ItemDetailsCarousel itemDetails={sneaker} />
+            <AlsoViewedCarousel sneakers={alsoViewedSneakers} />
           </Fragment>
         )}
       </div>

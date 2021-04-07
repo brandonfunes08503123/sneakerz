@@ -26,13 +26,14 @@ class SneakerProductPanel extends Component {
   }
 
   render() {
-    let { closeProductPanel, sneaker } = this.props;
+    let { closeProductPanel, sneaker, setSelectedSneaker } = this.props;
     return (
       <Fragment>
         {this.state.showInventory ? (
           <Inventory
             closeInventory={this.closeInventory}
             closeProductPanel={closeProductPanel}
+            setSelectedSneaker={setSelectedSneaker}
             inventory={sneaker.inventory}
             skuID={sneaker.sku}
           />

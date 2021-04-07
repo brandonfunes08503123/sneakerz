@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_31_204708) do
+ActiveRecord::Schema.define(version: 2021_04_06_204102) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,13 +36,13 @@ ActiveRecord::Schema.define(version: 2021_03_31_204708) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "carts", force: :cascade do |t|
+  create_table "cart_products", force: :cascade do |t|
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "inventory_id"
-    t.index ["inventory_id"], name: "index_carts_on_inventory_id"
-    t.index ["user_id"], name: "index_carts_on_user_id"
+    t.index ["inventory_id"], name: "index_cart_products_on_inventory_id"
+    t.index ["user_id"], name: "index_cart_products_on_user_id"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -79,12 +79,11 @@ ActiveRecord::Schema.define(version: 2021_03_31_204708) do
     t.string "colorway"
     t.string "technology"
     t.string "silhouette"
-    t.integer "category_id", null: false
-    t.integer "designer_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "designer"
+    t.string "category"
     t.index ["brand"], name: "index_sneakers_on_brand"
-    t.index ["designer_id"], name: "index_sneakers_on_designer_id"
     t.index ["name"], name: "index_sneakers_on_name", unique: true
   end
 

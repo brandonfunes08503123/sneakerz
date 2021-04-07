@@ -43,6 +43,8 @@
   height: 15vh;
   padding: 0px 50px;
   border-right: 1px solid #dedede;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 
 .slide-items-titles {
@@ -66,4 +68,9 @@
   text-transform: capitalize;
   text-align: center;
   padding: 0px 15px;
+}
+
+.carousel-container {
+  width: 100%;
+  margin-top: 50px;
 }

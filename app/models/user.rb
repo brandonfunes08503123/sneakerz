@@ -6,6 +6,11 @@ class User < ApplicationRecord
     attr_reader :password
     before_validation :ensure_session_token
 
+    # a user can have many products in their cart 
+    has_many :cart_products,
+        foreign_key: :user_id,
+        class_name: :CartProduct
+
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)
 
@@ -36,6 +41,5 @@ class User < ApplicationRecord
         self.session_token
     end
 
-    # this will ensure that a user only has one cart associated with it
-    has_one :cart
+    
 end

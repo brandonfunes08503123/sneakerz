@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
-// got to fix the designer
-
-function SneakerDetails(props) {
-  const [x, setX] = useState(0);
-
+function ItemDetailsCarousel(props) {
   let { itemDetails } = props;
   let propsDetails = [
     <div className="slide-items">
@@ -51,49 +49,39 @@ function SneakerDetails(props) {
     </div>,
   ];
 
-  const goLeft = () => {
-    if (window.innerWidth <= 1280) {
-      x === 0 ? setX(-121 * (propsDetails.length - 6)) : setX(x + 121);
-    } else {
-      x === 0 ? setX(-125 * (propsDetails.length - 8)) : setX(x + 125);
-    }
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 7,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 7,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 5,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 3,
+    },
   };
-
-  const goRight = () => {
-    if (window.innerWidth <= 1280) {
-      x === -121 * (propsDetails.length - 6) ? setX(0) : setX(x - 121);
-    } else {
-      x === -125 * (propsDetails.length - 8) ? setX(0) : setX(x - 125);
-    }
-  };
-  // designer
 
   return (
-    <div className="slider">
-      {propsDetails.map((item, index) => {
-        return (
-          <div
-            key={index}
-            className="slide"
-            style={{ transform: `translateX(${x}%)` }}
-          >
-            {item}
-          </div>
-        );
+    <Carousel
+      partialVisible={true}
+      responsive={responsive}
+      className="carousel-container"
+      customLeftArrow={<AiOutlineLeft size={30} className="buttonLeft" />}
+      customRightArrow={<AiOutlineRight size={30} className="buttonRight" />}
+    >
+      {propsDetails.map((detail, index) => {
+        return <div key={index}>{detail}</div>;
       })}
-
-      <AiOutlineLeft
-        size={30}
-        className="buttonLeft"
-        onClick={() => goLeft()}
-      />
-      <AiOutlineRight
-        size={30}
-        className="buttonRight"
-        onClick={() => goRight()}
-      />
-    </div>
+    </Carousel>
   );
 }
 
-export default SneakerDetails;
+export default ItemDetailsCarousel;
