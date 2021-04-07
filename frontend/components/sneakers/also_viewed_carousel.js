@@ -6,6 +6,9 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 function AlsoViewedCarousel(props) {
   let { sneakers } = props;
+
+  console.log("These are the also viewed sneakers: ", sneakers);
+
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -61,21 +64,22 @@ function AlsoViewedCarousel(props) {
         >
           {sneakers.map((sneaker, index) => {
             return (
-              <div className="carousel-shoe-wrapper" key={index}>
-                <Link
-                  to={`/sneaker/${sneaker.sku}`}
-                  className="carousel-shoe-link"
-                >
+              <Link
+                to={`/sneaker/${sneaker.sku}`}
+                className="carousel-shoe-wrapper"
+                key={index}
+              >
+                <div className="carousel-shoe-link">
                   <img
                     src={sneaker.photoUrl}
                     alt={sneaker.name}
                     className="carousel-shoe-img"
-                  ></img>
-                </Link>
+                  />
+                </div>
                 <div className="carousel-shoe-detail-container">
                   <div className="carousel-shoe-detail">{sneaker.name}</div>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </Carousel>

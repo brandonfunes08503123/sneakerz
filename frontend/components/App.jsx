@@ -18,8 +18,8 @@ const App = () => (
       <AuthRoute path="/login" component={LoginFormContainer} />
       <AuthRoute path="/signup" component={SignupFormContainer} />
       <Route path="/search" component={SearchItemsContainer} />
-      <Route path="/sneakers" component={SneakersContainer} />
       <Route path={`/sneaker/:skuId`} component={SneakerContainer} />
+      <Route path="/sneakers" component={SneakersContainer} />
       <Route path="/" component={SplashContainer} />
     </Switch>
   </div>

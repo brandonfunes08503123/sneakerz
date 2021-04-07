@@ -5,6 +5,8 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 function ItemDetailsCarousel(props) {
   let { itemDetails } = props;
+
+  console.log("these are the item details: ", itemDetails);
   let propsDetails = [
     <div className="slide-items">
       <span className="slide-items-titles">brand</span>
@@ -69,13 +71,32 @@ function ItemDetailsCarousel(props) {
     },
   };
 
+  const LeftArrow = (arrowProps) => {
+    const { carouselState, children, ...restArrowProps } = arrowProps;
+
+    return (
+      <AiOutlineLeft size={30} className="buttonLeft" {...restArrowProps}>
+        {children}
+      </AiOutlineLeft>
+    );
+  };
+
+  const RightArrow = (arrowProps) => {
+    const { carouselState, children, ...restArrowProps } = arrowProps;
+
+    return (
+      <AiOutlineRight size={30} className="buttonRight" {...restArrowProps}>
+        {children}
+      </AiOutlineRight>
+    );
+  };
   return (
     <Carousel
       partialVisible={true}
       responsive={responsive}
       className="carousel-container"
-      customLeftArrow={<AiOutlineLeft size={30} className="buttonLeft" />}
-      customRightArrow={<AiOutlineRight size={30} className="buttonRight" />}
+      customLeftArrow={<LeftArrow />}
+      customRightArrow={<RightArrow />}
     >
       {propsDetails.map((detail, index) => {
         return <div key={index}>{detail}</div>;

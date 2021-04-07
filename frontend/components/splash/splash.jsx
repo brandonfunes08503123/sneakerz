@@ -38,7 +38,7 @@ class Splash extends Component {
         </div>
         <div className="sneaker-front-page-container">
           <div className="sneaker-header-container">
-            <h3>Nostalgic Nike Sbs Collection</h3>
+            <h3>Nostalgic Nike Sb Collection</h3>
           </div>
           <div className="front_page_collection">
             <FrontPageCarousel sneakers={sbsFrontPageCollection} />

@@ -60,21 +60,22 @@ function FrontPageCarousel(props) {
       >
         {sneakers.map((sneaker, index) => {
           return (
-            <div className="carousel-shoe-wrapper" key={index}>
-              <Link
-                to={`/sneaker/${sneaker.sku}`}
-                className="carousel-shoe-link"
-              >
+            <Link
+              to={`/sneaker/${sneaker.sku}`}
+              className="carousel-shoe-wrapper"
+              key={index}
+            >
+              <div className="carousel-shoe-link">
                 <img
                   src={sneaker.photoUrl}
                   alt={sneaker.name}
                   className="carousel-shoe-img"
-                ></img>
-              </Link>
+                />
+              </div>
               <div className="carousel-shoe-detail-container">
                 <div className="carousel-shoe-detail">{sneaker.name}</div>
               </div>
-            </div>
+            </Link>
           );
         })}
       </Carousel>
