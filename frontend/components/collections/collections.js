@@ -17,7 +17,6 @@ class Collections extends Component {
           <Fragment>
             <div className="collections-header-container">
               <h1 className="collections-header">{sneakers[0].brand}</h1>
-              {/* {console.log("this sneaker 0: ", sneakers[0])} */}
             </div>
             <div className="collections-grid-container">
               <div className="collections-grid">

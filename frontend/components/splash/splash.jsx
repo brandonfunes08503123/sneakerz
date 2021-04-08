@@ -21,7 +21,7 @@ class Splash extends Component {
   }
 
   handleScroll() {
-    if (window.scrollY > 0) {
+    if (window.scrollY > 10) {
       document.querySelector(".nav-container").className =
         "nav-container scroll";
     } else {

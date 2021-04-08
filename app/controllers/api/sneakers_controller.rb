@@ -25,7 +25,7 @@ class Api::SneakersController < ApplicationController
     # but for now, just rendering the same view
 
     def adidas_full_collection
-        @sneakers = Sneaker.all.where(brand: "Adidas")
+        @sneakers = Sneaker.all.where("brand = ? AND designer != ?", "Adidas", "Kanye West")
 
         render :also_viewed
     end
@@ -49,7 +49,7 @@ class Api::SneakersController < ApplicationController
     end
 
     def adidas_front_page_collection
-        @sneakers = Sneaker.limit(8).order("RANDOM()").where(brand: "Adidas").where.not(designer: "Kanye West")
+        @sneakers = Sneaker.limit(8).order("RANDOM()").where("brand = ? AND designer != ?", "Adidas", "Kanye West")
     
         render :also_viewed
     end
