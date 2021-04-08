@@ -113,6 +113,10 @@ a {
   text-decoration: none;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .app-container {
   max-width: 1920px;
   /* border: 1px solid black; */

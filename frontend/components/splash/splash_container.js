@@ -4,6 +4,10 @@ import {
   getYeezyFrontPageCollection,
   getSbsFrontPageCollection,
   getJordanFrontPageCollection,
+  getAdidasCollection,
+  getYeezyCollection,
+  getSbsCollection,
+  getJordanCollection,
 } from "../../actions/sneakers_actions";
 import Splash from "./splash";
 
@@ -16,9 +20,13 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   getAdidasFrontPageCollection: () => dispatch(getAdidasFrontPageCollection()),
+  getAdidasCollection: () => dispatch(getAdidasCollection()),
   getYeezyFrontPageCollection: () => dispatch(getYeezyFrontPageCollection()),
+  getYeezyCollection: () => dispatch(getYeezyCollection()),
   getSbsFrontPageCollection: () => dispatch(getSbsFrontPageCollection()),
+  getSbsCollection: () => dispatch(getSbsCollection()),
   getJordanFrontPageCollection: () => dispatch(getJordanFrontPageCollection()),
+  getJordanCollection: () => dispatch(getJordanCollection()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Splash);

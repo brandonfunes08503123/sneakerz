@@ -35,6 +35,10 @@ class Splash extends Component {
       jordanFrontPageCollection,
       sbsFrontPageCollection,
       yeezyFrontPageCollection,
+      getAdidasCollection,
+      getYeezyCollection,
+      getSbsCollection,
+      getJordanCollection,
     } = this.props;
     return (
       <div className="splash-main-container">
@@ -46,6 +50,16 @@ class Splash extends Component {
         <div className="sneaker-front-page-container">
           <div className="sneaker-header-container">
             <h3>Air Jordans</h3>
+            <div className="see-all-button-container">
+              <Link to="/sneakers/collections">
+                <button
+                  onClick={() => getJordanCollection()}
+                  className="see-all-button"
+                >
+                  See All
+                </button>
+              </Link>
+            </div>
           </div>
           <div className="front_page_collection">
             <FrontPageCarousel sneakers={jordanFrontPageCollection} />
@@ -58,6 +72,16 @@ class Splash extends Component {
         <div className="sneaker-front-page-container">
           <div className="sneaker-header-container">
             <h3>Nostalgic Nike Sb Collection</h3>
+            <div className="see-all-button-container">
+              <Link to="/sneakers/collections">
+                <button
+                  onClick={() => getSbsCollection()}
+                  className="see-all-button"
+                >
+                  See All
+                </button>
+              </Link>
+            </div>
           </div>
           <div className="front_page_collection">
             <FrontPageCarousel sneakers={sbsFrontPageCollection} />
@@ -72,6 +96,16 @@ class Splash extends Component {
         <div className="sneaker-front-page-container">
           <div className="sneaker-header-container">
             <h3>Adidas Collection</h3>
+            <div className="see-all-button-container">
+              <Link to="/sneakers/collections">
+                <button
+                  onClick={() => getAdidasCollection()}
+                  className="see-all-button"
+                >
+                  See All
+                </button>
+              </Link>
+            </div>
           </div>
           <div className="front_page_collection">
             <FrontPageCarousel sneakers={adidasFrontPageCollection} />
@@ -86,6 +120,16 @@ class Splash extends Component {
         <div className="sneaker-front-page-container">
           <div className="sneaker-header-container">
             <h3>Yeezy Collection</h3>
+            <div className="see-all-button-container">
+              <Link to="/sneakers/collections">
+                <button
+                  onClick={() => getYeezyCollection()}
+                  className="see-all-button"
+                >
+                  See All
+                </button>
+              </Link>
+            </div>
           </div>
           <div className="front_page_collection">
             <FrontPageCarousel sneakers={yeezyFrontPageCollection} />
