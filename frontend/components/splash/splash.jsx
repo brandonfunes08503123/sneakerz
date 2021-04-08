@@ -1,15 +1,32 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import FrontPageCarousel from "./front_page_carousel";
 
 class Splash extends Component {
   constructor(props) {
     super(props);
+
+    this.handleScroll = this.handleScroll.bind(this);
   }
   componentDidMount() {
     this.props.getAdidasFrontPageCollection();
     this.props.getJordanFrontPageCollection();
     this.props.getSbsFrontPageCollection();
     this.props.getYeezyFrontPageCollection();
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
+  handleScroll() {
+    if (window.scrollY > 0) {
+      document.querySelector(".nav-container").className =
+        "nav-container scroll";
+    } else {
+      document.querySelector(".nav-container").className = "nav-container";
+    }
   }
 
   render() {
@@ -22,7 +39,9 @@ class Splash extends Component {
     return (
       <div className="splash-main-container">
         <div className="front-page-img-container">
-          <img src={window.images.jubilee11s} alt="Jubilee 11s"></img>
+          <Link to="/sneaker/CT8012011" className="splash-img-link">
+            <img src={window.images.jubilee11s} alt="Jubilee 11s"></img>
+          </Link>
         </div>
         <div className="sneaker-front-page-container">
           <div className="sneaker-header-container">
@@ -46,7 +65,9 @@ class Splash extends Component {
         </div>
 
         <div className="front-page-img-container">
-          <img src={window.images.sns} alt="SNS Ultraboosts"></img>
+          <Link to="/sneaker/BY2911" className="splash-img-link">
+            <img src={window.images.sns} alt="SNS Ultraboosts"></img>
+          </Link>
         </div>
         <div className="sneaker-front-page-container">
           <div className="sneaker-header-container">
@@ -58,7 +79,9 @@ class Splash extends Component {
         </div>
 
         <div className="front-page-img-container">
-          <img src={window.images.kyanite} alt="SNS Ultraboosts"></img>
+          <Link to="/sneaker/GY0260" className="splash-img-link">
+            <img src={window.images.kyanite} alt="Yeezy Kyanite"></img>
+          </Link>
         </div>
         <div className="sneaker-front-page-container">
           <div className="sneaker-header-container">

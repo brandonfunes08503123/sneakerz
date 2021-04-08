@@ -10,24 +10,26 @@ const Navbar = ({ currentUser, logout, openSearchModal, openMenuModal }) => {
         <Link to="/" className="nav-logo">
           S N E A K E R Z
         </Link>
-        <Link to="/" className="nav-item">
-          Discover
-        </Link>
-        <Link to="/" className="nav-item">
-          Styles
-        </Link>
-        <button className="nav-item nav-button" onClick={() => logout()}>
-          Sign Out
-        </button>
-        <button
-          className="nav-item nav-icon"
-          onClick={() => openSearchModal("search")}
-        >
-          <IoSearchOutline size={24} />
-        </button>
-        <button className="nav-icon" onClick={() => openMenuModal("menu")}>
-          <MdDehaze size={24} />
-        </button>
+        <div className="nav-items-container">
+          <Link to="/" className="nav-item">
+            Discover
+          </Link>
+          <Link to="/" className="nav-item">
+            Styles
+          </Link>
+          <button className="nav-item nav-button" onClick={() => logout()}>
+            Sign Out
+          </button>
+          <button
+            className="nav-item nav-icon"
+            onClick={() => openSearchModal("search")}
+          >
+            <IoSearchOutline size={24} />
+          </button>
+          <button className="nav-icon" onClick={() => openMenuModal("menu")}>
+            <MdDehaze size={24} />
+          </button>
+        </div>
       </div>
     );
   };
@@ -38,27 +40,29 @@ const Navbar = ({ currentUser, logout, openSearchModal, openMenuModal }) => {
         <Link to="/" className="nav-logo">
           S N E A K E R Z
         </Link>
-        <Link to="/" className="nav-item">
-          Discover
-        </Link>
-        <Link to="/" className="nav-item">
-          Styles
-        </Link>
-        <Link to="/login" className="nav-item">
-          Sign In
-        </Link>
-        <Link to="/signup" className="nav-item">
-          Sign Up
-        </Link>
-        <button
-          className="nav-item nav-icon"
-          onClick={() => openSearchModal("search")}
-        >
-          <IoSearchOutline size={24} />
-        </button>
-        <button className="nav-icon" onClick={() => openMenuModal("menu")}>
-          <MdDehaze size={24} />
-        </button>
+        <div className="nav-items-container">
+          <Link to="/" className="nav-item">
+            Discover
+          </Link>
+          <Link to="/" className="nav-item">
+            Styles
+          </Link>
+          <Link to="/login" className="nav-item">
+            Sign In
+          </Link>
+          <Link to="/signup" className="nav-item">
+            Sign Up
+          </Link>
+          <button
+            className="nav-item nav-icon"
+            onClick={() => openSearchModal("search")}
+          >
+            <IoSearchOutline size={24} />
+          </button>
+          <button className="nav-icon" onClick={() => openMenuModal("menu")}>
+            <MdDehaze size={24} />
+          </button>
+        </div>
       </div>
     );
   };
