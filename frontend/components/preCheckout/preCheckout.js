@@ -3,19 +3,6 @@ import { Link } from "react-router-dom";
 class PreCheckout extends Component {
   constructor(props) {
     super(props);
-
-    this.addToCart = this.addToCart.bind(this);
-  }
-
-  addToCart(currentUser, inventoryId) {
-    $.ajax({
-      method: "POST",
-      url: "api/cart_products",
-      data: {
-        user_id: currentUser,
-        inventory_id: inventoryId,
-      },
-    });
   }
 
   render() {
@@ -68,13 +55,14 @@ class PreCheckout extends Component {
           <Link to="/" className="checkout-link">
             <button
               className="checkout-add-cart-cont-btn"
-              onClick={() => this.addToCart(currentUser, selectedSneaker.id)}
+              onClick={() => addToCart(currentUser, selectedSneaker.id)}
             >
               Add to cart and continue shopping
             </button>
           </Link>
-
-          <button className="checkout-add-cart-btn">Checkout</button>
+          <Link to="/cart" className="checkout-link">
+            <button className="checkout-add-cart-btn">Checkout</button>
+          </Link>
         </div>
       </Fragment>
     );

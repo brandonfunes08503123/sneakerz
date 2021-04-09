@@ -3,6 +3,7 @@ require "open-uri"
 Sneaker.destroy_all
 Designer.destroy_all
 Category.destroy_all
+CartProduct.destroy_all
 # Inventory.destroy_all
 
 tinker = Designer.create(name: "Tinker Hatfield")

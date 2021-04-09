@@ -22,6 +22,7 @@ const App = () => (
       <Route path={`/sneaker/:skuId`} component={SneakerContainer} />
       <Route path="/sneakers/collections" component={CollectionsContainer} />
       <Route path="/sneakers" component={SneakersContainer} />
+      <Route path="/cart" component={CartContainer} />
       <Route path="/" component={SplashContainer} />
     </Switch>
   </div>

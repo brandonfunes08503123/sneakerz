@@ -18,6 +18,8 @@ const mapStateToProps = (state, { match }) => {
 const mapDispatchToProps = (dispatch, { match }) => ({
   getSneaker: () => dispatch(getSneaker(match.params.skuId)),
   getAlsoViewed: (sneakerID) => dispatch(getAlsoViewed(sneakerID)),
+  addToCart: (currentUser, inventoryId) =>
+    dispatch(addToCart(currentUser, inventoryId)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Sneaker);

@@ -3,6 +3,7 @@ class Api::CartProductsController < ApplicationController
     # should have create, index, update, destroy
     def index
         @cart_products = current_user.cart_products
+        # @cart_products = Cart.where(user_id: @current_user)
 
         render "api/cart_products/index"
     end
@@ -28,7 +29,7 @@ class Api::CartProductsController < ApplicationController
     private
 
     def cart_product_params
-        params.require(:cart_products).permit(:user_id, :inventory_id)
+        params.require(:cart_product).permit(:user_id, :inventory_id)
     end
 
 end

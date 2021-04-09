@@ -1,4 +1,4 @@
-import * as APIUtil from "../util/sneakers_api.util";
+import * as APIUtil from "../util/sneakers_api_util";
 
 export const RECEIEVE_ALL_SNEAKERS = "RECEIEVE_ALL_SNEAKERS";
 export const RECEIVE_SNEAKER = "RECEIVE_SNEAKER";

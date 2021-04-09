@@ -58,7 +58,7 @@ class Sneaker extends Component {
   }
 
   render() {
-    let { sneaker, currentUser, alsoViewedSneakers } = this.props;
+    let { sneaker, currentUser, alsoViewedSneakers, addToCart } = this.props;
 
     return (
       <div className="ProductContainer">
@@ -93,6 +93,7 @@ class Sneaker extends Component {
                       sneaker={sneaker}
                       openProductPanel={this.openProductPanel}
                       currentUser={currentUser}
+                      addToCart={addToCart}
                     />
                   </Route>
                 )}

@@ -71,9 +71,4 @@ class Api::SneakersController < ApplicationController
     
         render :also_viewed
     end
-
-    def buy
-       @sneaker = Sneaker.where("sku LIKE ?", "%" + params[:sku] + "%")
-       byebug
-    end
 end
