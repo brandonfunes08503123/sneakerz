@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoSearchOutline } from "react-icons/io5";
 import _ from "lodash";
@@ -45,44 +45,63 @@ class SearchModal extends Component {
     );
   }
 
-  // matches() {
-  //   let { input } = this.state;
-  //   let { allSneakers } = this.props;
-  //   const matches = [];
-  //   if (input.length === 0) {
-  //     return "";
-  //   }
-
-  //   Object.values(allSneakers).forEach((sneaker) => {
-  //     if (sneaker.name.toLowerCase().includes(input.toLowerCase())) {
-  //       matches.push(sneaker);
-  //     }
-  //   });
-
-  //   if (matches.length === 0) {
-  //     return "No matches";
-  //   }
-
-  //   return matches;
-  // }
-
   popularSearch() {
+    let {
+      getAdidasCollection,
+      getYeezyCollection,
+      getSbsCollection,
+      getJordanCollection,
+      closeSearchModal,
+    } = this.props;
     return (
       <div className="search-section-container">
         <h3>Popular Searches</h3>
         <ul className="search-list">
-          <li className="search-items">
-            Nike
-            <IoIosArrowForward size={16} />
-          </li>
-          <li className="search-items">
-            Jordan
-            <IoIosArrowForward size={16} />
-          </li>
-          <li className="search-items">
-            Adidas
-            <IoIosArrowForward size={16} />
-          </li>
+          <Link
+            to="/sneakers/collections"
+            onClick={() => {
+              getJordanCollection(), closeSearchModal();
+            }}
+          >
+            <li className="search-items">
+              Jordan
+              <IoIosArrowForward size={16} />
+            </li>
+          </Link>
+
+          <Link
+            to="/sneakers/collections"
+            onClick={() => {
+              getYeezyCollection(), closeSearchModal();
+            }}
+          >
+            <li className="search-items">
+              Yeezy
+              <IoIosArrowForward size={16} />
+            </li>
+          </Link>
+          <Link
+            to="/sneakers/collections"
+            onClick={() => {
+              getAdidasCollection(), closeSearchModal();
+            }}
+          >
+            <li className="search-items">
+              Adidas
+              <IoIosArrowForward size={16} />
+            </li>
+          </Link>
+          <Link
+            to="/sneakers/collections"
+            onClick={() => {
+              getSbsCollection(), closeSearchModal();
+            }}
+          >
+            <li className="search-items">
+              Nike Sb
+              <IoIosArrowForward size={16} />
+            </li>
+          </Link>
         </ul>
       </div>
     );

@@ -3,6 +3,7 @@ require "open-uri"
 Sneaker.destroy_all
 Designer.destroy_all
 Category.destroy_all
+CartProduct.destroy_all
 # Inventory.destroy_all
 
 tinker = Designer.create(name: "Tinker Hatfield")
@@ -606,14 +607,14 @@ adidas = [
     },
     {
         brand: "Adidas",
-        nickname: "Vintage White",
-        name: "Sneakersnstuff x Social Status x Adidas UltraBoost Lux 'Vintage White'",
+        nickname: "White Black",
+        name: "Sneakersnstuff x Social Status x UltraBoost SE 'White Black'",
         description: "Sneakersnstuff teamed up with Social Status and adidas on the UltraBoost for an elegant rendition of the classic performance runner. The Lux iteration features khaki hues on the Primeknit upper, which is accented by tan suede overlays on the toe and tongue patch. The full-length Boost midsole underfoot appears in white.",
         date: "2017-12-20",
-        sku: "DB0338",
+        sku: "BY2911",
         upper_material: "Primeknit",
-        main_color: "Tan",
-        colorway: "Vintage White/Chocolate Brown",
+        main_color: "White",
+        colorway: "Ftwwht/Ftwwht/Black",
         technology: "Boost",
         silhouette: "Ultra Boost",
         designer: "Ben Herath",

@@ -1,5 +1,11 @@
 import { connect } from "react-redux";
 import { closeSearchModal, closeMenuModal } from "../../actions/modal_actions";
+import {
+  getAdidasCollection,
+  getYeezyCollection,
+  getSbsCollection,
+  getJordanCollection,
+} from "../../actions/sneakers_actions";
 import Modal from "./modal";
 const mapStateToProps = (state) => {
   return {
@@ -10,7 +16,10 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => ({
   closeSearchModal: () => dispatch(closeSearchModal()),
-  closeMenuModal: () => dispatch(closeMenuModal()),
+  getAdidasCollection: () => dispatch(getAdidasCollection()),
+  getYeezyCollection: () => dispatch(getYeezyCollection()),
+  getSbsCollection: () => dispatch(getSbsCollection()),
+  getJordanCollection: () => dispatch(getJordanCollection()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Modal);

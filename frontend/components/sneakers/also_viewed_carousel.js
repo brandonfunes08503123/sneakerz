@@ -7,7 +7,8 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 function AlsoViewedCarousel(props) {
   let { sneakers } = props;
 
-  console.log("These are the passed sneakers: ", sneakers);
+  console.log("These are the also viewed sneakers: ", sneakers);
+
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -27,6 +28,27 @@ function AlsoViewedCarousel(props) {
       items: 5,
     },
   };
+
+  const LeftArrow = (arrowProps) => {
+    const { carouselState, children, ...restArrowProps } = arrowProps;
+
+    return (
+      <AiOutlineLeft size={30} className="buttonLeft" {...restArrowProps}>
+        {children}
+      </AiOutlineLeft>
+    );
+  };
+
+  const RightArrow = (arrowProps) => {
+    const { carouselState, children, ...restArrowProps } = arrowProps;
+
+    return (
+      <AiOutlineRight size={30} className="buttonRight" {...restArrowProps}>
+        {children}
+      </AiOutlineRight>
+    );
+  };
+
   return (
     <div className="main-carousel-container">
       <div className="people-viewed-container">
@@ -37,28 +59,27 @@ function AlsoViewedCarousel(props) {
           partialVisible={true}
           responsive={responsive}
           className="carousel-container"
-          customLeftArrow={<AiOutlineLeft size={30} className="buttonLeft" />}
-          customRightArrow={
-            <AiOutlineRight size={30} className="buttonRight" />
-          }
+          customLeftArrow={<LeftArrow />}
+          customRightArrow={<RightArrow />}
         >
           {sneakers.map((sneaker, index) => {
             return (
-              <div className="carousel-shoe-wrapper" key={index}>
-                <Link
-                  to={`/sneaker/${sneaker.sku}`}
-                  className="carousel-shoe-link"
-                >
+              <Link
+                to={`/sneaker/${sneaker.sku}`}
+                className="carousel-shoe-wrapper"
+                key={index}
+              >
+                <div className="carousel-shoe-link">
                   <img
                     src={sneaker.photoUrl}
                     alt={sneaker.name}
                     className="carousel-shoe-img"
-                  ></img>
-                </Link>
+                  />
+                </div>
                 <div className="carousel-shoe-detail-container">
                   <div className="carousel-shoe-detail">{sneaker.name}</div>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </Carousel>

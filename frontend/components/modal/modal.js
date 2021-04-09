@@ -47,6 +47,12 @@ class Modal extends Component {
   }
 
   handleSearch() {
+    let {
+      getAdidasCollection,
+      getYeezyCollection,
+      getSbsCollection,
+      getJordanCollection,
+    } = this.props;
     return (
       <div className="modal-background modal-container">
         <div
@@ -54,7 +60,12 @@ class Modal extends Component {
           ref={this.modalChild}
           onClick={(e) => e.stopPropagation()}
         >
-          <SearchContainer />
+          <SearchContainer
+            getAdidasCollection={getAdidasCollection}
+            getYeezyCollection={getYeezyCollection}
+            getSbsCollection={getSbsCollection}
+            getJordanCollection={getJordanCollection}
+          />
         </div>
       </div>
     );

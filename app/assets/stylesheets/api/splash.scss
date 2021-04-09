@@ -1,15 +1,57 @@
-.splash-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.jubilee-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.splash-container img {
+.splash-main-container {
   width: 100%;
+}
+
+.front-page-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.front-page-img-container img {
+  width: 100%;
+}
+
+.splash-img-link {
+  width: 100%;
+}
+
+.sneaker-front-page-container {
+  padding: 90px 0;
+  border-bottom: 1px solid gray;
+}
+
+.sneaker-header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sneaker-header-container h3 {
+  text-transform: capitalize;
+  font-size: 36px;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.22;
+  letter-spacing: -0.3px;
+  margin-left: 5%;
+}
+
+.see-all-button-container {
+  margin-right: 5%;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  min-width: 160px;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.see-all-button {
+  border: none;
+  text-decoration: none;
+  background: white;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.22;
+  font-size: 18px;
 }
