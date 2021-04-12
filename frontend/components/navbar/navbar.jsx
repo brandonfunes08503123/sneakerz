@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { IoSearchOutline } from "react-icons/io5";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-const Navbar = ({ currentUser, logout, openSearchModal, openMenuModal }) => {
+const Navbar = ({ currentUser, logout, openSearchModal }) => {
   const loggedIn = () => {
     return (
       <div className="nav-container">
