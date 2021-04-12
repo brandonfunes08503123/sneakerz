@@ -27,17 +27,11 @@ module.exports = {
       },
 
       {
-        test: /\.(sass|css|less)$/,
+        test: /\.(sass|css)$/,
         use: [
           { loader: "style-loader" },
           { loader: "css-loader" },
-          // {
-          //   loader: "postcss-loader",
-          //   options: {
-          //     plugins: () => [require("autoprefixer")()],
-          //   },
-          // },
-          { loader: "less-loader" },
+          // { loader: "less-loader" },
         ],
       },
       {
