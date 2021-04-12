@@ -10,11 +10,13 @@
   },
   "devDependencies": {
     "css-loader": "^5.2.0",
+    "less": "^4.1.1",
+    "less-loader": "^8.1.0",
     "url-loader": "^4.1.1"
   },
   "engines": {
-    "node": "12.5.0",
-    "npm": "6.9.0"
+    "node": ">=12.5.0",
+    "npm": ">=6.9.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -31,7 +33,6 @@
     "@babel/preset-react": "^7.12.7",
     "babel-loader": "^8.2.2",
     "file-loader": "^6.2.0",
-    "less-loader": "^8.0.0",
     "lodash": "^4.17.21",
     "postcss-loader": "^5.2.0",
     "react": "^17.0.1",
