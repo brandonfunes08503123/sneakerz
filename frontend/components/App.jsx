@@ -10,6 +10,7 @@ import SneakerContainer from "./sneakers/sneaker_container";
 import SneakersContainer from "./sneakers/sneakers_container";
 import SearchItemsContainer from "./search_items/search_items_container";
 import CollectionsContainer from "./collections/collections_container";
+import CartContainer from "./cart/cart_container";
 
 const App = () => (
   <div className="app-container">

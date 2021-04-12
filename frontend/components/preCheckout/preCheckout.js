@@ -11,6 +11,7 @@ class PreCheckout extends Component {
       openProductPanel,
       sneaker,
       currentUser,
+      addToCart,
     } = this.props;
 
     console.log("this is selectedSneaker: ", selectedSneaker);
@@ -60,8 +61,13 @@ class PreCheckout extends Component {
               Add to cart and continue shopping
             </button>
           </Link>
-          <Link to="/cart" className="checkout-link">
-            <button className="checkout-add-cart-btn">Checkout</button>
+          <Link to="/cart" className="checkout-link-right">
+            <button
+              className="checkout-add-cart-btn"
+              onClick={() => addToCart(currentUser, selectedSneaker.id)}
+            >
+              Checkout
+            </button>
           </Link>
         </div>
       </Fragment>
