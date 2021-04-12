@@ -1,0 +1,27 @@
+.HeroPane-left-wrapper {
+  border: 1px solid #dedede;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.cart-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+  padding: 25px 25px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.cart-img-wrapper {
+  width: 25%;
+}
+
+.cart-product-wrapper {
+  width: 25%;
+  text-align: center;
+}

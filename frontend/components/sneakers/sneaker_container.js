@@ -4,6 +4,7 @@
  */
 import { connect } from "react-redux";
 import { getSneaker, getAlsoViewed } from "../../actions/sneakers_actions";
+import { addToCart } from "../../actions/cart_actions";
 import Sneaker from "./sneaker";
 
 const mapStateToProps = (state, { match }) => {

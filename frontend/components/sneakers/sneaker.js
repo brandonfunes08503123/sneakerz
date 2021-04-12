@@ -3,7 +3,7 @@
  * an individual sneaker based on the the sneakerId
  */
 import React, { Component, Fragment } from "react";
-import { Route } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import SneakerProductPanel from "./sneaker_product_panel";
 import ItemDetailsCarousel from "./item_details_carousel";
 import PreCheckout from "../preCheckout/preCheckout";
@@ -80,7 +80,9 @@ class Sneaker extends Component {
               </div>
 
               <div className="ProductPane-container">
-                {this.state.showProductPanel ? (
+                {this.props.currentUser === null ? (
+                  <Redirect to="/login" />
+                ) : this.state.showProductPanel ? (
                   <SneakerProductPanel
                     closeProductPanel={this.closeProductPanel}
                     setSelectedSneaker={this.setSelectedSneaker}
