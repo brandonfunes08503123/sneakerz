@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { IoMdClose } from "react-icons/io";
 
 const CartItems = (props) => {
-  let { cartItems } = props;
+  let { cartItems, removeItem } = props;
 
   // need to pass delete item in here
   return (
@@ -24,7 +24,11 @@ const CartItems = (props) => {
               <span>Size: {item.size}</span>
             </div>
             <div className="cart-product-remove">
-              <IoMdClose className="cart-remove-btn" size={18} />
+              <IoMdClose
+                className="cart-remove-btn"
+                size={18}
+                onClick={() => removeItem(item.id)}
+              />
             </div>
           </div>
         );

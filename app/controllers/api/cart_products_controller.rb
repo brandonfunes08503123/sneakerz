@@ -10,15 +10,12 @@ class Api::CartProductsController < ApplicationController
     def create
         @cart_product = CartProduct.new(cart_product_params)
 
-        # if @cart_product.save
-        #     render "api/cart_products/show"
-        # else
-        #     render json: @cart_product.errors.full_messages, status: 422
-        # end
-
-        if !@cart_product.save
+        if @cart_product.save
+            render "api/cart_products/show"
+        else
             render json: @cart_product.errors.full_messages, status: 422
         end
+
     end
   
 
