@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import CartItems from "./cart_items";
 import { RiVisaLine } from "react-icons/ri";
+import { Redirect } from "react-router-dom";
 
 class Cart extends Component {
   constructor(props) {
@@ -18,7 +19,9 @@ class Cart extends Component {
   }
 
   componentDidMount() {
-    this.props.getUserCart();
+    if (this.props.currentUser !== null) {
+      this.props.getUserCart();
+    }
   }
 
   componentDidUpdate(prevProps) {
@@ -81,7 +84,7 @@ class Cart extends Component {
     return (
       <div className="ProductContainer">
         {cart.length < 1 ? (
-          " "
+          this.emptyCart()
         ) : (
           <div className="HeroContainer">
             <div className="HeroPane-left-wrapper">
