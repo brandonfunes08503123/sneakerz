@@ -1,32 +1,39 @@
 import * as APIUtil from "../util/cart_api_util";
 
 // export const ADD_ITEM_TO_CART = "ADD_ITEM_TO_CART";
-export const GET_CART = "GET_CART";
+export const GET_ITEMS = "GET_ITEMS";
+export const ADD_ITEM = "ADD_ITEM";
+export const REMOVE_ITEM = "REMOVE_ITEM";
 
-// export const addItemToCart = (cartItem) => ({
-//   type: ADD_ITEM_TO_CART,
-//   cartItem,
-// });
+export const addItemToCart = (item) => ({
+  type: ADD_ITEM,
+  item,
+});
 
 export const getCart = (cart) => ({
-  type: GET_CART,
+  type: GET_ITEMS,
   cart,
 });
 
-// export const addToCart = (currentUser, inventoryId) => (dispatch) => {
-//   console.log("cart actions current user: ", currentUser);
-//   console.log("cart actions inventoryId", inventoryId);
-//   return APIUtil.addToCart(currentUser, inventoryId).then((cart) =>
-//     dispatch(addItemToCart(cart))
-//   );
-// };
+export const deleteItem = (itemId) => ({
+  type: REMOVE_ITEM,
+  itemId,
+});
 
-export const addToCart = (currentUser, inventoryId) => {
-  return APIUtil.addToCart(currentUser, inventoryId);
+export const addToCart = (currentUser, inventoryId) => (dispatch) => {
+  return APIUtil.addToCart(currentUser, inventoryId).then((item) => {
+    dispatch(addItemToCart(item));
+  });
 };
 
 export const getUserCart = () => (dispatch) => {
   return APIUtil.getUserCart().then((cart) => {
     dispatch(getCart(cart));
+  });
+};
+
+export const removeItem = (itemId) => (dispatch) => {
+  return APIUtil.removeItem(itemId).then(() => {
+    dispatch(deleteItem(itemId));
   });
 };

@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import Cart from "./cart";
-import { getUserCart } from "../../actions/cart_actions";
+import { getUserCart, removeItem } from "../../actions/cart_actions";
 
 const mapStateToProps = (state) => ({
   currentUser: state.session.id,
@@ -9,6 +9,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   getUserCart: () => dispatch(getUserCart()),
+  removeItem: (itemId) => dispatch(removeItem(itemId)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Cart);

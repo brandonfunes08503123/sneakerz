@@ -51,7 +51,10 @@ class Cart extends Component {
   multipleItems() {
     return (
       <div className="HeroPane-cart-wrapper">
-        <CartItems cartItems={this.props.cart} />
+        <CartItems
+          cartItems={this.props.cart}
+          removeItem={this.props.removeItem}
+        />
       </div>
     );
   }

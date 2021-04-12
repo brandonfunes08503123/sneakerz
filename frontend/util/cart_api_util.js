@@ -12,3 +12,9 @@ export const getUserCart = () =>
   $.ajax({
     url: "/api/cart_products",
   });
+
+export const removeItem = (itemId) =>
+  $.ajax({
+    method: "DELETE",
+    url: `/api/cart_products/${itemId}`,
+  });

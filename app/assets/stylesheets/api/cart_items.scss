@@ -25,3 +25,23 @@
   width: 25%;
   text-align: center;
 }
+
+.cart-remove-btn {
+  cursor: pointer;
+}
+
+.cart-items-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightgray;
+  width: 85%;
+  height: 550px;
+  margin: 0 auto;
+  overflow-y: scroll;
+}
+
+@media only screen and (max-width: 1500px) {
+  .cart-items-container {
+    height: 438px !important;
+  }
+}

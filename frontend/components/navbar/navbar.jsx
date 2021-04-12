@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { IoSearchOutline } from "react-icons/io5";
-import { MdDehaze } from "react-icons/md";
-
+import { AiOutlineShoppingCart } from "react-icons/ai";
 const Navbar = ({ currentUser, logout, openSearchModal, openMenuModal }) => {
   const loggedIn = () => {
     return (
@@ -20,14 +19,14 @@ const Navbar = ({ currentUser, logout, openSearchModal, openMenuModal }) => {
           <button className="nav-item nav-button" onClick={() => logout()}>
             Sign Out
           </button>
+          <Link to="/cart" className="nav-item">
+            <AiOutlineShoppingCart size={24} />
+          </Link>
           <button
             className="nav-item nav-icon"
             onClick={() => openSearchModal("search")}
           >
             <IoSearchOutline size={24} />
-          </button>
-          <button className="nav-icon" onClick={() => openMenuModal("menu")}>
-            <MdDehaze size={24} />
           </button>
         </div>
       </div>
@@ -58,9 +57,6 @@ const Navbar = ({ currentUser, logout, openSearchModal, openMenuModal }) => {
             onClick={() => openSearchModal("search")}
           >
             <IoSearchOutline size={24} />
-          </button>
-          <button className="nav-icon" onClick={() => openMenuModal("menu")}>
-            <MdDehaze size={24} />
           </button>
         </div>
       </div>
