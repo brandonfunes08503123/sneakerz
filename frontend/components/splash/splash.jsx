@@ -13,6 +13,7 @@ class Splash extends Component {
     this.props.getJordanFrontPageCollection();
     this.props.getSbsFrontPageCollection();
     this.props.getYeezyFrontPageCollection();
+    window.scrollTo(0, 0);
     window.addEventListener("scroll", this.handleScroll);
   }
 

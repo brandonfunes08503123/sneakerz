@@ -13,7 +13,7 @@ const Navbar = ({ currentUser, logout, openSearchModal }) => {
           <Link to="/" className="nav-item">
             Discover
           </Link>
-          <Link to="/" className="nav-item">
+          <Link to="/styles" className="nav-item">
             Styles
           </Link>
           <button className="nav-item nav-button" onClick={() => logout()}>
@@ -43,7 +43,7 @@ const Navbar = ({ currentUser, logout, openSearchModal }) => {
           <Link to="/" className="nav-item">
             Discover
           </Link>
-          <Link to="/" className="nav-item">
+          <Link to="/styles" className="nav-item">
             Styles
           </Link>
           <Link to="/login" className="nav-item">

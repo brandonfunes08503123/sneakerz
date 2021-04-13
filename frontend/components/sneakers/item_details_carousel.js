@@ -26,12 +26,16 @@ function ItemDetailsCarousel(props) {
     </div>,
     <div className="slide-items">
       <span className="slide-items-titles">name</span>
-      <span className="slide-items-details">{itemDetails.name}</span>
+      <div className="slide-items-details-container">
+        <span className="slide-items-details">{itemDetails.name}</span>
+      </div>
     </div>,
 
     <div className="slide-items">
       <span className="slide-items-titles">colorway</span>
-      <span className="slide-items-details">{itemDetails.colorway}</span>
+      <div className="slide-items-details-container">
+        <span className="slide-items-details">{itemDetails.colorway}</span>
+      </div>
     </div>,
     <div className="slide-items">
       <span className="slide-items-titles">silhouette</span>

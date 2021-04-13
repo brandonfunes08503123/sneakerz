@@ -1,0 +1,47 @@
+.styles-main-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.styles-container {
+  column-count: 3;
+  column-gap: 10vw;
+  padding-bottom: 10vw;
+  padding-left: 90px;
+  padding-right: 90px;
+}
+
+.style-item {
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+  break-inside: avoid;
+  margin-bottom: 10vw;
+}
+
+.styles-header-container {
+  display: flex;
+  justify-content: center;
+  padding: 102px 52px;
+  flex-direction: column;
+}
+
+.styles-header-title {
+  font-size: 32px;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.38;
+  letter-spacing: 0.1px;
+  text-align: center;
+}
+
+.styles-header {
+  color: rgb(129, 129, 129);
+  text-align: center;
+  font-size: 14px;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.38;
+  letter-spacing: 0.1px;
+}

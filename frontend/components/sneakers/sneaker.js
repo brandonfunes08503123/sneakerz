@@ -26,6 +26,7 @@ class Sneaker extends Component {
   componentDidMount() {
     this.props.getSneaker();
     this.props.getAlsoViewed(this.props.sneaker.id);
+    window.scrollTo(0, 0);
   }
 
   componentDidUpdate(prevProps) {

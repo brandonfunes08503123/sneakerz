@@ -6,6 +6,10 @@ class Collections extends Component {
     super(props);
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     let { sneakers } = this.props;
 
