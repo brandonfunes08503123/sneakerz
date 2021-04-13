@@ -6,7 +6,6 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 function ItemDetailsCarousel(props) {
   let { itemDetails } = props;
 
-  console.log("these are the item details: ", itemDetails);
   let propsDetails = [
     <div className="slide-items">
       <span className="slide-items-titles">brand</span>

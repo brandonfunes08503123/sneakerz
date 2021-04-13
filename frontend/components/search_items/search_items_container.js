@@ -7,15 +7,11 @@ const mapStateToProps = (state, ownProps) => {
   let items = [];
 
   Object.values(state.entities.sneakers).map((sneaker) => {
-    console.log("value: ", value);
-    console.log("sneaker: ", sneaker);
-
     if (sneaker.name.toLowerCase().includes(value.toLowerCase())) {
       items.push(sneaker);
     }
   });
 
-  console.log(items);
   return {
     items,
   };

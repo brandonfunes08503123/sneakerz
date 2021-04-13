@@ -14,7 +14,7 @@ class SearchItems extends Component {
 
   render() {
     let { items } = this.props;
-    console.log(items.length);
+
     return (
       <div>
         {items.length > 0 ? (

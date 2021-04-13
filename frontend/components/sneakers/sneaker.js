@@ -30,8 +30,6 @@ class Sneaker extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    console.log("this is prevProps: ", prevProps.sneaker.sku);
-    console.log("this is props: ", this.props.skuID);
     if (
       this.props.skuID !== prevProps.sneaker.sku &&
       prevProps.sneaker.length !== 0

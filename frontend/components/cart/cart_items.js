@@ -8,7 +8,6 @@ const CartItems = (props) => {
   return (
     <div className="cart-items-container">
       {Object.entries(cartItems).map(([itemKey, item]) => {
-        console.log("this is the cartItem: ", item);
         return (
           <div className="cart-items" key={itemKey}>
             <div className="cart-img-wrapper">

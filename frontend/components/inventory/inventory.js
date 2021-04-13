@@ -17,7 +17,7 @@ class Inventory extends Component {
       closeProductPanel,
       setSelectedSneaker,
     } = this.props;
-    console.log("inventory: ", inventory);
+
     return (
       <div className="ProductList-container">
         <IoMdClose

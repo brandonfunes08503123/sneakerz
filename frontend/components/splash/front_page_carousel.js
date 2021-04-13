@@ -7,8 +7,6 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 function FrontPageCarousel(props) {
   let { sneakers } = props;
 
-  console.log("These are the collecion sneakers: ", sneakers);
-
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.

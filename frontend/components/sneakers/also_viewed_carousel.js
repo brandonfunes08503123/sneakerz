@@ -7,8 +7,6 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 function AlsoViewedCarousel(props) {
   let { sneakers } = props;
 
-  console.log("These are the also viewed sneakers: ", sneakers);
-
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.

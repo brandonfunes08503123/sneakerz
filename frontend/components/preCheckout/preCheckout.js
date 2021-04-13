@@ -14,8 +14,6 @@ class PreCheckout extends Component {
       addToCart,
     } = this.props;
 
-    console.log("this is selectedSneaker: ", selectedSneaker);
-
     return (
       <Fragment>
         <div className="pre-checkout-container">

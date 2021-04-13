@@ -16,9 +16,12 @@ const Navbar = ({ currentUser, logout, openSearchModal }) => {
           <Link to="/styles" className="nav-item">
             Styles
           </Link>
-          <button className="nav-item nav-button" onClick={() => logout()}>
-            Sign Out
-          </button>
+          <Link to="/" className="nav-item">
+            <button className="nav-button" onClick={() => logout()}>
+              Sign Out
+            </button>
+          </Link>
+
           <Link to="/cart" className="nav-item">
             <AiOutlineShoppingCart size={24} />
           </Link>

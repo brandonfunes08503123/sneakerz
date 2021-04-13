@@ -15,7 +15,6 @@ export const noResult = (noResultStr) => ({
 
 export const searchValue = (shoeStr) => (dispatch) => {
   return APIUtil.searchShoe(shoeStr).then((sneakerRes) => {
-    console.log("this is sneakerRes: ", sneakerRes);
     if (typeof sneakerRes[0] === "string") {
       dispatch(noResult(sneakerRes));
     } else {

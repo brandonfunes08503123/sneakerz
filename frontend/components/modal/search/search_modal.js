@@ -27,7 +27,6 @@ class SearchModal extends Component {
   }
 
   searchedValue(value) {
-    console.log("this is the value: ", value);
     this.props.searchValue(value);
   }
 
