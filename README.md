@@ -1,25 +1,11 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Sneakerz
 
-Things you may want to cover:
+[Sneakerz Live Link] (https://sneakerz-app.herokuapp.com/#/)
 
-* Ruby version
+## Overview
 
-* System dependencies
+Sneakerz is a clone of the e-commerce website GoatApp. Users can create their own profiles and search for some of the hottest shoes on the market today. 
 
-* Configuration
+**Splash Page**
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# sneakerz
