@@ -8,6 +8,9 @@ export const addToCart = (currentUser, inventoryId) =>
     },
   });
 
+// cart_product deconstructs currentuser and inventoryId
+// ajax call passes one object
+
 export const getUserCart = () =>
   $.ajax({
     url: "/api/cart_products",
