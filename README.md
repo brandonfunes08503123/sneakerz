@@ -1,11 +1,23 @@
 
 # Sneakerz
 
-[Sneakerz Live Link] (https://sneakerz-app.herokuapp.com/#/)
+[Sneakerz](https://sneakerz-app.herokuapp.com/#/) is a GoatApp clone where you can:
 
-## Overview
+1. Create an account
+2. Search for different products
+3. Simulates buying a shoe in a given size
+4. Add and remove items from a cart
+5. Cart is saved even when checking out
 
-Sneakerz is a clone of the e-commerce website GoatApp. Users can create their own profiles and search for some of the hottest shoes on the market today. 
+Sneakerz was built using: 
 
-**Splash Page**
+1. React
+2. Redux for state management
+3. Ruby on Rails 
+4. Postgres DB
+5. S3 for file storage
+
+
+
+
 
