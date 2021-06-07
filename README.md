@@ -27,5 +27,5 @@ When creating my search component, I knew that a temporary and inefficient solut
 
 # Things to work on
 
-1.) Lazy Load components
+1.) Lazy Load components </br>  
 2.) Lazy Load images
