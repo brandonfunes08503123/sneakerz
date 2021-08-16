@@ -6,6 +6,10 @@ class Splash extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      loaded: false,
+    };
+
     this.handleScroll = this.handleScroll.bind(this);
   }
   componentDidMount() {
@@ -50,6 +54,8 @@ class Splash extends Component {
                 loading="eager"
                 src={window.images.jubilee11s}
                 alt="Jubilee 11s"
+                style={this.state.loaded ? {} : { display: "none" }}
+                onLoad={() => this.setState({ loaded: true })}
               ></img>
             </Link>
           </div>
@@ -73,7 +79,13 @@ class Splash extends Component {
           </div>
 
           <div className="front-page-img-container">
-            <img src={window.images.sbs} alt="Sbs_Skateboard"></img>
+            <img
+              src={window.images.sbs}
+              alt="Sbs_Skateboard"
+              loading="eager"
+              style={this.state.loaded ? {} : { display: "none" }}
+              onLoad={() => this.setState({ loaded: true })}
+            ></img>
           </div>
           <div className="sneaker-front-page-container">
             <div className="sneaker-header-container">
@@ -96,7 +108,13 @@ class Splash extends Component {
 
           <div className="front-page-img-container">
             <Link to="/sneaker/BY2911" className="splash-img-link">
-              <img src={window.images.sns} alt="SNS Ultraboosts"></img>
+              <img
+                loading="eager"
+                src={window.images.sns}
+                alt="SNS Ultraboosts"
+                style={this.state.loaded ? {} : { display: "none" }}
+                onLoad={() => this.setState({ loaded: true })}
+              ></img>
             </Link>
           </div>
           <div className="sneaker-front-page-container">
@@ -120,7 +138,13 @@ class Splash extends Component {
 
           <div className="front-page-img-container">
             <Link to="/sneaker/GY0260" className="splash-img-link">
-              <img src={window.images.kyanite} alt="Yeezy Kyanite"></img>
+              <img
+                src={window.images.kyanite}
+                alt="Yeezy Kyanite"
+                loading="eager"
+                style={this.state.loaded ? {} : { display: "none" }}
+                onLoad={() => this.setState({ loaded: true })}
+              ></img>
             </Link>
           </div>
           <div className="sneaker-front-page-container">
