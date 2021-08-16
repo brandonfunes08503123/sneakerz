@@ -9,6 +9,7 @@ class SignUp extends Component {
       username: "",
       email: "",
       password: "",
+      loaded: false,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -54,6 +55,9 @@ class SignUp extends Component {
               src={window.images.banned1s}
               alt="1994_Banned_1s"
               className="shoeIMG"
+              loading="eager"
+              style={this.state.loaded ? {} : { display: "none" }}
+              onLoad={() => this.setState({ loaded: true })}
             ></img>
           </div>
           <div className="HeroPane-form-container">

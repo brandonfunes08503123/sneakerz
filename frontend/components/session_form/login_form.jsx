@@ -8,6 +8,7 @@ class LoginForm extends Component {
     this.state = {
       email: "",
       password: "",
+      loading: false,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -56,7 +57,13 @@ class LoginForm extends Component {
       <div className="BigHeroContainer">
         <div className="HeroContainer">
           <div className="HeroPane-shoe">
-            <img src={window.images.banned1s} alt="1994_Banned_1s"></img>
+            <img
+              src={window.images.banned1s}
+              alt="1994_Banned_1s"
+              loading="eager"
+              style={this.state.loaded ? {} : { display: "none" }}
+              onLoad={() => this.setState({ loaded: true })}
+            ></img>
           </div>
           <div className="HeroPane-form-container">
             <div className="HeroPane-header-container">
