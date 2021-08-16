@@ -46,7 +46,11 @@ class Splash extends Component {
         <Suspense fallback={<div>Loading...</div>}>
           <div className="front-page-img-container">
             <Link to="/sneaker/CT8012011" className="splash-img-link">
-              <img src={window.images.jubilee11s} alt="Jubilee 11s"></img>
+              <img
+                loading="eager"
+                src={window.images.jubilee11s}
+                alt="Jubilee 11s"
+              ></img>
             </Link>
           </div>
           <div className="sneaker-front-page-container">
